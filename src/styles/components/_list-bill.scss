@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	List bill
+\* ------------------------------------------------------------ */
+
+.list-bill {
+	list-style-type: none;
+
+
+	li {
+		font-size: $body-font-size;
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+	}
+
+	li + li {
+		margin-top: 2.4rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}

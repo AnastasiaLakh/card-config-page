@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------ *\
+  Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	max-width: calc(#{$shell-max-width} + #{$shell-gutter} * 2);
+	padding-left: $shell-gutter;
+	padding-right: $shell-gutter;
+	margin: auto;
+	width: 100%;
+
+	@include breakpoint-down(mobile-small) {
+		padding: 0 1.2rem;
+	}
+}
+
+.shell--alt {
+	max-width: calc(#{$shell-max-width} + 25px * 2);
+	padding-left: 25px;
+	padding-right: 25px;
+	margin: auto;
+	width: 100%;
+
+	@include breakpoint-down(mobile-small) {
+		padding: 0 1.2rem;
+	}
+}
+
+.shell--secondary {
+	max-width: calc(#{$shell-max-width} + 20px * 2);
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: auto;
+	width: 100%;
+
+	@include breakpoint-down(mobile-small) {
+		padding: 0 1.2rem;
+	}
+}
+
+.shell--xs {
+	max-width: calc(92.8rem + #{$shell-gutter} * 2);
+}
+
+.shell--small {
+	max-width: 116.8rem;
+}
+
+.shell--size-1 {
+	max-width: 122rem;
+}
+
+.shell--size-2 {
+	max-width: calc(92.8rem + 25px * 2);
+}
+
+.shell--size-3 {
+	max-width: calc(94rem + #{$shell-gutter} * 2);
+}
+
+.shell--size-4 {
+	max-width: calc(94.4rem + #{$shell-gutter} * 2);
+}
+
+/* Shell Fluid */
+
+.shell--fluid {
+	max-width: none;
+}

@@ -1,0 +1,274 @@
+/* ------------------------------------------------------------ *\
+	Article main
+\* ------------------------------------------------------------ */
+
+.article-main {
+	font-size: $h5-font-size;
+	line-height: $h3-line-height;
+	letter-spacing: 0.012em;
+
+	@include breakpoint-down(mobile) {
+		font-size: $h6-font-size;
+		line-height: $h3-line-height;
+	}
+	
+	.article__number {
+		width: 6.4rem;
+		height: 6.4rem;
+		background-color: $tert-color;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $white-color;
+		border-radius: 50%;
+		position: absolute; 
+		top: -1.9rem; 
+		left: .7rem; 
+		font-size: $h2-font-size;
+		font-weight: $font-weight-bold;
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: static; 
+			margin-bottom: 1rem; 
+			width: 4.4rem;
+			height: 4.4rem;
+			font-size: $h2-font-size-mobile;
+		}
+	}
+
+	.article__head {
+		max-width: 85rem;
+		padding-left: 9.5rem;
+		margin-bottom: 5.4rem;
+		position: relative; 
+
+		@include breakpoint-down(tablet) {
+			padding-left: 9.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding-left: 0;
+			margin-bottom: 3rem; 
+		}
+
+		h1 {
+			color: $primary-color;
+			margin-bottom: .6rem; 
+		}
+	}
+
+	.article__info {
+		ul {
+			margin: 0 -1.4rem; 
+		}
+
+		li {
+			display: inline-block; 
+			list-style-type: none;
+			font-size: $h6-font-size-mobile; 
+			padding: 0 1.4rem; 
+			position: relative; 
+			letter-spacing: .045em;
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				display: block; 
+			}
+
+			&:after {
+				content: '';
+				width: .1rem;
+				height: 1.4rem;
+				background-color: $dark-text;
+				position: absolute; 
+				left: 100%;
+				top: 50%;
+				transform: translate(0, -50%);  
+
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					display: none; 
+				}
+			}
+		}
+
+		li:last-child:after {
+			display: none; 
+		}
+	}
+
+	.article__content {
+		margin-left: 9.5rem;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 4rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
+
+		p + h5 {
+			margin-top: 5.9rem; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				margin-top: 3rem; 
+			}
+		}
+
+		h5 {
+			color: $primary-color;
+			letter-spacing: .03em;
+			max-width: 72rem;
+		}
+
+		h5 + p {
+			margin-top: 2.9rem; 
+		}
+
+		ul {
+			margin-left: 3rem; 
+			max-width: 71rem;
+			margin-bottom: 2.8rem; 
+		}
+
+		ul li {
+			letter-spacing: .014em;
+			margin-bottom: 3.2rem; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				margin-bottom: 1.5rem; 
+			}
+		}
+
+		ul li:last-child {
+			margin-bottom: 0; 
+		}
+	}
+
+	.article__content:not(:last-child) {
+		margin-bottom: 5.5rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 6rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 2.8rem;
+	}
+
+	.article__content p {
+		max-width: 73.9rem;
+	}
+
+	.article__content p strong {
+		color: $quinary-color;
+	}
+
+	.article__image {
+		margin-bottom: 6.5rem;
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			margin-bottom: 4rem; 
+		}
+	}
+
+	.article__image--alt {
+		margin-bottom: 3.4rem;
+	}
+
+	.article__meta {
+		font-size: $h6-font-size-mobile;
+		font-weight: $font-weight-bold;
+		margin-bottom: 7.2rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	.article__widget {
+		padding: 6.4rem 0;
+		border-top: .1rem solid $border-color;  
+		border-bottom: .1rem solid $border-color;  
+		margin-bottom: 6.3rem; 
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			padding: 4rem 0; 
+			margin-bottom: 6rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
+
+		h5 {
+			color: $quinary-color;
+			line-height: $h3-line-height;
+			letter-spacing: .03em;
+		}
+	}
+
+	.article__widget-content {
+		padding: .5rem 0 0 2.6rem; 
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			padding: 2rem 0 0; 
+		}
+	}
+
+	.article__widget .grid {
+		align-items: center;
+	}
+
+	h5 {
+		margin-bottom: .5rem;
+	}
+
+	h1 {
+		letter-spacing: 0;
+	}
+
+	h3 {
+		font-size: $h1-font-size-mobile;
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+		letter-spacing: 0.018em;
+		max-width: 76.2rem;
+		margin-bottom: 5.8rem;
+		color: $primary-color;
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			margin-bottom: 3rem; 
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: $h4-font-size;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------ *\
+	Section collaborations
+\* ------------------------------------------------------------ */
+
+.section-collaborations {
+	padding: 3.8rem 0 4.5rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 0 0 .5rem;
+	}
+
+	.section__head {
+		text-align: center;
+		max-width: 74rem;
+		margin: 0 auto 6rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2.8rem;
+		}
+
+		h1,
+		h2 {
+			margin-bottom: 2rem;
+			color: $primary-color;
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+				max-width: 27rem;
+				margin: 0 auto 1.8rem;
+			}
+		}
+
+		h2 {
+			font-weight: $font-weight-thin;
+		font-size: $h1-font-size;  
+		line-height: $h1-line-height;
+		font-family: $ff-sans-serif-2;  
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+			}
+		}
+
+		h3 {
+			font-size: $h4-font-size;
+			letter-spacing: 0.0085em;
+			font-weight: $font-weight-light;
+		}
+
+		h4,
+		h3 {
+			@include breakpoint-down(tablet) {
+				font-size: $h5-font-size;
+			}
+
+			@include breakpoint-down(mobile) {
+				font-size: $body-font-size;
+			}
+		}
+	}
+}

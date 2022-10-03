@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------ *\
+	Breadcrumbs
+\* ------------------------------------------------------------ */
+
+.breadcrumbs {
+	line-height: $h3-line-height;
+	padding-top: 0.3rem;
+	color: $quinary-color;
+
+	@include breakpoint-down(mobile) {
+		font-size: $h6-font-size-mobile;
+		padding-top: 0;
+		margin: -0.4rem 0;
+	}
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+	}
+
+	li:after {
+		content: "/";
+		margin-left: 0.2rem;
+	}
+
+	li:last-of-type a {
+		color: $primary-color;
+		text-decoration: none;
+	}
+
+	li:last-of-type:after {
+		display: none;
+	}
+
+	li + li {
+		margin-left: 0.4rem;
+	}
+}
+/*  breadcrumbs alt  */
+
+.breadcrumbs--alt {
+	padding: .9rem 0rem .4rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 0;
+	}
+
+	ul {
+		flex-flow: row wrap;
+	}
+
+	li:last-of-type a {
+		letter-spacing: 0.04em;
+		font-weight: $font-weight-medium;
+	}
+
+	li:after {
+		margin-left: .3rem;
+	}
+
+	li + li {
+		margin-left: .5rem;
+	}
+}
+
+/*  breadcrumbs def  */
+
+.breadcrumbs--def {
+	padding: 14px 0; 
+	font-size: $body-font-size;  
+	font-weight: $font-weight-light; 
+	color: $quinary-color; 
+
+	ul {
+		list-style: none; 
+	}
+
+	li {
+		display: inline-block; 
+
+		&:after {
+			content: '/'; 
+			padding: 0 8px 0 4px; 
+		}
+
+		&:last-child {
+			font-weight: $font-weight-regular; 
+			color: $primary-color; 
+
+			&:after {
+				display: none; 
+			}
+
+			a {
+				text-decoration: none; 
+				pointer-events: none;
+			}
+
+		}
+	}
+}

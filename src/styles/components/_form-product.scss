@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------ *\
+	Form Product
+\* ------------------------------------------------------------ */
+
+.form-product {
+	.form__body {
+		padding: 2rem 0 3.2rem;
+		margin-bottom: 3.2rem;
+		border-bottom: 0.1rem solid $border-color;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 2rem 0 2.7rem;
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	.form__label {
+		font-size: $h5-font-size;
+		font-weight: $font-weight-medium;
+		letter-spacing: 0.045em;
+		display: block;
+		margin-bottom: 1.9rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $body-font-size;
+			margin-bottom: 1.3rem;
+		}
+	}
+
+	.form__foot {
+		border-bottom: 0.1rem solid $border-color;
+		padding-bottom: 3.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding-bottom: 2.5rem;
+		}
+	}
+
+	.form__foot h1 {
+		margin-bottom: 1.1rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.form__notice {
+		color: $dark-text;
+		font-family: $ff-sans-serif-2;
+		font-size: $h6-font-size-mobile;
+		font-weight: $font-weight-regular;
+		letter-spacing: 0.028em;
+
+		@include breakpoint-down(mobile-medium) {
+			display: none;
+		}
+	}
+
+	.form__btn {
+		display: inline-block;
+	}
+
+	.form__btn + .form__btn {
+		margin-left: 1.3rem;
+	}
+}
+
+/* form-product--alt */
+
+.form-product--alt {
+	.form__foot {
+		padding-top: 3.5rem;
+	}
+}

@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Callout
+\* ------------------------------------------------------------ */
+
+.callout-alt {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	margin-top: 6.9rem;
+
+	.callout__inner {
+		padding: 9.4rem 0 7.2rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 6.5rem 0;
+		}
+	}
+
+	.callout__head {
+		text-align: center;
+		margin-bottom: 4.3rem;
+	}
+
+	.callout__head h1 {
+		color: $primary-color;
+		margin-bottom: 1rem;
+	}
+
+	.callout__head h5 {
+		font-weight: $font-weight-light;
+		font-size: $h5-font-size;
+		letter-spacing: 0.009em;
+	}
+
+	.callout__body {
+		margin-bottom: 4.8rem;
+	}
+
+	.callout__foot {
+		text-align: center;
+	}
+}

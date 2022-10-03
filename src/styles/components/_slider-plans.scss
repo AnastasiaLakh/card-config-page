@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	Slider Plans
+\* ------------------------------------------------------------ */
+
+.slider-plans {
+	position: relative;
+	max-width: 102.1rem;
+
+	.swiper-button-disabled {
+		opacity: 0;
+	}
+
+	.slider__actions {
+		z-index: 100001;
+		position: absolute;
+		top: 42%;
+		left: -5.4rem;
+		right: 0;
+		transform: translateY(-50%);
+		width: 116rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.slider__slides {
+		max-width: 102.1rem;
+		margin-bottom: 7.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 6.3rem;
+		}
+	}
+
+	.swiper-pagination {
+		position: static;
+	}
+
+	.swiper-pagination-bullet {
+		width: 1rem;
+		height: 1rem;
+		background-color: $white-color;
+		border: 0.1rem solid $primary-color;
+		opacity: 1;
+		margin: 0 0.5rem !important;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $primary-color;
+	}
+}
+
+/* slider plans alt*/
+
+.slider-plans--alt {
+	max-width: 110.6rem;
+	width: 100%;
+	margin: 0 auto;
+}

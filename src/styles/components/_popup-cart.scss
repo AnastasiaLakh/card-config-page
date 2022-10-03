@@ -1,0 +1,226 @@
+/* ------------------------------------------------------------ *\
+	Popup cart
+\* ------------------------------------------------------------ */
+
+.popup-cart {
+	width: 100%;
+	max-width: 93.1rem;
+	margin: 0 auto;
+	background: $white-color;
+	box-shadow: 0px 0px 8px rgba(42, 44, 46, 0.15);
+	border-radius: .4rem;
+	padding: 2.8rem 0 2.6rem;
+	position: relative;
+
+	@include breakpoint-down(mobile) {
+		padding: 2.4rem 0 1.1rem;
+	}
+
+	.popup__close {
+		position: absolute;
+		top: 3.8rem;
+		right: 3.2rem;
+		color: $primary-color;
+
+		@include breakpoint-down(mobile) {
+			top: 2.9rem;
+			right: 2rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			max-width: 1.8rem;
+		}
+	}
+
+	.popup__content {
+		padding: 0rem 4rem 0rem 6.5rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 0rem 2rem 2.7rem 2rem;
+		}
+	}
+
+	.popup__head {
+		margin-bottom: 4.1rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	h3 {
+		font-weight: $font-weight-light;
+		font-size: $h3-font-size-mobile;
+		line-height: $h3-line-height;
+		letter-spacing: 1.1px;
+		color: $primary-color;
+
+		@include breakpoint-down(mobile-small) {
+			font-size: $h5-font-size;
+			padding-right: 2rem;
+		}
+	}
+
+	.popup__body {
+		letter-spacing: 0.61px;
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+		height: 62.3rem;
+		padding-right: 1.5rem;
+		overflow-y: auto;
+
+		@include breakpoint-down(mobile) {
+			padding-right: 1.9rem;
+			height: 37.8rem;
+		}
+	}
+
+	.popup__body::-webkit-scrollbar {
+	  width: .9rem;
+	}
+
+	.popup__body::-webkit-scrollbar-track {
+		background: $scrollbar-primary-color;
+		border-radius: 1rem;
+	}
+
+	.popup__body::-webkit-scrollbar-thumb {
+		background: $border-color;
+		border-radius: 1rem;
+	}
+
+	.popup__body p:not(:last-child) {
+		margin-bottom: 1.6rem;
+	}
+
+	.popup__body-inner {
+		overflow:visible
+	}
+
+	.popup__foot {
+		position: relative;
+		padding: 3.3rem 6.5rem .8rem 6.5rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 3.3rem 2rem .8rem;
+		}
+	}
+
+	.popup__foot:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		max-width: 92rem;
+		height: 3.3rem;
+		background-image: url(../images/temp/gradient2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+.popup-cart--alt {
+	.popup__body-inner {
+		padding-bottom: 2rem;
+	}
+
+	.popup__body h4 {
+		color: $primary-color;
+	}
+
+	.popup__body h5 {
+		color: $primary-color;
+	}
+
+	.popup__body h6 {
+		color: $primary-color;
+	}
+
+	.popup__body p {
+
+	}
+
+	.popup__body ol {
+		list-style: lower-latin inside; 
+	}
+
+	.popup__body ol > li {
+		position: relative;
+		padding-left: 2rem;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 1rem;
+		}
+
+		&::marker {
+			color: $primary-color;
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.popup__body ol > li + li {
+		margin-top: 1rem;
+	}
+
+	.popup__body ol ul {
+		padding-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.popup__body ol ul li {
+		padding-left: 3rem;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 2rem;
+		}
+
+		&:before {
+			left: 1rem; 
+
+			@include breakpoint-down(mobile) {
+				left: .5rem;
+			}
+		}
+	}
+	
+	.popup__body ul {
+		list-style: none;
+		margin-bottom: 2rem;
+	}
+
+	.popup__body ul:last-child {
+		margin-bottom: 0;
+	}
+
+	.popup__body ul > li {
+		position: relative;
+		padding-left: 2rem;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: .7rem; 
+			height: .7rem; 
+			top: .8rem; 
+			left: 0; 
+			border-radius: 50%;
+			background-color: $primary-color; 
+		}
+	}
+
+	.popup__body ul > li + li {
+		margin-top: 1rem;
+	}
+
+	.popup__body a {
+		display: inline;
+		word-break: break-word;
+	}
+
+	.popup__body .table-green:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}

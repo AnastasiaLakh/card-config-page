@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Section payment
+\* ------------------------------------------------------------ */
+
+.section-payment {
+	padding: 5.2rem 0rem 6.2rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 5.2rem 0rem 2.6rem;
+	}
+
+	.section__inner {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.section__content {
+		max-width: 100%;
+		flex: 0 0 100%;
+		position: relative;
+	}
+
+	h1 {
+		color: $primary-color;
+		letter-spacing: 0.61px;
+		margin-bottom: 4rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.5rem;
+		}
+	}
+}
+
+.section-payment--alt {
+	padding-bottom: 27.5rem;
+
+	@include breakpoint-down(tablet) {
+		padding-bottom: 3rem;
+	}
+}

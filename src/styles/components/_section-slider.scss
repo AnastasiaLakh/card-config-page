@@ -1,0 +1,343 @@
+/* ------------------------------------------------------------ *\
+	Section slider
+\* ------------------------------------------------------------ */
+
+.section-slider {
+	.section__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -9rem; 
+
+		@include breakpoint-down(large-desktop) {
+			margin: 0 0 0 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+
+		h2 {
+			line-height: .95;
+			color: $primary-color;
+			margin-bottom: 2rem;
+
+			@include breakpoint-down(tablet) {
+				font-size: $h3-font-size;
+			}
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+				line-height: 1.13;
+				margin: 0 auto 2rem;
+				order: 0;
+			}
+		}
+	}
+
+	.section__content {
+		max-width: 37.4%;
+		flex: 0 0 37.4%;
+		padding-top: 1rem;
+
+
+		@include breakpoint-down(tablet) {
+			max-width: 45%;
+			flex: 0 0 45%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+			order: 2;
+		}
+
+
+		ul.list-tabs {
+			list-style: none;
+			margin-bottom: 3.2rem;
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: .8rem;
+			}
+
+			li + li {
+				margin-top: 1.4rem; 
+			}
+
+
+			a {
+				font-size: $body-font-size;
+				font-weight: $font-weight-regular;
+				line-height: $h3-line-height;
+				letter-spacing: .03em;
+				color: $dark-text;
+				transition: color $t-duration;
+				display: block;
+				text-decoration: none;
+				background-color: $white-color;
+				border-radius: .4rem;
+				position: relative;
+				padding: 1.3rem 1.5rem 1.3rem 1.4rem;
+				transition: box-shadow $t-duration;
+
+				@include breakpoint-down(mobile) {
+					padding: 0 0 0 0;
+					background-color: transparent;
+				}
+
+				&:before {
+					content: '';
+					height: 100%;
+					border-radius: .4rem 0 0 .4rem;
+					background-color: $primary-color;
+					width: 4px;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					visibility: hidden; 
+					transition: opacity $t-duration, visibility $t-duration;
+				}
+
+				span {
+					font-weight: $font-weight-medium;
+
+					@include breakpoint-down(mobile) {
+						display: block;
+						margin-bottom: 1.5rem;
+
+					}	
+				}
+			}
+
+			li.is-active {
+				a {
+					box-shadow: 0px 0px 16px 11px rgba(42,44,46,0.1);
+				}
+
+				a:before {
+					opacity: 1;
+					visibility: visible;  
+				}
+
+				a {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+	.section__actions .btn {
+		min-width: 18rem;
+
+		@include breakpoint-down(mobile) {
+			min-width: 100%;
+		}
+	}
+
+	.slider {
+		max-width: 62.6%;
+		flex: 0 0 62.6%;
+		padding-left: 6rem;
+
+		@include breakpoint-down(small-desktop) {
+			padding-left: 2rem; 
+		}
+
+		@include breakpoint-down(tablet) {
+			max-width: 55%;
+			flex: 0 0 55%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+			padding-left: 0; 
+		}
+
+		.section__content {
+			display: none;
+
+			@include breakpoint-down(mobile) {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	.slider__nav {
+		max-width: 19rem;
+		background-color: $white-color;
+		border-radius: 2rem;
+		box-shadow: 0px 0px 8px 2px rgba(42,44,46,0.1);
+		position: relative;
+		padding: 1.3rem 1rem .6rem 5rem;
+		margin-bottom: 3.8rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 1.5rem auto 3rem;
+		}
+	}
+
+
+	.slider__pagination {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin-top: -.9rem; 
+
+		span {
+			display: inline-block; 
+			width: 4rem;
+			border-radius: 2rem;
+			height: 2.3rem;
+			line-height: 2.3rem;
+			text-align: center;
+			color: $dark-text;
+			font-size: $h6-font-size-mobile;
+			text-decoration: none;
+			transition: background-color $t-duration, color $t-duration;
+			background-color: transparent;
+			opacity: 1; 
+			margin: 0 0 0 0;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: $primary-color;
+			color: $white-color;			
+		}
+	}
+
+	.progress-round__wrap {
+		position: absolute;
+		top: 50%;
+		left: 1.4rem;
+		transform: translateY(-50%);
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.slider__pause {
+		a {
+			display: inline-block;
+			width: 2rem;
+			height: 2rem;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-image: url(../images/svg/ico-pause-1.svg);
+				width: .5rem;
+				height: .7rem;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				transition: opacity $t-duration, visibility $t-duration;
+			}
+
+			&.is-paused:before {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 3px 0 3px 6px;
+				border-color: transparent transparent transparent $primary-color;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+				visibility: hidden; 
+				transition: opacity $t-duration, visibility $t-duration;
+			}
+
+			&.is-paused {
+				&:after {
+					opacity: 0;
+					visibility: hidden; 
+				}
+
+				&:before {
+					opacity: 1;
+					visibility: visible; 
+				}
+			}
+
+			circle {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.progress {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.progress circle {
+  fill: transparent;
+  stroke: $primary-color;
+  stroke-width: 1;
+}
+
+/* ------------------------------------------------------------ *\
+	Slider Brands
+\* ------------------------------------------------------------ */
+
+.slider-brands {
+	position: relative; 
+
+
+	.slick-arrow {
+		position: absolute; 
+		top: 34%; 
+		transform: translateY(-50%); 
+		background: $scrollbar-primary-color;
+		width: 38px; 
+		height: 38px; 
+		border-radius: 50%; 
+		font-size: 0;
+		border: none;
+		z-index: 10; 
+
+		@include breakpoint-down(mobile) {
+			display: none !important; 
+		}
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			top: 50%; 
+			left: 50%; 
+			transform: translate(-50%, -50%); 
+			background: url(../images/svg/ico-angle-right.svg) no-repeat 0 0;
+			background-size: 100% 100%;
+			width: 7px;
+			height: 12px; 
+		}
+	}
+
+	.slick-prev {
+		left: -60px; 
+
+		&:after {
+			transform: translate(-50%, -50%) rotate(180deg); 	
+		}
+	}
+
+	.slick-next {
+		right: -60px; 
+	}
+
+
+}

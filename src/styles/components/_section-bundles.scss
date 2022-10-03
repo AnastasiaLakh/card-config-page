@@ -1,0 +1,211 @@
+/* ------------------------------------------------------------ *\
+	Section Bundles
+\* ------------------------------------------------------------ */
+
+.section-bundles {
+	padding: 7.1rem 0 0;
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 5.6rem 0 0;
+	}
+
+	.section__group {
+		padding-left: 1.9rem;
+
+		@include breakpoint-down(small-desktop) {
+			padding: 0 1rem;
+		}
+	}
+
+	.section__group + .section__group {
+		margin-top: 6.7rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 8.5rem;
+		}
+	}
+
+	.section__head h3 {
+		color: $primary-color;
+		font-weight: $font-weight-thin;
+		margin-bottom: 4.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			text-align: center;
+			margin-bottom: 6.1rem;
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Section Bundles Alt
+\* ------------------------------------------------------------ */
+
+.section-bundles--alt {
+	padding: 99px 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 26px 0 41px;
+
+	}
+
+	.section__head {
+		margin: 0 0 24px -19px;
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+			margin: 0 0 27px;
+		}
+
+		h3 {
+			font-size: $h1-font-size-mobile;
+			margin: 0;
+			letter-spacing: 0.025em;
+			font-weight: $font-weight-light;
+
+			@include breakpoint-down(mobile) {
+				font-size: $h4-font-size;
+				line-height: $h3-line-height;
+			}
+		}
+	}
+
+	.section__body {
+		margin-right: -20px;
+
+		@include breakpoint-down(large-desktop) {
+			margin-right: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0 15px;
+		}
+	}
+
+	.slider-bundles {
+		.slider__slides {
+			display: flex;
+			margin: 0 -15px;
+			max-width: calc(100% + 30px);
+			width: calc(100% + 30px);
+			grid-gap: 0;
+
+			@include breakpoint-down(small-desktop) {
+				max-width: 100%;
+				width: 100%;
+				margin: 0;
+			}
+
+			@include breakpoint-down(mobile) {
+
+			}
+
+			.slider__slide {
+				flex: 0 0 33.33%;
+				max-width: 33.33%;
+				padding: 0 15px;
+
+				@include breakpoint-down(small-desktop) {
+					flex: 1 0 auto;
+					max-width: 50%;
+					padding: 0;
+				}
+
+				@include breakpoint-down(mobile) {
+					max-width: 100%;
+				}
+
+				> div {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.section__actions {
+		text-align: center;
+		margin: 17px 61px 0 0;
+
+		@include breakpoint-down(mobile) {
+			margin: 20px 0 0;
+		}
+
+		.link {
+			font-size: $body-font-size;
+			font-weight: $font-weight-regular;
+			text-decoration: none;
+			top: 18px;
+			letter-spacing: 0.01em;
+
+			&:after {
+				display: none;
+			}
+
+			i {
+				margin-left: 4px;
+			}
+		}
+	}
+
+
+}
+
+/* ------------------------------------------------------------ *\
+	Section bundles secondary
+\* ------------------------------------------------------------ */
+
+.section-bundles--secondary {
+	padding: 7.5rem 0 9.2rem;
+
+	@include breakpoint-down(tablet) {
+		padding-bottom: 3rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 6.4rem 0 2.4rem;
+	}
+
+	.section__head h3 {
+		font-size: $h3-font-size-mobile;
+		letter-spacing: 0.06em;
+		line-height: $h3-line-height;
+		color: $black-color;
+		margin-bottom: 0;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.2rem;
+		}
+	}
+
+	.section__head {
+		padding-right: 5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4.8rem;
+
+		@include breakpoint-down(mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-right: 0;
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	.section__link {
+		text-decoration: none;
+		color: $secondary-color;
+		font-weight: $font-weight-medium;
+	}
+
+	.section__link  i {
+		margin-left: .5rem;
+		stroke: $secondary-color;
+		transition: transform .3s;
+	}
+
+	.section__link:hover i {
+		transform: translateX(2rem);
+	}
+}

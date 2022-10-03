@@ -1,0 +1,210 @@
+/* ------------------------------------------------------------ *\
+	Updates
+\* ------------------------------------------------------------ */
+
+.updates {
+	padding: 41px 0 37px; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 92px 0 54px; 
+		margin: 0 -2px; 
+	}
+
+	.updates__head {
+		margin: 0 0 24px; 
+		position: relative; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			margin: 0 30px 16px; 
+			text-align: center; 
+		}
+
+		h3 {
+			font-size: 28px; 
+			font-weight: $font-weight-light; 
+			color: $primary-color; 
+			letter-spacing: 0.025em;
+			margin: 0 0 10px; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-size: 21px; 
+				letter-spacing: 0.025em;
+				margin: 0 0 10px; 
+			}
+		}
+
+		p {
+			font-weight: $font-weight-light; 
+			letter-spacing: 0.042em;
+			margin: 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-size: $body-font-size-small; 
+				line-height: $h3-line-height; 
+				letter-spacing: 0.042em;
+				margin: 0; 
+			}
+		}
+ 
+		.link-alt {
+			position: absolute; 
+			top: 16px; 
+			right: 0; 
+			font-size: $body-font-size-small; 
+			font-weight: $font-weight-regular; 
+			color: $secondary-alt-color; 
+			letter-spacing: 0.042em;
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.updates__items {
+		> h6 {
+			margin: 0 0 14px;
+			font-size: $body-font-size-small; 
+			color: $quinary-color;  
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				margin: 0 0 7px;
+			}
+		}
+
+		+ .updates__items {
+			margin: 17px 0 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.updates__actions {
+		display: none; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			display: block; 
+			margin: 23px 0 0; 
+		}
+
+		.btn-terms {
+			padding: 0; 
+			border: none;
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Update
+\* ------------------------------------------------------------ */
+
+.update {
+	position: relative; 
+	box-shadow: 0 0 8px 0 rgba(208, 208, 208, .5);
+	padding: 17px 50px 15px 49px; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 20px 15px 15px 49px; 
+	}
+
+	> i {
+		position: absolute; 
+		top: 23px; 
+		left: 17px; 
+	}
+
+	p {
+		font-size: $body-font-size;  
+		line-height: $h3-line-height; 
+		font-weight: $font-weight-light; 
+		letter-spacing: 0.05em;
+		margin: 0; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small; 
+			line-height: 1.57; 
+			padding-right: 30px; 
+		}
+
+		strong {
+			font-weight: $font-weight-regular; 
+		}
+
+		+ .list-updates {
+			margin-top: 16px; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				margin-top: 22px; 
+				margin-left: -36px; 
+			}
+		}
+	}
+
+	.link-alt {
+		color: $secondary-alt-color; 
+		margin: 7px 0 0; 
+		font-size: $body-font-size;  
+	}
+
+	.update__btn {
+		position: absolute; 
+		top: 24px; 
+		right: 15px; 
+		background: none; 
+		border: none;
+
+		i {
+			width: 14px; 
+			height: 14px; 
+		}
+	}
+
+	.update__actions {
+		margin: 15px 0 0; 
+
+		.btn {
+			font-size: $body-font-size-small; 
+			min-width: 180px; 
+			padding: 10px 10px; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				min-width: 150px; 
+			}
+
+			+ .btn {
+				margin-left: 15px; 
+			}
+		}
+	}
+
+	+ .update {
+		margin: 10px 0 0; 
+	}	
+}

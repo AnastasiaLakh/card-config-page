@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+	Tile service
+\* ------------------------------------------------------------ */
+
+.tile-service {
+	position: relative;
+	padding-left: 7.5rem;
+	font-size: $body-font-size;
+	line-height: $h3-line-height;
+	letter-spacing: 0.6px;
+
+	@include breakpoint-down(tablet) {
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.tile__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include breakpoint-down(tablet) {
+			position: relative;
+			top: auto;
+			left: auto;
+			text-align: center;
+			margin-right: 1rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	h5 {
+		line-height: $h3-line-height;
+		margin-bottom: 1rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: $h3-line-height;
+			letter-spacing: 0.1px;
+			font-weight: $font-weight-medium;
+			margin-bottom: .8rem;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/* ------------------------------------------------------------ *\
+	Section gray
+\* ------------------------------------------------------------ */
+
+.section-gray {
+	background-color: $scrollbar-primary-color;
+	padding: 5rem 0 6.6rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 3.5rem 0rem 3.7rem;
+	}
+
+	p {
+		letter-spacing: 0.02em;
+		line-height: $h3-line-height;
+	}
+
+	.section__inner {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	.section__image {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	.section__image img {
+		@include breakpoint-down(mobile) {
+			width: 100%;
+		}
+	}
+
+	.section__content {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-left: 8.2rem;
+		padding-bottom: 3.1rem;
+
+		@include breakpoint-down(tablet) {
+			padding-left: 4rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.section__link {
+		text-decoration: none;
+		color: $secondary-color;
+	}
+
+	.section__link  i {
+		margin-left: .3rem;
+		stroke: $secondary-color;
+		transition: transform .3s;
+	}
+
+	.section__link:hover i {
+		transform: translateX(2rem);
+	}
+
+	h5 {
+		margin-bottom: 1.2rem;
+		letter-spacing: 0.03em;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: 1.25;
+			letter-spacing: 0.1px;
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	.section__actions {
+		margin-top: 5.8rem;
+	}
+}
+
+/*  sectopn gray alt  */
+
+.section-gray--alt {
+	padding: 4rem 0;
+
+	.section__inner {
+		align-items: flex-start;
+	}
+
+	.section__content {
+		order: 1;
+		padding-left: 0rem;
+		padding-bottom: 3.1rem;
+		padding-right: 6rem;
+		padding-top: 1.3rem;
+
+		@include breakpoint-down(tablet) {
+			padding-right: 4rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+			order: 2;
+		}
+	}
+
+	h1 {
+		color: $primary-color;
+		margin-bottom: 1.6rem;
+	}
+
+	.section__btn {
+		min-width: 34.1rem;
+	}
+
+	.section__image {
+		text-align: right;
+		order: 2;
+
+		@include breakpoint-down(mobile) {
+			order: 1;
+		}
+	}
+}
+
+/* secttion gray size 1 */
+
+.section-gray--size-1 {
+	padding: 6.5rem 0 6.3rem;
+
+	.section__content {
+		padding-bottom: 4.8rem;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 0;
+		}
+	}
+}

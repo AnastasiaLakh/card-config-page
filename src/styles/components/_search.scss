@@ -1,0 +1,126 @@
+/* ------------------------------------------------------------ *\
+	Search
+\* ------------------------------------------------------------ */
+
+.search {
+	position: relative; 
+	width: 35.2rem; 
+
+	h6 {
+		opacity: 0; 
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+		margin: 0 0 .9rem; 
+	}
+
+	label {
+		display: none; 
+	}
+
+	form {
+		position: relative; 
+		display: block; 
+	}
+
+	.search__field {
+		width: 100%; 
+		height: 4.8rem; 
+		border: .1rem solid $dark-text;
+		border-radius: .4rem;
+		padding: 0 2.0rem; 
+		font-weight: $font-weight-light;
+		font-size: $body-font-size;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+	}
+
+	.search__btn {
+		position: absolute; 
+		top: 50%; 
+		right: 1.3rem;
+		transform: translateY(-50%); 
+		background: none; 
+		border: none;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Search Autocomplete
+\* ------------------------------------------------------------ */
+
+.search-autocomplete {
+	position: relative; 
+
+	&:after {
+		content: ''; 
+		position: absolute; 
+		top: 50%; 
+		left: 14px; 
+		transform: translateY(-50%); 
+		background: none; 
+		border: none;
+		background: url(../images/svg/ico-search.svg) no-repeat 0 0; 
+		width: 16px; 
+		height: 16px; 
+		background-size: 100% 100%; 
+	}
+
+	form {
+		display: block; 
+
+		> div {
+			display: block !important; 
+
+			> div {
+				cursor: pointer; 
+			}
+		}
+	}
+
+	input {
+		width: 100%;
+		height: 48px;
+		border-radius: 4px;
+		background: $white-color;
+		padding: 0 20px 0 48px;
+		border: 1px solid $gray-light-color;
+		font-size: $body-font-size;
+		letter-spacing: 0.013em;
+		font-weight: $font-weight-regular;
+		color: $gray-dark-color; 
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Search Alt
+\* ------------------------------------------------------------ */
+
+.search--alt {
+	max-width: 26.8rem;
+
+	.search__field {
+		border-radius: 10rem;
+		padding: 0 4.2rem 0 2.2rem;
+		font-weight: $font-weight-medium;
+		letter-spacing: $search-letter-spacing;
+	}
+
+	.search__btn {
+		width: 3.6rem;
+		height: 3.6rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $white-color;
+		background-color: $primary-color;
+		right: .7rem; 
+	}
+
+	.search__btn svg {
+		width: 2rem; 
+		height: auto;
+	}
+}

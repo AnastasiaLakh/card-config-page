@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+	Btn ALt
+\* ------------------------------------------------------------ */
+
+.btn-alt {
+	display: inline-block;
+	border-radius: 0.4rem;
+	border: 0.1rem solid $primary-color;
+	padding: 1.9rem 4.1rem;
+	text-decoration: none;
+	font-size: $h5-font-size;
+	font-weight: $font-weight-medium;
+	color: $primary-color;
+	transition: background-color $t-duration, color $t-duration;
+
+	&:hover {
+		background-color: $primary-color;
+		color: $white-color;
+	}
+}

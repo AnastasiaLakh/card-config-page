@@ -1,0 +1,294 @@
+/* ------------------------------------------------------------ *\
+	Section Help
+\* ------------------------------------------------------------ */
+
+.section-help {
+	padding: 8.5rem 0;
+
+	@include breakpoint-down(tablet) {
+		padding: 3.5rem 0;
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 3rem 0;
+	}
+
+	h2 {
+		font-size: $h3-font-size;
+		font-weight: $font-weight-light;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $h3-font-size-mobile;
+		}
+	}
+
+	h3,
+	h2 {
+		color: $primary-color;
+		margin-bottom: 1rem;
+	}
+
+	.section__content {
+		background-color: $scrollbar-primary-color;
+		text-align: center;
+		padding: 4.5rem 2rem 5.4rem;
+	}
+
+	.section__entry {
+		max-width: 57.8rem;
+		width: 100%;
+		margin: 0 auto 2.2rem;
+		font-size: $h5-font-size;
+		line-height: $h3-line-height;
+		font-weight: $font-weight-light;
+	}
+}
+
+/*section help alt */
+
+.section-help--alt {
+	padding-bottom: 6.9rem;
+}
+
+.section-help--secondary {
+	@include breakpoint-down(mobile) {
+		padding: 3.8rem 0 2rem;
+	}
+
+	.section__content {
+		@include breakpoint-down(mobile) {
+			h3 {
+				font-size: $h3-font-size;
+				margin-bottom: 1.4rem;
+			}
+		}
+	}
+
+	.section__entry {
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: $h3-line-height;
+		}
+	}
+}
+
+/*  section help flex  */
+
+.section-help--flex {
+	position: relative;
+	background-color: transparent;
+	padding: 9.8rem 0 0;
+
+	@include breakpoint-down(tablet) {
+		padding-top: 7rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding-top: 4rem;
+	}
+
+	.section__outer {
+		background-color: $scrollbar-primary-color;
+	}
+
+	.section__inner {
+		position: relative;
+		padding: 7.6rem 0 7.2rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 5.3rem 0;
+		}
+	}
+
+	h3 {
+		font-size: $h3-font-size-mobile;
+		font-weight: $font-weight-light;
+		line-height: 1.286;
+		letter-spacing: 0.04em;
+		margin-bottom: 1.8rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1.3rem;
+		}
+	}
+
+	.section__content {
+		position: relative;
+		padding: 0;
+		background-color: transparent;
+		text-align: left;
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+	}
+
+	.section__entry {
+		letter-spacing: 0.03em;
+		margin-left: 0;
+		margin-bottom: 4.7rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			font-weight: $font-weight-light;
+			line-height: $h3-line-height;
+			max-width: 27.8rem;
+			margin: 0 auto 3.2rem;
+		}
+
+	}
+
+	.options {
+		margin-left: 0;
+
+		@include breakpoint-down(mobile) {
+			margin: 0 auto;
+		}
+	}
+
+	.section__image {
+		position: absolute;
+		bottom: 0;
+		right: -7rem;
+
+		@include breakpoint-down(tablet) {
+			display: none;
+		}
+	}
+}
+
+
+.section-help--flex-alt {
+	.section__image {
+		right: .3rem;
+		max-width: 50.2rem;
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 47rem;
+		}
+	}
+}
+
+.section-help--size-1 {
+	h3 {
+		font-size: $h3-font-size-large;
+		letter-spacing: $letter-spacing-md-s;
+		margin-bottom: .6rem; 
+
+		@include breakpoint-down(mobile) {
+			font-size: $h2-large-font-size-mobile;
+		}
+	}
+
+	.section__inner {
+		padding: 7.2rem 0 7.2rem;
+	}
+
+	.section__entry {
+		letter-spacing: $letter-spacing-xl;
+		max-width: 59.7rem;
+		margin-bottom: 5rem;
+	}
+
+	.section__image {
+		right: -2.5rem;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Section Help Def
+\* ------------------------------------------------------------ */
+
+.section-help--def {
+	padding: 0 0 30px;
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 0;
+	}
+
+	.section__content {
+		padding: 4.9rem 2rem 5.4rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 4.2rem 1rem 4rem;
+
+			h3 {
+				font-size: $h4-font-size;
+				
+				margin: 0 0 21px;
+			}
+		}
+	}
+
+	.section__entry {
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		max-width: 44.8rem;
+		margin: 0 auto 2.6rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 40px;
+		}
+
+		p {
+			letter-spacing: 0.05em;
+		}
+	}
+
+	.options {
+		max-width: 525px;
+
+		.options__item {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.section__actions {
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		padding: 16px 0;
+		text-align: center;
+		margin: 41px -48px 0;
+
+		@include breakpoint-down(large-desktop) {
+			margin: 41px 0 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 18px 0;
+			margin: 23px -15px 0;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			font-size: $body-font-size;
+			font-weight: $font-weight-regular;
+			letter-spacing: 0.01em;
+
+			> i {
+				position: relative;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				border: 1px solid $primary-color;
+				vertical-align: middle;
+				margin-right: 11px;
+
+				i {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}
+

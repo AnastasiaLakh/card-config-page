@@ -1,0 +1,93 @@
+/* ------------------------------------------------------------ *\
+	Form Contact
+\* ------------------------------------------------------------ */
+
+.form-contact {
+	max-width: 50.3rem;
+	width: 100%;
+	margin: 0 auto;
+
+	.form__row + .form__row {
+		margin-top: 3rem;
+	}
+
+	.form__cols {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1.15rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin: 0 -0.5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			margin: -1rem 0;
+		}
+	}
+
+	.form__col {
+		width: 100%;
+	}
+
+	.form__col--1of2 {
+		max-width: 50%;
+		flex: 0 0 50%;
+		padding: 0 1.15rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 0 0.5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			max-width: 100%;
+			flex: 0 0 100%;
+			padding: 1rem 0;
+		}
+	}
+
+	.form__label {
+		font-size: $h6-font-size-mobile;
+		font-weight: $font-weight-medium;
+		display: block;
+		margin-bottom: 0.8rem;
+	}
+
+	.form__textarea {
+		resize: none;
+		min-height: 13.9rem;
+		width: 100%;
+		padding: 1.4rem 1.6rem;
+		border-radius: 0.4rem;
+		border: 0.1rem solid $light-tile;
+		font-size: $h6-font-size;
+	}
+
+	.form__actions {
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+
+	@include breakpoint-down(mobile-small) {
+		.form__actions > * {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.form__btn {
+		background-color: $secondary-color;
+		color: $white-color;
+		border-color: $secondary-color;
+		padding: 1.9rem 4.9rem;
+		margin-left: 1rem;
+
+		&:hover {
+			color: $secondary-color;
+			background-color: $white-color;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			margin: 1.5rem 0 0;
+		}
+	}
+}

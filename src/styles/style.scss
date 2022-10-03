@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------ *\
+  Vendor
+\* ------------------------------------------------------------ */
+
+//@import '~vendor-name/vendor.scss/css';
+//@import "~swiper/swiper-bundle.css";
+/*@import '~magnific-popup/dist/magnific-popup.css';*/
+/*@import '~slick-carousel/slick/slick.css';*/
+//@import "../vendor/slick.css";
+//@import "../vendor/magnific-popup.css";
+
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import "generic/variables";
+@import "generic/functions";
+@import "generic/mixins";
+@import "generic/reset";
+@import "generic/fonts";
+@import "generic/base";
+@import "generic/helpers";
+
+/* ------------------------------------------------------------ *\
+	Components
+\* ------------------------------------------------------------ */
+
+//@import "_sprite.css";
+@import "components/header";
+@import "components/pagination-alt";
+@import "components/pagination";
+@import "components/section";
+@import "components/section-accordion";
+@import "components/main";
+@import "components/shell";
+@import "components/accordeon";
+@import "components/accordion-form";
+@import "components/price-alt";
+@import "components/price";
+@import "components/list-prices";
+@import "components/btn";
+
+/* ------------------------------------------------------------ *\
+	Overwrites
+\* ------------------------------------------------------------ */
+
+//@import 'overwrites/';

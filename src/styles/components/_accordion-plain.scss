@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------ *\
+	Accordion Plain
+\* ------------------------------------------------------------ */
+
+.accordion-plain {
+	.accordion__section {
+		box-shadow: 0 .1rem 0 0 $gray-alt;
+	}
+
+	.accordion__section + .accordion__section {
+		margin-top: 0;
+	}
+
+	.accordion__head {}
+
+	.accordion__head h5 {
+		color: $dark-color-alt; 
+		line-height: $line-height-xl; 
+		letter-spacing: $letter-spacing-l;
+		font-weight: $font-weight-600; 
+
+		@include breakpoint-down(mobile) {
+			font-size: $h5-font-size-mobile;
+		}
+	}
+
+	.accordion__head h5 a {
+		display: block;
+		position: relative;
+		padding: 1.7rem 1.6rem 1.5rem 3.2rem;
+		text-decoration: none;
+		transition: color $t-duration;
+
+		@include breakpoint-down(mobile) {
+			padding: 1rem 1.6rem 1rem 3.2rem;
+		}
+	}
+
+	.accordion__head h5:hover a {
+		color: $secondary-color;
+	}
+
+	.accordion__head h5 a i {
+		position: absolute;
+		top: 2.5rem; 
+		left: 0;
+		transition: transform $t-duration;
+
+		@include breakpoint-down(mobile) {
+			top: 2rem;
+		}
+	}
+
+	.accordion__section.is-active .accordion__head h5 a i {
+		transform: rotateZ(180deg);
+	}
+
+	.accordion__body {
+		padding: 1.6rem .9rem 4rem 3.2rem;
+		font-size: $body-font-size;
+		letter-spacing: $letter-spacing-xxl;
+		line-height: $line-height-big;
+		color: $gray-dark;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small;
+			padding: 1rem .9rem  1rem 3.2rem;
+		}
+	}
+
+	.accordion__body a {
+		color: $secondary-color;
+		text-decoration: underline;
+		text-decoration-color: currentColor;
+		transition: text-decoration-color $t-duration;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: transparent;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Paging
+\* ------------------------------------------------------------ */
+
+.paging {
+	list-style: none;
+
+	li {
+		display: inline-block;
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+
+	li:hover a {
+		background-color: $primary-color;
+		color: $white-color;
+	}
+
+	li.is-current a {
+		background-color: $primary-color;
+		color: $white-color;
+	}
+
+	li + li {
+		margin-left: 1rem;
+	}
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		line-height: $h3-line-height;
+		justify-content: center;
+		color: $primary-color;
+		background-color: $c-gray-7;
+		font-family: $ff-sans-serif-2;
+		font-weight: $font-weight-regular;
+		transition: color $t-duration, background-color $t-duration;
+	}
+}

@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Faq
+\* ------------------------------------------------------------ */
+
+.faq {
+	max-width: 89.5rem;
+	width: 100%;
+
+	h6 {
+		font-weight: $font-weight-medium;
+		letter-spacing: 0.028em;
+		margin-bottom: 1.7rem;
+	}
+
+	& + & {
+		margin-top: 2.8rem;
+	}
+
+	.faq__entry {
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $h6-font-size-mobile;
+		}
+	}
+}

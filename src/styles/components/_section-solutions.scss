@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	Section Solutions
+\* ------------------------------------------------------------ */
+
+.section-solutions {
+	padding: 6.8rem 0 5.4rem;
+
+	@include breakpoint-down(tablet) {
+		padding: 4.5rem 0;
+	}
+
+	.section__head {
+		text-align: center;
+		margin-bottom: 6.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.section__head h1 {
+		color: $primary-color;
+		margin-bottom: 0.3rem;
+	}
+
+	.section__head h4 {
+		margin-bottom: 1.9rem;
+	}
+}

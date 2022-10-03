@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------ *\
+	List Ratings
+\* ------------------------------------------------------------ */
+
+.list-ratings {
+	display: inline-block;
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

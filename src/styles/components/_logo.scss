@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	display: inline-block;
+	text-decoration: none;
+
+	&:focus {
+		outline: .2rem solid $c-orange-2;
+		outline-offset: .5rem;
+	}
+}

@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------ *\
+	Form waitlist
+\* ------------------------------------------------------------ */
+
+.form-waitlist {
+	.form__label {
+		padding-left: .2rem;
+		display: block;
+		font-weight: $font-weight-medium;
+		letter-spacing: 0.6px;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 0;
+			letter-spacing: 0.1px;
+		}
+	}
+
+	.form__cols {
+		display: flex;
+		flex-flow: row wrap;
+		margin: -.7rem -1.6rem;
+
+		@include breakpoint-down(mobile) {
+			margin: -.8rem 0rem;
+		}
+	}
+
+	.form__col {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: .7rem 1.6rem;
+
+		@include breakpoint-down(mobile) {
+			padding: .8rem 0rem;
+		}
+	}
+
+	.form__controls {
+		margin-top: 1.1rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: .8rem;
+		}
+	}
+
+	.form__col--1of2 {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.form__body {
+		margin-bottom: 2.9rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	.form__btn {
+		min-width: 26.8rem;
+		letter-spacing: 0.6px;
+
+		@include breakpoint-down(mobile-medium) {
+			min-width: 100%;
+			padding: 1.5rem 1.5rem;
+		}
+	}
+}

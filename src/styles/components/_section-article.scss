@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\
+	Section Article
+\* ------------------------------------------------------------ */
+
+.section-article {
+	padding: 2rem 0 4.4rem;
+
+	.section__head {
+		color: $primary-color;
+		padding-left: .3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.section__head h5 {
+		letter-spacing: 0.03em;
+	}
+}

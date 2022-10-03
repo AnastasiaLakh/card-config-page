@@ -1,0 +1,52 @@
+/* ------------------------------------------------------------ *\
+	Nav Utilities
+\* ------------------------------------------------------------ */
+
+.nav-utilities {
+	ul {
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		position: relative; 
+	}
+
+	li + li {
+		margin-left: 2.1rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 1rem;
+		}
+	}
+
+	li:hover svg {
+		filter: drop-shadow(0px 0px 11px #4b286d);
+	}
+
+	a {
+		text-decoration: none;
+		display: inline-block; 
+		position: relative;
+
+		&:focus {
+			outline: .2rem solid $c-orange-2;
+			outline-offset: .5rem;
+		}
+
+		span {
+			position: absolute; 
+			top: -16px; 
+			right: -14px; 
+			font-size: $body-font-size; 
+			font-weight: $font-weight-regular; 
+			color: $white-color; 
+			width: 24px; 
+			height: 24px; 
+			border-radius: 50%; 
+			background: $primary-color; 
+			line-height: 24px; 
+			text-align: center; 
+		}
+	}
+}

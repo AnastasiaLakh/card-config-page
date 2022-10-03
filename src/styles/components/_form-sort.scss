@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Form Sort
+\* ------------------------------------------------------------ */
+
+.form-sort {
+	.form__label {
+		display: block;
+		margin-bottom: 1.1rem;
+		font-weight: $font-weight-medium;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $h6-font-size-mobile;
+			margin-bottom: 1.4rem;
+		}
+	}
+
+	.form__notice {
+		margin-top: 2.2rem;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.047em;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $body-font-size-small-mobile;
+			margin-top: 2.7rem;
+		}
+	}
+}

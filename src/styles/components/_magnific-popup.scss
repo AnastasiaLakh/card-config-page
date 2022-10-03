@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Magnific popup
+\* ------------------------------------------------------------ */
+
+.mfp-bg {
+	background-color: $white-color;
+	opacity: .94; 
+
+}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+	color: $dark-text;
+	font-size: $h1-font-size;
+	margin-top: -2rem; 
+}
+
+.mfp-figure:after {
+	display: none; 
+}

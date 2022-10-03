@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------ *\
+	List Basic
+\* ------------------------------------------------------------ */
+
+.list-basic {
+	list-style: none;
+	li {
+		color: $primary-color;
+		font-size: $h6-font-size;
+		font-weight: $font-weight-medium;
+	}
+
+	li + li {
+		margin-top: 1rem;
+	}
+}

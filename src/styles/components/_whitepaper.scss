@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------ *\
+	Whitepaper
+\* ------------------------------------------------------------ */
+
+.whitepaper {
+	font-size: $h5-font-size;
+	line-height: $h3-line-height;
+	letter-spacing: 0.012em;
+
+	@include breakpoint-down(mobile) {
+		font-size: $h6-font-size;
+		line-height: $h3-line-height;
+	}
+
+	.whitepaper__body {
+		position: relative;
+		padding-bottom: 13rem;
+		margin-left: 9.2rem;
+
+		@include breakpoint-down(tablet) {
+			padding-bottom: 7rem;
+			margin-left: 4rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
+	}
+
+	.whitepaper__body:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		max-width: 92rem;
+		height: 3.3rem;
+		background-image: url(../images/temp/gradient3.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		@include breakpoint-down(mobile) {
+			background-size: contain;
+		}
+	}
+
+	.whitepaper__head {
+		max-width: 74rem;
+		margin-left: 9.5rem;
+		margin-bottom: 4.4rem;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 4rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 2.8rem;
+	}
+
+	.whitepaper__body p {
+		max-width: 73.6rem;
+	}
+
+	.whitepaper__image {
+		margin-bottom: 6.4rem;
+	}
+
+	h5 {
+		letter-spacing: 0.03em;
+		margin-bottom: .5rem;
+	}
+
+	h1 {
+		letter-spacing: 0;
+	}
+
+	h3 {
+		font-size: $h3-font-size-mobile;
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+		letter-spacing: 0.04em;
+		max-width: 76.2rem;
+		margin-bottom: 4rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $h4-font-size;
+		}
+	}
+
+	.whitepaper__foot {
+		max-width: 77rem;
+		margin: 0 auto;
+		display: flex;
+		padding: 4.8rem 0 0;
+	}
+
+	.whitepaper__foot-content {
+		flex: 0 0 51%;
+		max-width: 51%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.whitepaper__foot-image {
+		flex: 0 0 49%;
+		max-width: 49%;
+		padding-left: 1rem;
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+
+	.whitepaper__foot h5 {
+		line-height: $h3-line-height;
+		margin-bottom: 4.2rem;
+	}
+
+	.whitepaper__btn {
+		border-radius: .5rem;
+		letter-spacing: 0.01em;
+		padding: 1.1rem 2.4rem;
+	}
+}

@@ -1,0 +1,110 @@
+/* ------------------------------------------------------------ *\
+	Boxes
+\* ------------------------------------------------------------ */
+
+.boxes {
+
+}
+
+.boxes--grid {
+	background-color: $white-color;
+	box-shadow: 0 0 1.6rem rgb(213 213 213 / 50%);
+
+	.boxes__head {
+		color: $primary-color;
+		padding: 2rem 2.5rem 0;
+		margin-bottom: 2rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 2rem 1.5rem 0;
+		}
+	}
+
+	.boxes__head h5 {
+		padding-bottom: 1.8rem;
+		border-bottom: .1rem solid $border-color;
+		letter-spacing: 0.03em;
+	}
+
+	.boxes__inner {
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		padding: 0 2.2rem; 
+
+		@include breakpoint-down(tablet) {
+			padding: 0;
+		}
+	}
+
+	.boxes__inner .box {
+		flex: 0 0 25%;
+		max-width: 25%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.boxes__actions {
+		background-color: $scrollbar-primary-color; 
+		color: $secondary-color; 
+		padding: 2rem 2.5rem;
+	}
+
+	.boxes__link {
+		text-decoration: none;
+	}
+
+	.boxes__link i {
+		margin-left: .4rem;
+		margin-top: -.4rem;
+		transition: margin .4s;
+	}
+
+	.boxes__link:hover i {
+		margin-left: 4.4rem;
+	}
+
+	.box + .box {
+		margin-top: 0;
+	}
+
+	.box + .box .box__content {
+		@include breakpoint-down(mobile-medium) {
+			border-top: .1rem solid $border-color;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0; 
+			top: 1.8rem;
+			width: .1rem; 
+			height: 9.5rem;
+			background-color: $border-color; 
+
+			@include breakpoint-down(mobile) {
+				display: none;
+			}
+		}
+	}
+
+	.box:nth-child(even) .box__content {
+		&:before {
+			@include breakpoint-down(mobile) {
+				display: block;
+			}
+
+			@include breakpoint-down(mobile-medium) {
+				display: none;
+			}
+		}
+	}
+}

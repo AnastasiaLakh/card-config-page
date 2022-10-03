@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------ *\
+	Section tabs
+\* ------------------------------------------------------------ */
+
+.section-slider {
+	background-color: $scrollbar-primary-color;
+	padding: 6.8rem 0 0;
+
+	@include breakpoint-down(large-desktop) {
+		padding: 6rem 0 3rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 5.4rem 0;
+	}
+}

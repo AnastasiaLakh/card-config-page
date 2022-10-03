@@ -1,0 +1,737 @@
+/* ------------------------------------------------------------ *\
+	Icons
+\* ------------------------------------------------------------ */
+
+i[class^="ico-"] {
+	display: inline-block;
+	vertical-align: middle;
+	transition: transform $t-duration;
+
+	img,
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: filter $t-duration, opacity $t-duration, stroke $t-duration,
+			fill $t-duration;
+	}
+}
+
+.ico-search {
+	stroke: $primary-color;
+}
+
+.ico-cart path {
+	fill: $primary-color;
+}
+
+.ico-chevron-down {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: $primary-color;
+	padding: 1.1rem;
+}
+
+.ico-chevron-right-alt {
+	stroke: $primary-color;
+}
+
+
+.ico-x {
+	position: relative;
+	width: 24px;
+	height: 24px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		width: 100%;
+		height: 1px;
+		background: $black-color;
+	}
+
+	&:after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+.ico-x--purple {
+	width: 3.2rem;
+	height: 3.2rem;
+
+	&:before,
+	&:after {
+		height: 2px;
+		background-color: $primary-color;
+	}
+}
+
+.ico-pen {
+	background: url(../images/svg/ico-pen.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.0rem;
+	height: 2.0rem;
+}
+
+.ico-trash {
+	background: url(../images/svg/ico-trash.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.8rem;
+	height: 2.3rem;
+}
+
+.ico-angle-down {
+	background: url(../images/svg/ico-angle-down.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.2rem;
+	height: .7rem;
+}
+
+.ico-angle-down-white {
+	background: url(../images/svg/ico-angle-down-white.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.2rem;
+	height: .7rem;
+}
+
+.ico-circle-check {
+	background: url(../images/svg/ico-circle-check.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.ico-angle-right {
+	background: url(../images/svg/ico-angle-right.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: .7rem;
+	height: 1.2rem;
+}
+
+.ico-clock-alt {
+	background: url(../images/svg/ico-clock-alt.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.ico-dots {
+	background: url(../images/svg/ico-dots.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: .4rem;
+	height: 1.8rem;
+
+	&--large {
+		background: url(../images/svg/ico-dots-large.svg) no-repeat 0 0;
+		width: 26px; 
+		height: 6px; 
+	}
+}
+
+.ico-location {
+	background: url(../images/svg/ico-location.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.ico-search-purple {
+	background: url(../images/svg/ico-search-purple.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2rem;
+	height: 2rem;
+}
+
+.ico-arrows {
+	background: url(../images/svg/ico-arrows.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2rem;
+	height: 1.9rem;
+}
+
+.ico-profile {
+	background: url(../images/temp/ico-profile.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 6.2rem;
+	height: 6.2rem;
+}
+
+.ico-email {
+	background: url(../images/svg/ico-email.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.ico-message {
+	background: url(../images/svg/ico-message.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.ico-info {
+	background: url(../images/svg/ico-info.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.0rem;
+	height: 2.0rem;
+}
+
+.ico-sort {
+	background: url(../images/svg/ico-sort.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.3rem;
+	height: 2.4rem;
+}
+
+.ico-download {
+	background: url(../images/svg/ico-download.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.ico-angle-down-alt {
+	background: url(../images/svg/ico-angle-down-alt.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.0rem;
+	height: .8rem;
+}
+
+.ico-search-alt {
+	background: url(../images/svg/ico-search-alt.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.ico-angle-down-def {
+	background: url(../images/svg/ico-angle-down-def.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.2rem;
+	height: .8rem;
+}
+
+.ico-angle-left-def {
+	background: url(../images/svg/ico-angle-left-def.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: .7rem;
+	height: 1.2rem;
+}
+
+.ico-angle-left-alt {
+	background: url(../images/svg/ico-angle-down-purple.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.2rem;
+	height: .7rem;
+	transform: rotate(90deg); 
+}
+
+.ico-angle-right-def {
+	background: url(../images/svg/ico-angle-right-def.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: .7rem;
+	height: 1.2rem;
+}
+
+.ico-label {
+	background: url(../images/svg/ico-label.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2.4rem;
+	height: 2.5rem;
+}
+
+.ico-success {
+	background: url(../images/svg/ico-success.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.ico-arrows-alt {
+	background: url(../images/svg/ico-arrows-alt.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.ico-avard {
+	background: url(../images/svg/ico-avard.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 3.2rem;
+	height: 5.5rem;
+}
+
+.ico-lamp {
+	background: url(../images/svg/ico-lamp.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2rem;
+	height: 3rem;
+}
+
+.ico-circle {
+	background: url(../images/svg/ico-circle.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 29px;
+	height: 27px;
+}
+
+.ico-write {
+	background: url(../images/svg/ico-write.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 30px;
+	height: 30px;
+}
+
+.ico-eye-line {
+	background: url(../images/svg/ico-eye-line.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+}
+
+.ico-star--r {
+	background: url(../images/svg/ico-star-r.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 17px;
+	height: 16px;
+}
+
+.ico-star-yellow {
+	background: url(../images/svg/ico-star-yellow.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 17px;
+	height: 16px;
+}
+
+.ico-star {
+	background: url(../images/svg/ico-star.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 17px;
+	height: 16px;
+}
+
+.ico-settings {
+	background: url(../images/temp/ico-settings.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 32px;
+	height: 32px;
+}
+
+.ico-filter {
+	background: url(../images/temp/ico-filter.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+}
+
+.ico-rocket {
+	background: url(../images/temp/ico-rocket.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 32px;
+	height: 32px;
+}
+
+.ico-explore {
+	background: url(../images/temp/ico-explore.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 32px;
+	height: 32px;
+}
+
+.ico-angle-right-green {
+	background: url(../images/svg/ico-angle-right-green.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 7px;
+	height: 11px;
+}
+
+.ico-question {
+	background: url(../images/svg/ico-question.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 38px;
+	height: 38px;
+}
+
+.ico-mail-r {
+	background: url(../images/svg/ico-mail-r.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 38px;
+	height: 26px;
+}
+
+.ico-message-r {
+	background: url(../images/svg/ico-message-r.svg) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 39px;
+	height: 35px;
+}
+
+
+
+.ico-layers-small-1,
+.ico-layers-small { 
+	background-image: url(../images/svg/ico-layers-small.svg); 
+	width: 24px; 
+	height: 21px; 
+}
+
+.ico-layers-small-1 {
+	background-image: url(../images/svg/ico-layers-small-1.svg); 
+}
+
+.ico-clients-1,
+.ico-clients { 
+	background-image: url(../images/svg/ico-clients.svg); 
+	width: 24px; 
+	height: 16px; 
+}
+
+.ico-clients-1 {
+	background-image: url(../images/svg/ico-clients-1.svg); 
+}
+
+.ico-sales-1,
+.ico-sales { 
+	background-image: url(../images/svg/ico-sales.svg); 
+	width: 15px; 
+	height: 19px; 
+}
+
+.ico-sales-1 {
+	background-image: url(../images/svg/ico-sales-1.svg); 
+}
+
+.ico-cash-1,
+.ico-cash { 
+	background-image: url(../images/svg/ico-cash.svg); 
+	width: 22px; 
+	height: 22px; 
+}
+
+.ico-cash-1 {
+	background-image: url(../images/svg/ico-cash-1.svg); 
+}
+
+.ico-digital-1,
+.ico-digital { 
+	background-image: url(../images/svg/ico-digital.svg); 
+	width: 23px; 
+	height: 23px; 
+}
+
+.ico-digital-1 {
+	background-image: url(../images/svg/ico-digital-1.svg); 
+}
+
+.ico-clock-small-1,
+.ico-clock-small { 
+	background-image: url(../images/svg/ico-clock-small.svg); 
+	width: 24px; 
+	height: 24px; 
+}
+
+.ico-clock-small-1 {
+	background-image: url(../images/svg/ico-clock-small-1.svg); 
+}
+
+.ico-layers { 
+	background-image: url(../images/svg/ico-layers.svg); 
+	width: 36px; 
+	height: 32px; 
+	background-size: 100% 100%; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		width: 24px;
+		height: 21px;
+	}
+}
+
+.ico-users { 
+	background-image: url(../images/svg/ico-users.svg); 
+	width: 24px; 
+	height: 16px; 
+}
+
+.ico-pay { 
+	background-image: url(../images/svg/ico-pay.svg); 
+	width: 24px; 
+	height: 24px; 
+}
+
+.ico-total { 
+	background-image: url(../images/svg/ico-total.svg); 
+	width: 24px; 
+	height: 24px; 
+}
+
+.ico-clock-r { 
+	background-image: url(../images/svg/ico-clock-r.svg); 
+	width: 23px; 
+	height: 23px; 
+}
+
+.ico-flag-red { 
+	background-image: url(../images/svg/ico-flag-red.svg); 
+	width: 11px; 
+	height: 16px; 
+}
+
+.ico-direction { 
+	background-image: url(../images/svg/ico-direction.svg); 
+	width: 15px; 
+	height: 15px; 
+}
+
+.ico-award { 
+	background-image: url(../images/svg/ico-award.svg); 
+	width: 16px; 
+	height: 16px; 
+}
+
+.ico-connection { 
+	background-image: url(../images/svg/ico-connection.svg); 
+	width: 70px; 
+	height: 62px; 
+}
+
+.ico-brain { 
+	background-image: url(../images/svg/ico-brain.svg); 
+	width: 70px; 
+	height: 70px; 
+}
+
+.ico-arrow-alt {
+	background-image: url(../images/temp/ico-arrow-alt.png);    
+	background-size: 100% 100%; 
+    width: 16px;
+    height: 14px;
+}
+
+.ico-bar-chart {
+	background-image: url(../images/temp/ico-bar-chart.png);    
+	background-size: 100% 100%; 
+    width: 36px;
+    height: 42px;
+}
+
+.ico-bag {
+	background-image: url(../images/temp/ico-bag.png);    
+	background-size: 100% 100%; 
+    width: 47px;
+    height: 44px;
+}
+
+.ico-siren {
+	background-image: url(../images/temp/ico-siren.png);    
+	background-size: 100% 100%; 
+    width: 36px;
+    height: 36px;
+}
+
+.ico-community {
+	background-image: url(../images/temp/ico-community.png);    
+	background-size: 100% 100%; 
+    width: 36px;
+    height: 36px;
+}
+
+.ico-chat {
+	background-image: url(../images/temp/ico-chat.png);    
+	background-size: 100% 100%; 
+    width: 28px;
+    height: 24px;
+}
+
+.ico-play {
+	background-image: url(../images/svg/ico-play.svg);    
+	background-size: 100% 100%; 
+	width: 84px;
+	height: 84px;
+}
+
+.ico-message-alt {
+	background-image: url(../images/svg/ico-message-alt.svg);    
+	background-size: 100% 100%; 
+	width: 16px;
+	height: 16px;
+}
+
+.ico-stamp {
+	background-image: url(../images/svg/ico-stamp.svg);    
+	background-size: 100% 100%; 
+	width: 16px;
+	height: 15px;
+}
+
+.ico-shield-yellow {
+	background-image: url(../images/svg/ico-shield-yellow.svg);    
+	background-size: 100% 100%; 
+	width: 10px;
+	height: 14px;
+}
+
+.ico-shield-brown {
+	background-image: url(../images/svg/ico-shield-brown.svg);    
+	background-size: 100% 100%; 
+	width: 10px;
+	height: 14px;
+}
+
+.ico-home {
+	background-image: url(../images/svg/ico-home.svg);    
+	background-size: 100% 100%; 
+	width: 45px;
+	height: 48px;
+}
+
+.ico-arrow-big {
+	background-image: url(../images/svg/ico-arrow-bog.svg);    
+	background-size: 100% 100%; 
+	width: 48px;
+	height: 48px;
+}
+
+.ico-lightbulb,
+.ico-play-alt,
+.ico-shop,
+.ico-receipt,
+.ico-settings-alt,
+.ico-lock,
+.ico-administration,
+.ico-support {
+	width: 3.3rem;
+	height: 3.2rem;
+}
+
+.ico-arrow-right {
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.ico-chevron-down-alt {
+	width: 1.2rem;
+	height: .7rem;
+}
+
+.ico-cart-alt {
+	width: 2.3rem;
+	height: 2.2rem;
+}
+
+.ico-cart--superfix {
+	width: 3.4rem;
+	height: 3.4rem;
+
+	path {
+		fill: none;
+	}
+}
+
+.ico-globe {
+	svg {
+		width: 3rem;
+		height: auto;
+	}
+}
+
+.ico-globe {
+	svg {
+		width: 3.2rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-board {
+	svg {
+		width: 3.2rem;
+		height: auto;
+	}
+}
+
+.ico-broadband {
+	svg {
+		width: 3.2rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-security {
+	svg {
+		width: 3.2rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-cloud-alt {
+	svg {
+		width: 3.4rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-server {
+	svg {
+		width: 3.5rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-chat-purple {
+	svg {
+		width: 7.2rem;
+		height: auto;
+	}
+}
+
+.ico-dialog {
+	svg {
+		width: 3.4rem;
+		height: auto;
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}
+
+.ico-backup {
+	svg {
+		width: 3.2rem;
+		height: auto; 
+
+		@include breakpoint-down(mobile) {
+			width: 2.4rem;
+		}
+	}
+}

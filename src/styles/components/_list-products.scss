@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	List Products
+\* ------------------------------------------------------------ */
+
+.list-products {
+	list-style: none;
+	min-height: 5rem;
+
+	li {
+		display: inline-block;
+	}
+
+	li:hover a {
+		transform: scale(1.1);
+	}
+
+	li + li {
+		margin-left: 2.6rem;
+	}
+
+	a {
+		display: block;
+		transition: transform 0.5s;
+	}
+}
+
+/*  List PRoducts Alt */
+
+.list-products--alt {
+	display: flex;
+	flex-flow: row wrap;
+	margin: -1.4rem -2.3rem;
+
+	li {
+		padding: 1.4rem 2.3rem;
+	}
+
+	li + li {
+		margin: 0;
+	}
+}

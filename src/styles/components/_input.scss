@@ -1,0 +1,118 @@
+/* ------------------------------------------------------------ *\
+	Input
+\* ------------------------------------------------------------ */
+
+.input {
+	position: relative; 
+
+	input {
+		border: .1rem solid $quinary-color;
+		border-radius: 0;
+		background-color: transparent;
+		padding: 1.1rem 1.2rem; 
+		font-size: $body-font-size;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.input__message {
+		position: absolute;
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		border: .1rem solid $error-color;
+		background-color: $beige-color; 
+		padding: 1rem 1.5rem 1rem 1.2rem;
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		letter-spacing: 0.03em;
+	}
+
+	.input__message p {
+		margin-bottom: 0; 
+	}
+
+	&.error input {
+		background-color: $beige-color; 
+		border-color: $error-color;
+	}
+
+	&.error .input__message {
+		display: flex;
+	}
+}
+
+.input--count {
+	position: relative;
+	display: flex;
+	align-items: center;
+	--input-width: 7.2rem;
+
+	@include breakpoint-down(mobile) {
+		--input-width: 8rem;
+	}
+
+	input {
+		max-width: var(--input-width);
+		padding: 1.1rem 3.3rem 1.1rem 1.2rem;
+		text-align: right;
+	}
+
+	label {
+		margin-left: 1.7rem; 
+		font-size: $tiny-font-size;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include breakpoint-down(mobile) {
+			margin-left: .8rem;
+			text-transform: none;
+		}
+	}
+
+	.input__controls {
+		position: absolute;
+		top: 0; 
+		left: var(--input-width); 
+		height: 100%;
+		transform: translateX(-100%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: .5rem .8rem;
+
+	}
+
+	.input__controls i {
+		border-bottom: 1rem solid $black-color; 
+		border-left: .5rem solid transparent; 
+		border-right: .5rem solid transparent; 
+
+		&:last-child {
+			transform: rotateZ(180deg);
+		}
+	}
+
+	.input__controls i + i {
+		margin-top: 0.8rem; 
+	}
+
+	.input__message-icon {
+		display: none;
+		margin-left: 1.9rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 1.1rem;
+		}
+	}
+
+	&.error .input__message-icon {
+		display: inline-block;
+		font-style: normal; 
+	}
+}

@@ -1,0 +1,127 @@
+/* ------------------------------------------------------------ *\
+	Popup
+\* ------------------------------------------------------------ */
+
+.popup {
+	border: 0.1rem solid $lighter-color;
+	max-width: 70rem;
+	width: 100%;
+	border-radius: 0.4rem;
+	background-color: $white-color;
+	margin: 0 auto;
+	position: relative;
+	padding: 6.1rem 3rem 5rem;
+	box-shadow: 0px 0px 10px $border-color;
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 5rem 1.5rem;
+	}
+
+	h3 {
+		font-size: $h3-font-size-mobile;
+		font-weight: $font-weight-regular;
+		color: $primary-color;
+		text-align: center;
+		margin-bottom: 3.4rem;
+	}
+
+	.popup__close {
+		position: absolute;
+		top: 2.7rem;
+		right: 3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			top: 2rem;
+			right: 2rem;
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Popup Small
+\* ------------------------------------------------------------ */
+
+.popup-small {
+	background: $white-color;
+	box-shadow: 2px 0 8px 0 rgba(0, 0, 0, .5);
+	padding: 34px 32px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .4s, visibility .4s;
+	position: fixed;
+	top: 118px;
+	left: 50%;
+	width: 464px;
+	margin-left: 109px;
+	z-index: 1000;
+
+	@media(max-width: 1151px){
+		margin-left: 0;
+		left: auto;
+		right: 15px;
+	}
+
+	@include breakpoint-down(mobile) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		margin-top: 0;
+		z-index: 100002;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.popup__head {
+		position: relative;
+		margin: 0 0 36px;
+
+		h5 {
+			font-weight: $font-weight-regular;
+			letter-spacing: 0.04em;
+		}
+
+		.js-popup-alt {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+	}
+
+	&.is-visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.popup-small--cart {
+	width: 500px;
+	padding: 38px 48px 44px;
+	border-radius: .4rem;
+	box-shadow: 0px 0px 12px rgba(10, 15, 18, 0.12);
+
+	@include breakpoint-down(mobile) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		margin-top: 0;
+		z-index: 100002;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.popup__head {
+		padding-bottom: 1.8rem;
+		border-bottom: solid .1rem $border-color;
+	}
+
+	.popup__head .js-popup-alt {
+		top: 0;
+		transform: none;
+	}
+}

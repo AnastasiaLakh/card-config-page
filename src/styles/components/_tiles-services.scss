@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------ *\
+	Tiles services
+\* ------------------------------------------------------------ */
+
+.tiles-services {
+	.tiles__items {
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0rem -2.5rem;
+
+		@include breakpoint-down(tablet) {
+			margin: 0rem -1.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: -1.6rem 0rem;
+		}
+	}
+
+	.tiles__item {
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+		padding: 0rem 2.5rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 0rem 1.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 1.6rem 0rem;
+		}
+	}
+}
+
+.tiles-services--alt {
+	.tiles__items {
+		margin-right: -1rem; 
+
+		@include breakpoint-down(tablet) {
+			margin: 0rem -1.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: -1.6rem 0rem;
+		}
+	}
+
+	.tile-service {
+		padding-left: 6.6rem;
+
+		@include breakpoint-down(tablet) {
+			padding-left: 0;
+		}
+	}
+
+	.tile-service h5 { 
+		margin-bottom: 1.5rem;
+	}
+
+	.tile-service p {
+		letter-spacing: 0.02em;
+	} 
+
+	.tile-service .list-checked--def {
+		font-size: $body-font-size;
+	}
+
+	.tile-service .list-checked--def li {
+		font-size: $body-font-size;
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			justify-content: center;
+		}
+	}
+
+	.tile-service .list-checked--def li + li {
+		margin-top: .9rem;
+	}
+}

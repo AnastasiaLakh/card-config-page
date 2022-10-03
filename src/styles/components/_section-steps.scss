@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+	Section Steps
+\* ------------------------------------------------------------ */
+
+.section-steps {
+	padding: 1rem 0;
+
+	.section__inner {
+		background-color: $c-gray-5;
+		padding: 2.3rem 0 2.4rem;
+		margin-top: 1.6rem;
+		border-top: 0.1rem solid $border-color;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 1.1rem;
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Section Steps Alt
+\* ------------------------------------------------------------ */
+
+.section-steps--alt {
+	border-bottom: 1px solid $border-color;
+	padding: 1rem 0 1.2rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.6rem 0 1.6rem;
+	}
+
+	.link-back span {
+		margin-left: 1.5rem;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	section steps secondary
+\* ------------------------------------------------------------ */
+
+.section-steps--secondary {
+	padding: 0;
+}
+
+/*  section steps main  */
+
+.section-steps--main {
+	padding: 0;
+
+	.section__inner {
+		padding: 7.7rem 0rem 7.6rem;
+		margin-top: 0;
+		border: none;
+
+		@include breakpoint-down(mobile) {
+			padding: 4.9rem 0 8.3rem;
+		}
+	}
+}

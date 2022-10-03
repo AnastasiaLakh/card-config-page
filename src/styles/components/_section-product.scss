@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Section Product
+\* ------------------------------------------------------------ */
+
+.section-product {
+	padding: 0.8rem 0 4rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 1.4rem 0 0rem;
+	}
+
+	.section__body {
+		padding-top: 2.9rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding-top: 3.8rem;
+		}
+	}
+}
+
+/*  section product alt  */
+
+.section-product--alt {
+	padding: 8rem 0rem 6rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0;
+	}
+}
+
+.section-product--alt-size-1 {
+	padding-bottom: 6.5rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0;
+	}
+}

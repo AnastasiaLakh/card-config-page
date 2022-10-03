@@ -1,0 +1,129 @@
+/* ------------------------------------------------------------ *\
+	Section partner
+\* ------------------------------------------------------------ */
+
+.section-partner {
+	padding: 3rem 0 4rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1rem 0 2rem;
+	}
+
+	.section__head {
+		text-align: center;
+		margin-bottom: 6rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 3rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
+
+		h1,
+		h2 {
+			margin-bottom: 1.9rem;
+			color: $primary-color;
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+			}
+		}
+
+		h2 {
+			font-weight: $font-weight-thin;
+		font-size: $h1-font-size;  
+		line-height: $h1-line-height;
+		font-family: $ff-sans-serif-2;  
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+			}
+		}
+
+		h3 {
+			font-size: $h4-font-size;
+			letter-spacing: 0.0085em;
+			font-weight: $font-weight-light;
+
+			@include breakpoint-down(mobile-small) {
+				font-size: $h6-font-size;
+			}
+		}
+	}
+}
+
+/*  section partner secodnary  */
+
+.section-partner--secondary {
+	text-align: center;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.8rem 0 2rem;
+	}
+
+	.section__head {
+		margin-bottom: 4rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 3rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.8rem;
+		}
+	}
+
+	.section__head h1 {
+		margin-bottom: 1.6rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $h4-font-size;			
+			letter-spacing: 0.5px;
+			margin-bottom: 2rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 30rem;
+			margin: 0 auto 2rem;
+		}
+	}
+
+	.section__entry {
+		font-weight: $font-weight-light;
+		font-size: $h4-font-size;		
+		letter-spacing: 0.031em;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: $h3-line-height;
+			max-width: 29rem;
+			margin: 0 auto;
+		}
+	}
+
+	.section__link {
+		color: $primary-color;
+		font-weight: $font-weight-regular;
+		text-decoration: none;
+	}
+
+	.section__link .ico-chevron-right {
+		margin-left: .3rem;
+		font-weight: $font-weight-light;
+		stroke: $primary-color;
+	}
+
+	.section__link:hover .ico-chevron-right {
+		transform: translateX(2rem);
+	}
+
+	.section__actions {
+		padding-top: 5.1rem;
+
+		@include breakpoint-down(mobile) {
+			padding-top: 4.8rem;
+		}
+	}
+}

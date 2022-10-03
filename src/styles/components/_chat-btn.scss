@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------ *\
+	Chat Btn
+\* ------------------------------------------------------------ */
+
+.chat-btn {
+	position: fixed;
+	right: 0;
+	top: 34.9rem;
+	z-index: 1001;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 9.5rem;
+	height: 8.3rem;
+	padding-left: 1rem;
+	color: $white-color;
+	background-color: $secondary-color;
+	border-top-left-radius: 4rem;
+	border-bottom-left-radius: 4rem;
+	transition: width 0.7s;
+
+	@include breakpoint-down(mobile) {
+		width: 6.5rem;
+		top: 25rem;
+	}
+
+	&:hover {
+		width: 13rem;
+
+		@include breakpoint-down(mobile-medium) {
+			width: 8rem;
+		}
+	}
+
+	img {
+		display: block;
+		margin-bottom: 0.1rem;
+	}
+
+	span {
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+	}
+}

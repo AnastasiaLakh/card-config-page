@@ -1,0 +1,225 @@
+/* ------------------------------------------------------------ *\
+	Select
+\* ------------------------------------------------------------ */
+
+.select {
+	position: relative;
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	select {
+		appearance: none;
+		width: 100%;
+		padding: 1.4rem 1.6rem;
+		border-radius: 0.4rem;
+		border: 0.1rem solid $light-tile;
+		font-size: $h6-font-size;
+		background-image: url(../images/svg/ico-chevron-down.svg);
+		background-repeat: no-repeat;
+		background-position: center right 1.7rem;
+		background-color: $white-color;
+	}
+}
+
+/* Select Alt */
+
+.select--alt {
+	max-width: 32.3rem;
+	width: 100%;
+
+	@include breakpoint-down(mobile-medium) {
+		max-width: 100%;
+	}
+
+	select {
+		border: 0.1rem solid $dark-text;
+		border-radius: 0.4rem;
+		padding: 1.6rem 1.6rem;
+		font-family: $ff-sans-serif-2;
+		font-weight: $font-weight-regular;
+		font-size: $body-font-size;
+		background-image: url(../images/svg/ico-chevron-down-green.svg);
+	}
+
+	option {
+		font-size: $body-font-size;
+	}
+}
+
+/*  select secodnary  */
+
+.select--secondary {
+	select {
+		font-size: $body-font-size;
+		padding: 1.4rem 1.7rem;
+		border-radius: 0.4rem;
+		border: 0.1rem solid $dark-text;
+		background-image: url(../images/svg/ico-chevron-down-2.svg);
+		color: $dark-text;
+	}
+}
+
+
+/*  Select Praimry  */
+.select-container {
+	> h6 {
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+		margin: 0 0 8px; 
+	}
+}
+
+.select--primary {
+	select {
+		border: 1px solid $dark-text;
+		border-radius: 4px;
+		font-weight: $font-weight-light;
+		font-size: $body-font-size;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+		background-size: 12px 7px; 
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Select Dropdown
+\* ------------------------------------------------------------ */
+
+.select-dropdown {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%; 
+		right: 1.6rem;
+		transform: translateY(-50%);
+		border-top: 1.2rem solid $dark-text; 
+		border-left: .6rem solid transparent;
+		border-right: .6rem solid transparent;
+		user-select: none;
+		transition: transform $t-duration;
+		pointer-events: none;
+	}
+
+	a {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: .8rem;
+		border: .1rem solid $quinary-color;
+		max-width: 100%;
+		width: 100%;
+		padding: .3rem 2.8rem .3rem 1.2rem;
+		letter-spacing: 0.02em;
+		text-decoration: none;
+		transition: border-radius $t-duration;
+		background-color: $white-color; 
+		min-height: 4.8rem;
+	}
+
+	a p {
+		font-size: $body-font-size-small;
+	}
+	
+	a span {
+		display: none;
+	}
+
+	.select__error {
+		position: absolute;
+		top: 50%;
+		right: 3.8rem;
+		transform: translateY(-50%);  
+		font-size: 0;
+		display: none;
+		pointer-events: none;
+	}
+
+	&.error .select__error {
+		display: inline-block;
+	}
+
+	&.error a {
+		border-color: $error-color;
+		background-color: $beige-color; 
+	}
+
+	ul {
+		list-style: none;
+		position: absolute;
+		z-index: 2; 
+		top: 0;
+		left: 0; 
+		width: 100%; 
+		opacity: 0;
+		pointer-events: none;
+		border: .1rem solid $quinary-color;
+		border-radius: .8rem;
+		background-color: $white-color; 
+		transition: opacity $t-duration;
+	}
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		font-size: $body-font-size-small;
+		padding: .7rem 1.1rem;
+		cursor: pointer;
+		min-height: 4.8rem;
+	}
+
+	li + li {
+		border-top: .1rem solid $border-color; 
+	}
+
+	h6 {
+		flex: 0 0 100%;
+		margin-bottom: 0; 
+		font-size: $body-font-size;
+		color: inherit;
+	}
+
+	p {
+		margin-bottom: 0; 
+	}
+
+	span {
+
+	}
+
+	select {
+		display: none;
+		appearance: none;
+		border-radius: .8rem;
+		border: .1rem solid $quinary-color;
+		max-width: 100%;
+		width: 100%;
+		padding: 1.1rem 2.8rem 1.1rem 1.2rem;
+		letter-spacing: 0.02em;
+	}
+
+	&.is-open {
+		&:after {
+			transform: translateY(-50%) rotateX(180deg);
+		}
+	}
+
+	&.is-open a {
+		border-radius: .8rem .8rem 0 0;
+		border-bottom-color: transparent; 
+
+	}
+
+	&.is-open ul {
+		opacity: 1;
+		pointer-events: all;
+	}
+}

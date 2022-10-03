@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	List Props
+\* ------------------------------------------------------------ */
+
+.list-props {
+	list-style: none;
+	display: flex;
+	align-items: center;
+
+	li {
+
+	}
+
+	li + li {
+		position: relative;
+		margin-left: .9rem;
+		padding-left: 1.2rem; 
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 1rem; 
+			left: 0;
+			width: .2rem; 
+			height: .2rem; 
+			border-radius: 50%;
+			background-color: $gray-alt; 
+		}
+	}
+}

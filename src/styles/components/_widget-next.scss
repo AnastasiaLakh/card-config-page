@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Widget-next
+\* ------------------------------------------------------------ */
+
+.widget-next {
+	max-width: 35.1rem;
+	margin-left: auto;
+	font-size: $body-font-size;
+	line-height: $h3-line-height;
+	letter-spacing: 0.02em;
+
+	@include breakpoint-down(mobile) {
+		max-width: 100%;
+	}
+
+	h3 {
+		font-size: $h3-font-size-mobile;
+		line-height: $h3-line-height;
+		letter-spacing: 0.04em;
+		margin-bottom: 2rem;
+	}
+
+	.widget__btn {
+		letter-spacing: 0.001em;
+		padding: 1.2rem 2.7rem;
+	}
+}

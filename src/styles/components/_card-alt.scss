@@ -1,0 +1,255 @@
+/* ------------------------------------------------------------ *\
+	Card Alt
+\* ------------------------------------------------------------ */
+
+.card-alt {
+	text-decoration: none;
+	background-color: $white-color;
+	min-height: 7.6rem;
+	height: 100%;
+	border-radius: 0.4rem;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0476399);
+	padding: 0.7rem 2.3rem;
+	position: relative;
+	transition: box-shadow $t-duration;
+	display: flex;
+	align-items: center;
+	border: 0.5px solid $border-color;
+
+	&:hover {
+		box-shadow: 0px 0px 15px $primary-color;
+	}
+
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.card__image {
+		display: inline-flex;
+		min-height: 4.4rem;
+		align-items: center;
+		justify-content: center;
+	}
+	.card__image img {
+		filter: invert(15%) sepia(50%) saturate(1889%) hue-rotate(246deg)
+			brightness(99%) contrast(93%);
+	}
+
+	.card__entry {
+		max-width: 15rem;
+		width: 100%;
+		margin-left: 2rem;
+		color: $primary-color;
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: none;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Card Alt
+\* ------------------------------------------------------------ */
+
+.card-alt-r {
+	box-shadow: 0 0 8px rgba(42, 44, 46, 0.15);
+	border-radius: 4px; 
+	display: flex;
+	padding: 28px 32px 33px; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		display: block; 
+		padding: 30px 15px; 
+	}
+
+	+ .card-alt-r {
+		margin: 20px 0 0; 
+	}
+
+	.card__body {
+		flex: 0 0 60.7%;
+		max-width: 60.7%;
+		position: relative; 
+		padding: 0 15px 0 82px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			max-width: 100%; 
+			padding-right: 0; 
+		}
+
+		> img {
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+		}
+
+		h4 {
+			font-size: $h4-font-size; 
+			margin: 0 0 8px; 
+			color: $primary-color; 
+		}
+
+		p {
+			font-size: $h4-font-size-mobile; 
+			font-weight: $font-weight-light; 
+			margin: 0 0 26px; 
+
+			strong {
+				font-weight: $font-weight-regular; 
+			}
+		}
+
+		h6 {
+			font-weight: $font-weight-regular; 
+			margin: 0 0 6px; 
+		}
+
+		ul {
+			list-style: none; 
+			font-size: $body-font-size;  
+
+			li {
+				position: relative; 
+				padding-left: 30px; 
+
+				&:after {
+					content: ''; 
+					position: absolute; 
+					top: 8px; 
+					left: 1px; 
+					width: 12px; 
+					height: 8px; 
+					border-left: 3px solid $secondary-color;
+					border-bottom: 3px solid $secondary-color;
+					transform: rotate(-45deg); 
+				}
+
+				+ li {
+					margin: 5px 0 0; 
+				}
+			}
+		}
+	}
+
+	.card__aside {
+		flex: 0 0 39.3%;
+		max-width: 39.3%;
+		border-left: 1px solid $lighter-color; 
+		padding: 10px 0 0 44px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			max-width: 100%; 
+			border: none;
+			padding: 0; 
+			margin: 30px 0 0; 
+		}
+
+		> ul {
+			list-style: none; 
+			font-size: $h4-font-size-mobile; 
+			font-weight: $font-weight-bold; 
+			letter-spacing: 0;
+			letter-spacing: 0;
+			margin: 0; 
+			margin-right: -20px; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				margin-right: 0; 
+			}
+
+			strong {
+				color: $secondary-color; 
+			}
+
+			span {
+				font-weight: $font-weight-regular; 
+				font-size: $body-font-size;  
+			} 
+
+			ul {
+				display: inline-block; 
+				padding-left: 18px; 
+				padding-right: 13px; 
+				margin: 0; 
+
+				li {
+					display: inline-block; 
+					vertical-align: middle;
+					position: relative; 
+					top: -2px; 
+
+					+ li {
+						margin-left: 8px; 
+					}
+				}
+			}
+
+			> li {
+				+ li {
+					margin: 5px 0 0; 
+				}
+			}
+		}
+
+		.link-alt {
+			margin: 2px 0 0; 
+			font-size: $body-font-size;  
+			color: $secondary-color; 
+		}
+
+		.card__actions {
+			margin: 24px -20px 0 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				margin-right: 0; 
+			}
+
+			.btn {
+				min-width: 149px; 
+
+				@include breakpoint-down(small-desktop) {
+					min-width: 130px; 
+				}
+
+				/*  Tablet  */
+				
+				@include breakpoint-down(tablet) {
+					min-width: 0; 
+					width: 100%; 
+				}
+
+				+ .btn {
+					margin-left: 13px; 
+					min-width: 208px; 
+
+					@include breakpoint-down(small-desktop) {
+						min-width: 160px; 
+					}
+
+					/*  Tablet  */
+					
+					@include breakpoint-down(tablet) {
+						margin: 15px 0 0; 
+					}
+				}
+			}
+		}
+	}
+}
+

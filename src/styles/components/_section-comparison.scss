@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Section Comparison
+\* ------------------------------------------------------------ */
+
+.section-comparison {
+	padding: 6.8rem 0;
+
+	@include breakpoint-down(tablet) {
+		padding: 5rem 0 0;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0 0rem;
+	}
+
+	.section__title {
+		text-align: center;
+		color: $primary-color;
+		margin-bottom: 6rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
+	}
+}

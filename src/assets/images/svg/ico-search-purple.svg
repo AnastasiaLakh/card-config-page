@@ -1,0 +1,14 @@
+
+<svg id="icons_spyglass" data-name="icons/spyglass" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.517" height="19.012" viewBox="0 0 19.517 19.012">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M18.69,19.012a.75.75,0,0,1-.484-.177l-5.486-4.641a7.837,7.837,0,0,1-4.81,1.63,7.91,7.91,0,1,1,6.356-3.2l5.031,5.03a.752.752,0,0,1,0,1.061l-.077.076A.745.745,0,0,1,18.69,19.012ZM7.911,2.11a5.8,5.8,0,1,0,5.8,5.8A5.808,5.808,0,0,0,7.911,2.11Z" fill="#4b286d"/>
+    </clipPath>
+  </defs>
+  <path id="Combined_Shape-2" data-name="Combined Shape" d="M18.69,19.012a.75.75,0,0,1-.484-.177l-5.486-4.641a7.837,7.837,0,0,1-4.81,1.63,7.91,7.91,0,1,1,6.356-3.2l5.031,5.03a.752.752,0,0,1,0,1.061l-.077.076A.745.745,0,0,1,18.69,19.012ZM7.911,2.11a5.8,5.8,0,1,0,5.8,5.8A5.808,5.808,0,0,0,7.911,2.11Z" fill="#4b286d"/>
+  <g id="icons_spyglass-2" data-name="icons/spyglass" clip-path="url(#clip-path)">
+    <g id="bg_icon_default" data-name="bg/icon/default" transform="translate(0 -0.417)">
+      <rect id="bg-icon" width="20" height="20" fill="#4b286d"/>
+    </g>
+  </g>
+</svg>

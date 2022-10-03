@@ -1,0 +1,357 @@
+/* ------------------------------------------------------------ *\
+	Option Row
+\* ------------------------------------------------------------ */
+
+.option-row {
+	display: flex;
+	align-items: center;
+	padding: 2.3rem 2.5rem 2.4rem 1.4rem; 
+
+	@include breakpoint-down(mobile) {
+		flex-wrap: wrap;
+		padding: 1.6rem 1.6rem 1.5rem;
+	}
+
+	.option__head {
+		display: flex;
+		align-items: center;
+		flex: 0 0 38.2%;
+		max-width: 38.2%;
+		align-self: flex-start;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 35%;
+			max-width: 35%;
+			padding-right: 1rem; 
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-bottom: 1.5rem; 
+		}
+	}
+
+	.option__head .option__icon {
+		width: 3.2rem; 
+		margin-right: 1.8rem;
+		position: relative;
+
+		@include breakpoint-down(mobile) {
+			margin-right: .8rem;
+			width: 2.4rem; 
+		}
+	}
+
+	.option__head .option__icon span {
+		position: absolute;
+		top: .3rem; 
+		left: .4rem; 
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		width: 2.4rem;
+		height: 2.4rem; 
+		background-color: $error-color; 
+		font-size: $body-font-size-small;
+		color: $white-color;
+		display: none; 
+		justify-content: center;
+		align-items: center;
+		font-style: normal; 
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small-mobile;
+			width: 1.8rem; 
+			height: 1.8rem;
+			top: .7rem;
+			left: .9rem; 
+		}
+	}
+
+	&.error .option__head .option__icon span {
+		display: flex;
+	}
+
+	.option__head-inner {
+		font-size: $body-font-size-small;
+		color: $quinary-color;
+	}
+
+	.option__head-inner h5 {
+		margin-bottom: 0; 
+		padding-bottom: 0; 
+		color: $dark-color-alt-1;
+		font-weight: 700;
+		letter-spacing: 0.005em; 
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+		}
+	}
+
+	.option__head-inner p {
+		letter-spacing: 0.03em;
+	}
+
+	.option__body {
+		flex: 0 0 61.8%;
+		max-width: 61.8%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 65%;
+			max-width: 65%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			flex-wrap: wrap;
+		}
+	}
+
+	.option__col {
+		flex: 0 0 48.6%;
+		max-width: 48.6%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.option__col--lg {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.option__col--md {
+		flex: 0 0 63%;
+		max-width: 63%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.option__col--sm {
+		flex: 0 0 34.2%;
+		max-width: 34.2%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.option__col--mobile-1of2 {
+		@include breakpoint-down(mobile) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+
+	.option__col > .price-alt {
+		margin-left: auto;
+		max-width: 16.3rem;
+		width: 100%; 
+		flex-wrap: wrap;
+		padding-bottom: .6rem; 
+		padding-right: 1.4rem;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 0;
+			padding-top: .8rem;  
+			padding-right: 0; 
+			max-width: 13.6rem;
+		}
+	}
+
+	.option__col > .price-alt .price__row {
+		width: 100%;
+	}
+
+	.option__col > .price-alt h6 {
+		margin-left: auto;
+	}
+
+	.accordion__head .price-alt {
+		max-width: 15rem;
+		width: 100%;
+		padding: 1.2rem 0;
+		justify-content: space-between;
+
+		@include breakpoint-down(mobile) {
+			padding: 1rem 0;
+		}
+	}
+
+	&.error-alt {
+		background-color: $beige-color; 
+	}
+}
+
+.option-row + .option-row {
+	border-top: .1rem solid $border-color; 
+
+	&:nth-child(2n) {
+		background-color: $gray-light-alt; 
+		&.error-alt {
+			background-color: $beige-color; 
+		}
+	}
+
+	&:nth-child(2n):last-child {
+		border-bottom: .1rem solid $border-color; 
+	}
+}
+
+.option-row--alt {
+	padding: 2.3rem 2.5rem 2.6rem 1.4rem; 
+
+	@include breakpoint-down(mobile) {
+		padding: 1.6rem 1.6rem 1.5rem;
+	}
+
+	.option__head {
+		@include breakpoint-down(mobile) {
+			padding-bottom: .8rem; 
+		}
+	}
+	.option__body {
+		padding-top: 0.5rem; 
+	}
+
+	.option__col > .price-alt {
+		padding-bottom: 1.5rem; 
+	}
+}
+
+.option-row--sm {
+	padding: 2.3rem 2.5rem 2rem 1.4rem; 
+
+	@include breakpoint-down(mobile) {
+		padding: 1.4rem 1.6rem 1.5rem;
+	}
+
+	.option__head {
+		@include breakpoint-down(mobile) {
+			padding-bottom: 1.3rem; 
+		}
+	}
+
+	.option__col > .price-alt {
+		@include breakpoint-down(mobile) {
+			max-width: 14rem;
+		}
+	}
+}
+
+.option-row--md {
+	padding: 2.3rem 2.5rem 2.5rem 1.4rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.2rem 1.6rem 1.6rem;
+	}
+
+	.option__head {
+		padding-top: .5rem;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 1.3rem; 
+		}
+	}
+
+	.option__head h5 {
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small;
+		}
+	}
+
+	.option__body {
+		align-items: center;
+	}
+
+	.option__col > .price-alt {
+		padding-bottom: 0; 
+
+		@include breakpoint-down(mobile) {
+			padding-top: 0; 
+		}
+	}
+}
+
+.option-row--md-alt {
+	.option__head {
+		@include breakpoint-down(mobile) {
+			padding-bottom: 1.6rem; 
+		}
+	}
+}
+
+.option-row--lg {
+	padding: 2.8rem 2.5rem 2.4rem 1.4rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.4rem 1.6rem 1.5rem;
+	}
+
+	.option__head {
+		align-items: flex-start;
+		flex: 0 0 46.8%;
+		max-width: 46.8%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-bottom: 0; 
+		}
+	}
+	.option__head h5 {
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small;
+			padding-bottom: .1rem; 
+		}
+	}
+
+	.option__col > .price-alt {
+		@include breakpoint-down(mobile) {
+			max-width: 14rem;
+		}
+	}
+
+	.option__body {
+		flex: 0 0 53.2%;
+		max-width: 53.2%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.option__head i {
+		margin-top: .3rem; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 0; 
+		}
+	}
+}
+
+.option-row--lg-alt {
+	padding: 3rem 2.5rem 2.6rem 1.4rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.6rem 1.6rem 1.5rem;
+	}
+}
+
+.option-row--mobile-sm {
+	.option__head h5 {
+		font-size: $body-font-size-small;
+	}
+}

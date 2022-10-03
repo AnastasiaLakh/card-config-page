@@ -1,0 +1,173 @@
+/* ------------------------------------------------------------ *\
+	Bar Notification
+\* ------------------------------------------------------------ */
+
+.bar-notification {
+	position: relative; 
+	background: $light-color; 
+	border-radius: 4px; 
+	padding: 28px 16px; 
+	padding-right: 220px; 
+	font-size: $body-font-size; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 50px 16px 28px; 
+	}
+
+	p {
+		position: relative; 
+		margin: 0; 
+		padding-left: 34px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: relative; 
+			margin: 0; 
+			padding-left: 34px; 
+		}
+
+		i {
+			position: absolute; 
+			top: 5px; 
+			left: 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				position: absolute; 
+				top: 5px; 
+				left: 0; 
+			}
+		}
+
+		a {
+			text-decoration: underline; 
+			color: $secondary-color; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				text-decoration: underline; 
+				color: $secondary-color; 
+			}
+		}
+
+		strong {
+			font-weight: $font-weight-regular; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-weight: $font-weight-regular; 
+			}
+		}
+	}
+
+	.bar__actions {
+		position: absolute; 
+		top: 23px; 
+		right: 20px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: static; 
+			padding-left: 34px; 
+			margin: 10px 0 0; 
+		}
+
+		a {
+			vertical-align: middle;
+			display: inline-block; 
+
+			+ button {
+				margin-left: 20px; 
+			}
+		}
+
+		button {
+			position: relative; 
+			top: 2px; 
+			display: inline-block; 
+			border: none;
+			background: none; 
+			vertical-align: middle;
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				position: absolute; 
+				top: 16px; 
+				right: 16px; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Bar
+\* ------------------------------------------------------------ */
+
+.bar {
+	background: $light-color; 
+	font-size: $body-font-size; 
+	font-weight: $font-weight-light; 
+	padding: 13px 0; 
+	letter-spacing: 0.006em;
+
+	/*  Bar Primary  */
+	&--primary {
+		background: none; 
+		padding: 8px 0 13px; 
+
+		.link-r {
+			background: none; 
+			border: none;
+			color: $primary-color; 
+			text-decoration: none; 
+			font-weight: $font-weight-regular; 
+
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&--alt {
+		background: none; 
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		text-align: center; 
+
+		.btn-terms {
+			display: inline-block;
+			padding: 0; 
+			border: none
+		}
+	}
+
+	&--size1 {
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $h6-font-size-mobile-small; 
+		}
+	}
+
+	&--secondary {
+		text-align: center; 
+		color: $white-color; 
+		background: $primary-color;
+		font-weight: $font-weight-medium; 
+		padding: 18px 0; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small; 
+		}
+	}
+}

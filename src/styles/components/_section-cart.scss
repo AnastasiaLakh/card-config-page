@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Section Cart
+\* ------------------------------------------------------------ */
+
+.section-cart {
+	padding: 34px 0 65px;
+	border-bottom: 1px solid $border-color;
+
+	@include breakpoint-down(mobile) {
+		padding: 27px 0 23px;
+	}
+
+	.shell {
+		@include breakpoint-down(mobile) {
+			padding: 0 12px;
+		}
+	}
+
+
+	.section__head {
+		margin: 0 0 30px;
+
+		@include breakpoint-down(mobile) {
+			margin: 0 0 25px;
+		}
+
+		h1 {
+			color: $primary-color;
+			font-weight: $font-weight-regular;
+		}
+
+		+ .gadget-notification {
+			margin: -6px 0 25px;
+
+			@include breakpoint-down(mobile) {
+
+			}
+		}
+	}
+}

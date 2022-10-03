@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Email
+\* ------------------------------------------------------------ */
+
+.email {
+	color: $dark-text;
+	font-size: $body-font-size;
+	line-height: $h3-line-height;
+	font-weight: $font-weight-light;
+	letter-spacing: 0.02em;
+	padding-left: .5rem;
+
+	h5 {
+		letter-spacing: 0.03em;
+		line-height: $h3-line-height;
+		color: $dark-text;
+		margin-bottom: 1.5rem;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}

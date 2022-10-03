@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Section community
+\* ------------------------------------------------------------ */
+
+.section-community {
+	padding: 8.8rem 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 5rem 0;
+	}
+}
+
+.section-community--alt {
+	padding: 8.8rem 0 6.7rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 5rem 0;
+	}
+}

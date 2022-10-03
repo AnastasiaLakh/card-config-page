@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+	Nav Lang
+\* ------------------------------------------------------------ */
+
+.nav-lang {
+	ul {
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		color: $white-color;
+		text-transform: uppercase;
+		font-family: $ff-sans-serif-2;
+		font-weight: $font-weight-regular;
+		font-size: $h6-font-size-mobile;
+		padding: 0rem 0 0 1rem;
+		border-left: 1px solid $c-gray;
+
+		@include breakpoint-down(mobile-medium) {
+			padding-left: 2.2rem;
+		}
+	}
+
+	li + li {
+		margin-left: 0.8rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-left: 2rem;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:focus {
+			outline: .2rem solid $c-orange-2;
+			outline-offset: .5rem;
+		}
+	}
+}
+
+
+

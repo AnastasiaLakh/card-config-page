@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	List Prices
+\* ------------------------------------------------------------ */
+
+.list-prices {
+	position: relative;
+
+	> span {
+		display: inline-block;
+		padding-bottom: .5rem; 
+		position: absolute;
+		bottom: 100%;
+		right: 0;
+		text-align: right;
+		color: $quinary-color; 
+
+		@include breakpoint-down(tablet) {
+			position: static;
+			display: block;
+			max-width: max-content;
+			margin-left: auto; 
+			margin-right: auto;
+			text-align: center;
+			margin-top: 1rem; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 1.6rem; 
+			font-size: $body-font-size-small;
+			letter-spacing: 0.035em;
+			margin-top: 1.2rem;
+		}
+	}
+
+	ul {
+		list-style: none; 
+		margin-bottom: 0;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: .1rem dotted $quinary-color; 
+		padding: 1rem 0;
+
+		@include breakpoint-down(mobile) {
+			border-top: 0;
+			padding: 0; 
+		}
+	}
+
+	h6 {
+		margin-bottom: 0;
+		color: $black-color;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small;
+			letter-spacing: 0.035em;
+		}
+	}
+
+	p {
+		margin-bottom: 0; 
+
+		@include breakpoint-down(mobile) {
+			font-size: $h5-font-size; 
+			padding-bottom: .2rem;
+			letter-spacing: 0.035em;
+		}
+	}
+}

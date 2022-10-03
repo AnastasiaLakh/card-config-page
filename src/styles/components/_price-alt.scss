@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	Price alt
+\* ------------------------------------------------------------ */
+
+.price-alt {
+  font-size: $tiny-font-size;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: 0.6s linear;
+  overflow: hidden;
+  max-height: 1000rem;
+
+  &.is-active {
+    max-height: 0;
+  }
+
+  @include breakpoint-down(mobile) {
+    text-transform: none;
+  }
+
+  .price__row {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .price__row + .price__row {
+    margin-top: 0.5rem;
+
+    @include breakpoint-down(mobile) {
+      margin-top: 0;
+    }
+  }
+
+  .price__row p {
+    margin-bottom: 0;
+  }
+
+  .price__row h3 {
+    color: $dark-color-alt-1;
+
+    @include breakpoint-down(mobile) {
+      font-size: $h4-font-size;
+    }
+  }
+
+  .price__row h6 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    letter-spacing: 0.015em;
+    font-weight: 400;
+    margin-left: 2rem;
+    color: $dark-color-alt-1;
+
+    @include breakpoint-down(mobile) {
+      font-size: $body-font-size;
+      letter-spacing: 0;
+    }
+  }
+
+  .price__row h6 span {
+    margin-left: 0.7rem;
+
+    @include breakpoint-down(mobile) {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.price-alt--sm {
+  .price__row h6 {
+    font-size: $body-font-size;
+    letter-spacing: 0.04em;
+    margin-left: 2.7rem;
+  }
+}

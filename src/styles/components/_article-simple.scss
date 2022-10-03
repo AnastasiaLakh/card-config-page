@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------ *\
+	Article simple
+\* ------------------------------------------------------------ */
+
+.article-simple {
+	height: 100%;
+	color: $dark-text;
+	font-weight: $font-weight-light;
+	background: $white-color;
+	box-shadow: .0rem .0rem 1.6rem rgba(213, 213, 213, 0.5);
+	border-radius: .4rem;
+
+	&:not(:last-child) {
+		margin-bottom: 3.2rem; 
+	}
+
+	img {
+		width: 100%;
+		border-radius: .4rem .4rem 0 0;
+	}
+
+	.article__content {
+		padding: 6rem 4.8rem 4.3rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 2.6rem 1.9rem 2.8rem 2.8rem;
+		}
+	}
+
+	h5 {
+		color: $black-color;
+		letter-spacing: 0.03em;
+		line-height: $h3-line-height;
+		margin-bottom: 1rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: $h3-line-height;
+			font-weight: $font-weight-medium;
+			letter-spacing: 0.1px;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 2.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	.article__link {
+		font-family: $ff-sans-serif-2;
+		color: $secondary-color;
+		font-weight: $font-weight-regular;
+		text-decoration: none;
+	}
+
+	.article__link .ico-chevron-right {
+		margin-left: .3rem;
+		font-weight: $font-weight-light;
+		stroke: $secondary-color;
+	}
+
+	.article__link:hover .ico-chevron-right {
+		transform: translateX(2rem);
+	}
+}
+
+.article-simple--alt {
+	padding: 4rem 4.8rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 2.7rem 1.3rem 2.4rem 2.6rem;
+	}
+}

@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------ *\
+	Link alt
+\* ------------------------------------------------------------ */
+
+.link-alt {
+	font-size: $h6-font-size;
+	font-weight: $font-weight-light;
+	letter-spacing: 0.004em;
+	color: $primary-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:hover .ico-chevron-right {
+		transform: translateX(3rem);
+	}
+
+	.ico-chevron-right {
+		margin-left: 0.3rem;
+	}
+}

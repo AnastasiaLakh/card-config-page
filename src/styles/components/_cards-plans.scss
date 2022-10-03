@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------ *\
+	Cards plans
+\* ------------------------------------------------------------ */
+
+.cards-plans {
+	.cards__items {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		margin: -1.6rem;
+	}
+
+	.cards__item {
+		flex: 1;
+		max-width: 100%;
+		padding: 1.6rem;
+	}
+
+	.cards__item--1of3 {
+		flex: 0 0 33.333%;
+		max-width: 33.333%;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 60%;
+			max-width: 60%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.cards-plans--flex-start {
+	.cards__items {
+		justify-content: flex-start;
+	}
+}

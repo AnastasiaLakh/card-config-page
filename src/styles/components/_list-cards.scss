@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------ *\
+	List cards
+\* ------------------------------------------------------------ */
+
+.list-cards {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+	li + li {
+		margin-left: .8rem;
+	}
+}

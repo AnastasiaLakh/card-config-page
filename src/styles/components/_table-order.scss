@@ -1,0 +1,162 @@
+/* ------------------------------------------------------------ *\
+	Table order
+\* ------------------------------------------------------------ */
+
+.table-order {
+	overflow-x: auto;
+	border: .1rem solid $border-color;
+	border-radius: .4rem;
+
+	.table__inner {
+		width: 112rem;
+	}
+
+	.table__head {
+		font-family: $ff-sans-serif;
+		padding: 2.2rem 3.2rem;
+		font-size: $h5-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.02em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: 3.5rem;
+	}
+
+	.table__head:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 3.2rem;
+		width: calc(100% - 6.4rem);
+		height: .1rem;
+		background-color: $border-color;
+
+	}
+
+	.table__head p {
+		margin-bottom: 0;
+	}
+
+	.table__col--size1 {
+		width: 50.8rem;
+	}
+
+	.table__col--size2 {
+		width: 14.7rem;
+	}
+
+	.table__col--size3 {
+		width: 17.1rem;
+	}
+
+	tr:nth-child(2n) {
+		background-color: $scrollbar-primary-color;
+	}
+
+	th {
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.03em;
+		vertical-align: top;
+		padding: 0rem 1.6rem;
+		height: 4.8rem;
+
+		@include breakpoint-down(tablet) {
+			font-size: $h6-font-size-mobile;
+			line-height: $h3-line-height;
+			padding-bottom: .3rem;
+		}
+	}
+
+	th:nth-child(3) {
+		padding: 0rem .5rem;
+	}
+
+	th + th,
+	td + td {
+		border-left: solid .1rem $border-color;
+	}
+
+	td {
+		height: 3.8rem;
+		font-size: $h6-font-size-mobile;
+		line-height: 1.428;
+		letter-spacing: 0.6px;
+		font-weight: $font-weight-regular;
+		padding: .8rem 1.6rem 1rem;
+	}
+
+	td:first-child,
+	th:first-child {
+		padding-left: 3.4rem;
+	}
+
+	td:last-child,
+	th:last-child {
+		padding-right: 3.2rem;
+	}
+
+
+	td,
+	th {
+		text-align: center;
+	}
+
+	td:first-child,
+	th:first-child {
+		text-align: left;
+		padding-right: 3.2rem;
+	}
+
+	td:nth-child(4),
+	th:nth-child(4) {
+		text-align: right;
+	}
+
+	td:last-child,
+	th:last-child {
+		text-align: right;
+	}
+
+	.table__product td:first-child {
+		font-weight: $font-weight-bold;
+	}
+
+	.table__service td:first-child {
+		padding-left: 5.6rem;
+	}
+
+	.table__sub-total td {
+		font-weight: $font-weight-medium;
+		padding-top: .6rem;
+		padding-bottom: .8rem;
+	}
+
+	.table__sub-total td:first-child{
+		text-align: right;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.4px;
+		padding-right: 3.2rem;
+	}
+
+
+	.table__total {
+		border-top: solid .1rem $border-color;
+	}
+
+	.table__total td {
+		font-weight: $font-weight-bold;
+		height: 7.6rem;
+		font-size: $h5-font-size;
+		line-height: 16px;
+		letter-spacing: 0.6px;
+		text-align: right;
+	}
+
+	.table__total td:first-child {
+		padding-top: .6rem;
+	}
+}

@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\
+	List partners
+\* ------------------------------------------------------------ */
+
+.list-partners {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 92.8rem;
+	margin: 0 auto;
+	list-style-type: none;
+
+	@include breakpoint-down(tablet) {
+		justify-content: center;
+		margin: -1rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		margin: -2rem;
+	}
+
+	li + li {
+		margin-left: 2rem;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 0;
+		}
+	}
+
+	li {
+		@include breakpoint-down(tablet) {
+			padding: 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 2rem;
+		}
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $white-color;
+		box-shadow: 0px 0px 16px rgba(213, 213, 213, 0.5);
+		border-radius: .4rem;
+		width: 7.8rem;
+		height: 7.8rem;
+		transition: box-shadow .3s;
+	}
+
+	a:hover {
+		box-shadow: 0px 0px 22px $primary-color;
+	}
+}

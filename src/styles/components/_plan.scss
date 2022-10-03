@@ -1,0 +1,358 @@
+/* ------------------------------------------------------------ *\
+	Plan
+\* ------------------------------------------------------------ */
+
+.plan {
+	max-width: 30rem;
+
+	@include breakpoint-down(mobile-medium) {
+		margin: 0 auto;
+	}
+
+	h6 {
+		margin-bottom: 1.9rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $h6-font-size;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Plan Alt
+\* ------------------------------------------------------------ */
+
+.plan-alt {
+	position: relative; 
+	border-radius: 4px; 
+	border: 1px solid $border-color;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+	padding: 20px 31px 31px; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 20px; 
+	}
+
+	.plan__head {
+		position: relative; 
+		color: $primary-color; 
+		padding: 10px 0 51px;
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			top: 100%; 
+			left: 0; 
+			background: url(../images/temp/shadow-p.png) no-repeat 0 0;
+			width: 100%;
+			height: 28px; 
+			margin-top: -30px; 
+			background-size: 100% 100%; 
+		}
+ 
+		h4 {
+			margin: 0 0 6px; 
+			font-weight: $font-weight-light; 
+			letter-spacing: 0.007em;
+			font-size: $h4-font-size; 
+		}
+
+		p {
+			letter-spacing: 0.042em;
+		}
+	}
+
+	.plan__features {
+		position: relative; 
+		z-index: 10; 
+		text-align: right; 
+		list-style: none; 
+		font-size: $body-font-size; 
+		line-height: 1.38; 
+		padding-right: 3px; 
+		font-weight: $font-weight-light; 
+		letter-spacing: 0.038em;
+		margin: 0;
+
+		span {
+			display: inline-block; 
+			max-width: 200px; 
+		}
+
+		li {
+			position: relative; 
+
+			> img {
+				position: absolute; 
+				top: 50%; 
+				left: 0; 
+				transform: translateY(-50%); 
+			}
+
+			+ li {
+				margin: 22px 0 0; 
+			}
+		}
+	}
+
+	.plan__bar {
+		padding: 32px 0 25px; 
+
+		h6 {
+			font-size: $h6-font-size-mobile; 
+			font-weight: $font-weight-regular; 
+			margin: 0 0 6px; 
+			letter-spacing: 0.043em;
+		}
+
+		ul {
+			list-style: none; 
+			font-size: $body-font-size; 
+			font-weight: $font-weight-light; 
+			letter-spacing: 0.043em;
+		}
+	}
+
+	.plan__info {
+		border-top: 1px solid $border-color;
+		padding: 22px 8px 20px 0; 
+		list-style: none; 
+		margin: 0;
+
+		span {
+			font-size: $body-font-size; 
+			font-weight: $font-weight-light; 
+			letter-spacing: 0.038em;
+		}
+
+		li {
+			display: flex; 
+			justify-content: space-between;
+			align-items: center; 
+
+			+ li {
+				margin: 8px 0 0; 
+			}
+		}
+	}
+
+	.plan__price {
+		border-top: 1px solid $border-color;
+		padding: 23px 9px 18px 0; 
+		display: flex; 
+		justify-content: space-between;
+		align-items: center; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			display: block; 
+			text-align: center; 
+		}
+
+		h6 {
+			margin: 0; 
+			font-weight: $font-weight-light; 
+		}
+
+		h2 {
+			color: $secondary-alt-color; 
+			margin: 0; 
+			font-size: 40px; 
+			font-weight: $font-weight-thin; 
+			letter-spacing: -0.05em;
+
+			span {
+				font-size: $h4-font-size; 
+				position: relative; 
+				top: -10px; 
+				left: -6px; 
+			}
+		}
+	}
+
+	.plan__actions {
+		border-top: 1px solid $border-color;
+		padding: 20px 10px 0; 
+		text-align: center; 
+
+		.link-alt {
+			font-size: $h5-font-size-mobile; 
+			font-weight: $font-weight-light; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Plan R
+\* ------------------------------------------------------------ */
+
+.plan-r {
+	position: relative; 
+	border-radius: 4px; 
+	border: 1px solid $border-color;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+	padding: 20px; 
+
+	.plan__label {
+		position: absolute; 
+		top: 16px; 
+		left: -20px; 
+		background: $primary-color; 
+		color: $light-text;  
+		font-size: $body-font-size; 
+		letter-spacing: 0.013em;
+		padding: 8px 21px 10px 41px; 
+		min-width: 193px; 
+
+		&:before {
+			content: ''; 
+			position: absolute; 
+			top: 100%; 
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 20px 20px 0;
+			border-color: transparent $blue-dark-color transparent transparent; 
+		}
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			top: 50%; 
+			right: -15px; 
+			width: 30px; 
+			height: 30px; 
+			background: $light-text; 
+			transform: translateY(-50%) rotate(45deg); 
+		}
+	}
+
+	.plan__head {
+		color: $primary-color; 
+		padding: 56px 7px 26px;
+
+		h4 {
+			text-align: center; 
+			margin: 0 0 49px; 
+			font-weight: $font-weight-light; 
+			letter-spacing: 0.007em;
+			position: relative; 
+
+			&:after {
+				content: ''; 
+				position: absolute; 
+				top: 100%; 
+				left: 0; 
+				background: url(../images/temp/shadow-p.png) no-repeat 0 0;
+				width: 100%;
+				height: 28px; 
+				margin-top: 10px; 
+				background-size: 100% 100%; 
+			}
+		}
+
+		ul {
+			list-style: none; 
+			font-size: $h5-font-size-mobile;
+			letter-spacing: 0.01em; 
+
+			li + li {
+				margin-top: 4px;
+			}
+		}
+	}
+
+	.plan__body {
+		border-top: 1px solid $border-color;
+		padding: 16px 8px 28px; 
+
+		h6 {
+			margin: 0 0 23px; 
+			letter-spacing: 0.015em;
+		}
+	}
+
+	.plan__bar {
+		border-top: 1px solid $border-color;
+		padding: 15px 8px 21px; 
+
+		h6 {
+			margin: 0 0 3px; 
+			letter-spacing: 0.015em;
+		}
+
+		ul {
+			list-style: none; 
+			font-size: $body-font-size; 
+		}
+	}
+
+	.plan__price {
+		border-top: 1px solid $border-color;
+		padding: 23px 8px 22px; 
+		text-align: center; 
+
+		h6 {
+			letter-spacing: 0.015em;
+			margin: 0 0 14px; 
+		}
+
+		h2 {
+			color: $secondary-alt-color; 
+			margin: 0; 
+
+			sup {
+				font-size: $h4-font-size; 
+				position: relative; 
+				top: -5px; 
+				left: -5px; 
+			}
+
+			+ h6 {
+				margin: -13px 0 0; 
+			}
+		}
+	}
+
+	.plan__actions {
+		border-top: 1px solid $border-color;
+		padding: 17px 10px 2px; 
+		text-align: center; 
+
+		.btn {
+			font-size: $body-font-size; 
+			padding: 17px 10px; 
+			min-width: 250px; 
+			display: block; 
+			max-width: 250px; 
+			margin: auto; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				min-width: 210px;
+			}
+
+			+ .link-alt {
+				margin: 20px 0 0; 
+				font-size: $h5-font-size-mobile; 
+				font-weight: $font-weight-light; 
+			}
+		}
+	}
+
+	.plan__features {
+		list-style: none; 
+		margin: 0 -49px -29px 0; 
+
+		li {
+			display: inline-block; 
+			vertical-align: middle;
+			margin: 0 49px 29px 0; 
+		}
+	}
+}

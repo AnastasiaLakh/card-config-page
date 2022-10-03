@@ -1,0 +1,169 @@
+//Variables
+$ff-sans-serif: "Helvetica Now Display W01", Helvetica, Arial, sans-serif;
+$ff-sans-serif-2: "Helvetica Now Display W01", Helvetica, Arial, sans-serif;
+$ff-helvetica-now-text: "Helvetica Now Display W01", Helvetica, Arial, sans-serif;
+$ff-graphik: "Helvetica Now Display W01", "'Graphik'", Helvetica, Arial, sans-serif;
+$ff-serif: "Helvetica Now Display W01", Georgia, "Times New Roman", Times, serif;
+
+$t-duration: 0.4s;
+
+$shell-max-width: 112.2rem;
+$shell-gutter: 1.5rem;
+
+$c-black-2: #0a0a0a;
+$c-base: #055590;
+$c-gray: #828282;
+$c-gray-4: #54595f;
+$c-gray-5: #f4f4f4;
+$c-gray-7: #f2eff4;
+$c-gray-8: #737272;
+$c-orange: #faca69;
+$c-orange-2: #E59700;
+$responsive-ios: 812px;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-medium: 575px,
+	mobile: 767px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1199px,
+large-desktop: 1399px
+);
+
+/* Variables */
+
+$primary-color: #4B286D;
+$secondary-color: #2B8000;
+$secondary-alt-color: #248700;
+$secondary-alt-darker: #2a670e;
+$white-color: #fff;
+$black-color: #000;
+$dark-text: #2a2c2e;
+$dark-text-alt: #414547;
+$light-text: #fff;
+$border-color: #D8D8D8;
+$lighter-color: #dbdbdb;
+$light-tile: #C4C4C4;
+$dark-color: #54595F;
+$error-color: #C12335;
+$gray-color: #767676;
+$gray-light-color: #949494;
+$gray-dark-color: #737373;
+$gray-darker-color: #707070;
+$blue-color: #415EE8;
+$blue-color-alt: #256EDF;
+$blue-dark-color: #200738;
+$light-color: #F7F7F9;
+$lighter-color: #D9D9D9;
+$light-color-def: #F6F6F7;
+$purple-color: #522471;
+$purple-color-lighter: #7C53A5;
+$dark-color-alt: #2C2E30;
+$dark-color-alt-1: #262626;
+$gray-darker: #F2F2F2;
+$gray-light: #F5F5F8;
+$gray-lighter: #F4F4F7;
+$gray-light-alt: #FAFAFA;
+$gray-dark: #676E73;
+$gray-alt: #B2B9BF;
+$gray-darker: #E3E6E8;
+$pink-bubblegum: #E53293;
+
+$alt-color: #d54b4b;
+$alt-color-2: #e63c45;
+
+$tert-color: #E7B612;
+
+$quinary-color: #71757B;
+$quinary-color-alt: #545960;
+
+$beige-color: #FFF9EE;
+$error-color: #905D00;
+
+$body-font-size: 1.6rem;
+$body-font-size-small: 1.4rem;
+$body-font-size-small-mobile: 1.2rem;
+$body-font-weight: 400;
+$body-line-height: 1.2;
+
+$body-font-family: "Helvetica Now Display W01", Helvetica, Arial, sans-serif;
+$heading-font-family: "Helvetica Now Display W01", Helvetica, Arial, sans-serif;
+$font-family-gotham: "Helvetica Now Display W01", Gotham, Arial, sans-serif;
+$font-family-graphik: "Helvetica Now Display W01", Graphik, Arial, sans-serif;
+$font-family-hoefler: "Helvetica Now Display W01", Hoefler Text, Arial, sans-serif;
+
+$large-font-size: 7.2rem;
+$medium-font-size: 3.6rem;
+$tiny-font-size: 1.1rem;
+$tiny-font-size-mobile: .8rem;
+
+$h1-large-font-size: 6.4rem;
+$h1-large-font-size-tablet: 4.9rem;
+$h1-large-font-size-mobile: 4rem;
+$h1-font-size: 4.4rem;
+$h1-font-size-mobile: 2.8rem;
+$h2-large-font-size: 5.6rem;
+$h2-large-font-size-tablet: 3.9rem;
+$h2-large-font-size-mobile: 3.8rem;
+$h2-font-size: 3.8rem;
+$h2-font-size-mobile: 2.6rem;
+$h3-font-size-large: 4rem;
+$h3-font-size-large-mobile: 3.5rem;
+$h3-font-size: 3.2rem;
+$h3-font-size-medium: 3rem;
+$h3-font-size-mobile: 2.8rem;
+$h4-font-size: 2.4rem;
+$h4-font-size-mobile: 1.8rem;
+$h5-font-size-biger: 2.3rem;
+$h5-font-size-big: 2.2rem;
+$h5-font-size: 2rem;
+$h5-font-size-mobile: 1.8rem;
+$h6-font-size: 1.8rem;
+$h6-font-size-mobile: 1.4rem;
+$h6-font-size-mobile-small: 1.2rem;
+
+$h1-line-height: 1.17;
+$h2-large-line-height: 1.14;
+$h2-line-height: 1.17;
+$h3-line-height: 1.28;
+$h4-line-height: 1.17;
+$h5-line-height: 1.17;
+$h6-line-height: 1.17;
+$line-height-xl: 1.6;
+$line-height-big: 1.5;
+$line-height-medium-large: 1.43;
+$line-height-medium: 1.4;
+$line-height-medium-small: 1.29;
+$line-height-default: 1.2;
+
+$h1-large-letter-spacing: 0.02;
+$h1-letter-spacing: 1.17;
+$h2-large-letter-spacing: 0.015em;
+$h2-letter-spacing: 1.17;
+$h3-letter-spacing: 1.1px;
+$h4-letter-spacing: 0.0085em;
+$h5-letter-spacing: 1.17;
+$h6-letter-spacing: 1.17;
+
+$letter-spacing-xxxl: 0.069em;
+$letter-spacing-xxl: 0.06em;
+$letter-spacing-xl: 0.055em;
+$letter-spacing-l: 0.0525em;
+$letter-spacing-l-md: 0.05em;
+$letter-spacing-md: 0.03em;
+$letter-spacing-md-s: 0.025em;
+$letter-spacing-s: 0.02em;
+$tabs-head-letter-spacing: 0.055em;
+$search-letter-spacing: 0.05em;
+$breadcrumb-letter-spacing: 0.03em;
+
+$font-weight-thin: 100;
+$font-weight-200: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-600: 600;
+$font-weight-bold: 700;
+
+$scrollbar-primary-color: #F7F7F8;

@@ -1,0 +1,98 @@
+/* ------------------------------------------------------------ *\
+	Section Summary
+\* ------------------------------------------------------------ */
+
+.section-summary {
+	padding: 12rem 0 0;
+
+	@include breakpoint-down(tablet) {
+		padding: 10rem 0 0;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 5rem 0 0;
+	}
+
+	h1 {
+		color: $primary-color;
+		max-width: 54rem;
+		width: 100%;
+		margin-bottom: 3.6rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0 auto 3rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 100%;
+		}
+	}
+
+	.section__inner {
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+	}
+
+	.section__entry {
+		font-size: $h4-font-size;
+		font-weight: $font-weight-light;
+		
+		max-width: 77rem;
+		width: 100%;
+		letter-spacing: 0.007em;
+		margin-bottom: 3.6rem;
+
+		@include breakpoint-down(mobile-small) {
+			font-size: $h6-font-size;
+		}
+	}
+
+	.section__entry p + p {
+		margin-top: 3.4rem;
+	}
+
+	.section__actions a + a {
+		margin-left: 0.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin: 1.5rem 0 0;
+		}
+	}
+
+	.section__actions a {
+		@include breakpoint-down(mobile-medium) {
+			display: block;
+		}
+	}
+}
+
+/*  section summary alt  */
+
+.section-summary--alt {
+	padding: 5.2rem 0 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0;
+	}
+
+	.section__inner {
+		@include breakpoint-down(mobile) {
+			text-align: left;
+		}
+	}
+
+	h1 {
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+	}
+
+	.section__head {
+		margin-bottom: 5.9rem;
+	}
+
+	.section__body {
+		margin-bottom: 3.2rem;
+	}
+}

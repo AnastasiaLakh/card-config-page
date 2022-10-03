@@ -1,0 +1,384 @@
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav {
+	@include breakpoint-down(mobile) {
+		width: 100%;
+		margin-bottom: 5rem;
+	}
+
+	ul {
+		list-style: none;
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+		}
+	}
+
+	li {
+		display: inline-block;
+		font-size: $h6-font-size-mobile;
+		text-transform: capitalize;
+		padding-bottom: 2.3rem;
+		position: relative;
+
+		&:after {
+			content: "";
+			width: 100%;
+			height: 0.2rem;
+			opacity: 0;
+			background-color: $primary-color;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			transition: opacity 0.3s;
+		}
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			font-size: $h6-font-size;
+			text-transform: uppercase;
+		}
+	}
+
+	li.is-current {
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	li:hover:after {
+		opacity: 1;
+	}
+
+	li + li {
+		margin-left: 3.7rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 1.5rem;
+			margin-left: 0.8rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin-left: 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: 4rem 0 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		position: relative;
+		display: block;
+		padding-bottom: 0.5rem;
+
+		&:focus {
+			outline: .2rem solid $c-orange-2;
+			outline-offset: .3rem;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	nav alt
+\* ------------------------------------------------------------ */
+
+.nav--alt {
+	li {
+		font-weight: $font-weight-regular;
+		padding-bottom: 2.5rem;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Def
+\* ------------------------------------------------------------ */
+
+.nav-def {
+	border-left: 3px solid $scrollbar-primary-color;
+	padding-left: 12px; 
+	font-size: $body-font-size;  
+	font-weight: $font-weight-light; 
+	color: $quinary-color-alt; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 0; 
+		border: none;
+		font-size: $body-font-size;  
+		position: relative; 
+	}
+
+	button,
+	a {
+		text-decoration: none; 
+		position: relative; 
+		display: inline-block; 
+		padding: 8px 0; 
+		padding-left: 37px; 
+		background: none; 
+		border: none;
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			display: block; 
+			padding: 18px 10px 18px 57px; 
+		}
+
+		&:after {
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				left: 0;
+				width: 5px;  
+			}
+		}
+
+		> i {
+			position: absolute; 
+			top: 50%; 
+			left: 15px; 
+			transform: translate(-50%, -50%);   
+			transition: opacity .4s; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				left: 32px; 
+			}
+
+			+ i {
+				opacity: 0; 
+			}
+		}
+	}
+
+	li {
+		position: relative; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: static; 
+		}
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			top: 0; 
+			left: -15px; 
+			bottom: 0; 
+			width: 3px;
+			background: $primary-color;  
+			opacity: 0; 
+			transition: opacity .4s; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1; 
+			}
+		}
+
+		+ li {
+			margin: 32px 0 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				border-top: 1px solid $border-color;
+				margin-top: 0;
+			}
+
+			button,
+			a {
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					padding: 22px 10px 21px 51px; 
+				}
+			}
+		}
+	}
+
+	.is-active {
+		color: $primary-color; 
+		font-weight: $font-weight-regular; 
+		letter-spacing: 0.05em;
+
+		&:after {
+			opacity: 1; 
+		}
+
+		button,
+		a {
+			> i {
+				opacity: 0; 
+
+				+ i {
+					opacity: 1; 
+				}
+			}
+		}
+
+		> .dropdown {
+			display: block; 
+		}
+	}
+
+	.has-dropdown {
+		> a:before {
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				content: ''; 
+				position: absolute; 
+				top: 50%; 
+				right: 16px; 
+				transform: translateY(-50%); 
+				background: url(../images/svg/ico-angle-right-purple.svg) no-repeat 0 0; 
+				background-size: 100% 100%; 
+				width: 9px; 
+				height: 15px; 
+			}
+		}
+
+		&.is-active {
+			.dropdown {
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					opacity: 1; 
+					visibility: visible; 
+				}
+			}
+		}
+	}
+
+	.dropdown {
+		display: none; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			display: block; 
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			width: 100%; 
+			height: 100vh; 
+			background: $white-color; 
+			z-index: 10; 
+			opacity: 0; 
+			visibility: hidden;
+			transition: opacity .4s, visibility .4s; 
+		}
+		
+		p {
+			display: none; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				position: relative; 
+				border-bottom: 1px solid $border-color;
+				border-left: 5px solid $primary-color;
+				font-size: $body-font-size;  
+				font-weight: $font-weight-regular; 
+				padding: 20px 10px 18px 70px;  
+				margin: 0; 
+				display: block; 
+			}
+
+			&:after {
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					content: ''; 
+					position: absolute; 
+					top: 50%; 
+					left: 16px; 
+					transform: translateY(-50%) rotate(180deg); 
+					background: url(../images/svg/ico-angle-right-purple.svg) no-repeat 0 0; 
+					background-size: 100% 100%; 
+					width: 9px; 
+					height: 15px; 
+				}
+			}
+
+			i {
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					position: absolute; 
+					top: 50%; 
+					left: 38px; 
+					transform: translateY(-50%); 
+				}
+			}
+		}
+
+		ul {
+			text-align: left; 
+			padding: 11px 50px 0 34px; 
+			font-size: $body-font-size-small; 
+			letter-spacing: 0.043em; 
+
+			a,
+			button {
+				display: inline-block; 
+				position: relative; 
+				padding: 0; 
+				text-align: left; 
+				line-height: 1.44;
+
+				&:before {
+					content: ''; 
+					position: absolute; 
+					top: 7px; 
+					left: -21px;  
+					width: 6px; 
+					height: 6px; 
+					border-radius: 50%; 
+					background: $primary-color; 
+					opacity: 0; 
+					transition: opacity .4s; 
+				}
+			}
+
+			li {
+				&:after {
+					display: none; 
+				}
+
+				+ li {
+					margin: 15px 0 0; 
+				}
+			}
+
+			.is-active-alt {
+				button,
+				a {
+					color: $primary-color; 
+
+					&:before {
+						opacity: 1; 
+					}
+				}
+			}
+		}
+		
+	}
+}

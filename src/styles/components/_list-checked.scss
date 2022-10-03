@@ -1,0 +1,79 @@
+/* ------------------------------------------------------------ *\
+	List checked
+\* ------------------------------------------------------------ */
+
+.list-checked {
+	list-style-type: none;
+	margin-right: -3rem;
+	margin-left: -.3rem;
+
+	@include breakpoint-down(small-desktop) {
+		margin-right: 0;
+	}
+
+	li {
+		min-height: 4rem;
+		display: flex;
+		align-items: center;
+		font-weight: $font-weight-bold;
+		font-size: $h6-font-size-mobile;
+		line-height: 1.428;
+		letter-spacing: 0.01em;
+	}
+
+	li i {
+		margin-right: 2.4rem;
+	}
+}
+
+/*  list checked alt  */
+
+.list-checked--alt {
+	@include breakpoint-down(mobile) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	li {
+		min-height: 2.4rem;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.03em;
+	}
+
+	li i {
+		margin-right: 1.7rem;
+		max-width: 1.6rem
+	}
+}
+
+/*  list checked def  */
+
+.list-checked--def {
+	margin-right: 0;
+
+
+	li {
+		padding-left: .2rem;
+		align-items: flex-start;
+		min-height: auto;
+		line-height: 1.44;
+	}
+
+	li i {
+		flex: 0 0 1.6rem;
+		margin-right: 1.6rem;
+	}
+
+	li i img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	li + li {
+		margin-top: 1.6rem; 
+	}
+}

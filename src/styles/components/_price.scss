@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------ *\
+	Price
+\* ------------------------------------------------------------ */
+
+.price {
+	line-height: 1;
+
+	.price__cur {
+		display: inline-block;
+		font-size: $h5-font-size;
+		padding-top: 0.5rem;
+		vertical-align: top;
+		font-weight: $font-weight-light;
+	}
+
+	.price__amount {
+		font-size: $h1-font-size;
+		font-weight: $font-weight-regular;
+	}
+
+	.price__per {
+		display: inline-block;
+		margin-left: 0.5rem;
+		font-size: $body-font-size;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.05em;
+	}
+}
+
+/* Price Alt */
+
+.price--alt {
+	color: $secondary-color;
+
+	.price__cur {
+		font-size: $h4-font-size;
+		font-weight: $font-weight-light;
+	}
+
+	.price__per {
+		font-size: inherit;
+		font-weight: $font-weight-regular;
+	}
+}
+
+/*  Price secondary  */
+
+.price--secondary {
+	.price__per {
+		font-size: $h5-font-size;
+		letter-spacing: 0.04em;
+		margin-left: 1.2rem;
+	}
+}

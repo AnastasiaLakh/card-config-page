@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Pagination
+\* ------------------------------------------------------------ */
+
+.pagination {
+	display: inline-block; 
+
+	> a {
+		vertical-align: middle;
+		text-decoration: none; 
+
+		+ a {
+			margin-left: 1.9rem; 
+		}
+	}
+
+	p {
+		display: inline-block; 
+		margin: 0; 
+		font-weight: $font-weight-bold;
+		font-size: $h6-font-size-mobile;
+		letter-spacing: 0.6px;
+		color: $c-gray-4;
+		padding-right: .1rem; 
+	}
+}

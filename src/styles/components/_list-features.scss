@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\
+	List Features
+\* ------------------------------------------------------------ */
+
+.list-features {
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		font-weight: $font-weight-light;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $h6-font-size-mobile;
+		}
+	}
+
+	li + li {
+		margin-top: 1.1rem;
+	}
+
+	i {
+		margin-right: 1.1rem;
+	}
+}
+
+/*  List features alt */
+
+.list-features--alt {
+	li {
+		display: flex;
+		align-items: flex-start;
+		line-height: $h3-line-height;
+	}
+
+	i {
+		min-width: 1.6rem;
+
+		margin-top: 0.5rem;
+		margin: 0.5rem 1.9rem 0 0;
+	}
+
+	li + li {
+		margin-top: 0.8rem;
+	}
+}
+
+/* list-features--cols */
+
+.list-features--cols {
+	padding-bottom: 3.8rem;
+	column-count: 2;
+	box-shadow: 0px 10px 22px -22px rgba(0, 0, 0, 0.34);
+
+	@include breakpoint-down(mobile-medium) {
+		column-count: 1;
+	}
+}

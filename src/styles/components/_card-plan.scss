@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------ *\
+	Card plan
+\* ------------------------------------------------------------ */
+
+.card-plan {
+	background: $white-color;
+	box-shadow: 0px 0px 16px rgba(213, 213, 213, 0.5);
+	border-radius: .4rem;
+	padding: 3.6rem 3.3rem 3.5rem 2.9rem;
+
+	h4 {
+		color: $primary-color;
+		letter-spacing: 0.03em;
+		margin-bottom: 1.8rem;
+	}
+
+	.card__price h6 {
+		font-size: $h6-font-size-mobile;
+		font-weight: $font-weight-bold;
+		line-height: $h3-line-height;
+		margin-bottom: .6rem;
+	}
+
+	.card__entry {
+		font-weight: $font-weight-light;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.04em;
+		margin-bottom: 4.7rem;
+	}
+
+	.card__head {
+		margin-bottom: 1.5rem;
+		border-bottom: solid .1rem $border-color;
+	}
+
+	.card__price {
+		border-bottom: solid .1rem $border-color;
+		padding-bottom: 1.6rem;
+		margin-bottom: 3rem;
+	}
+
+	.card__body {
+		border-bottom: solid .1rem $border-color;
+		padding-bottom: 4rem;
+		margin-bottom: 1.3rem;
+	}
+
+	.card__foot {
+		text-align: center;
+	}
+
+	.card__btn {
+		min-width: 100%;
+		max-width: 29rem;
+
+		@include breakpoint-down(tablet) {
+			min-width: 29rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			min-width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.card-plan--alt {
+	height: 100%;
+	padding: 3.4rem 2.5rem 3.5rem 3.2rem; 
+
+	.card__head {
+		border-bottom: 0;
+		margin-bottom: 2.1rem;
+	}
+
+	.card__head h4 {
+		
+		margin-bottom: 0;
+	}
+
+	.card__body {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: .7rem;
+	}
+}

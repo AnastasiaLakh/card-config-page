@@ -1,0 +1,147 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	min-width: 320px;
+	background: $white-color;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	color: $dark-text;
+	overflow-x: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&[href^="tel"] {
+		text-decoration: none;
+	}
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+	margin-bottom: calc(#{$body-line-height}em / 2);
+}
+
+.h1,
+h1 {
+	font-family: $heading-font-family;
+	font-size: $h1-font-size;
+	line-height: $h1-line-height;
+	font-weight: $font-weight-thin;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-medium) {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+.h2,
+h2 {
+	font-size: $h2-font-size;
+	font-weight: $font-weight-light;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-small) {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+.h3,
+h3 {
+	font-size: $h3-font-size;
+	font-weight: $font-weight-light;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-medium) {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+.h4,
+h4 {
+	font-size: $h4-font-size;
+	letter-spacing: $h4-letter-spacing;
+	font-weight: $font-weight-light;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-small) {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+.h5,
+h5 {
+	font-size: $h5-font-size;
+	font-weight: $font-weight-medium;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-small) {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+.h6,
+h6 {
+	font-size: $h6-font-size;
+	font-weight: $font-weight-regular;
+	color: $primary-color;
+
+	@include breakpoint-down(mobile-small) {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote {
+	margin-bottom: #{$body-line-height}em;
+}
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;
+}

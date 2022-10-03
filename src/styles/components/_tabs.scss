@@ -1,0 +1,272 @@
+/* ------------------------------------------------------------ *\
+	Tabs
+\* ------------------------------------------------------------ */
+
+.tabs {
+	.tabs__head {
+		margin-bottom: 3.3rem;
+	}
+
+	.tabs__nav ul {
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint-down(mobile-medium) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.tabs__nav li {
+		max-width: 20%;
+		width: 100%;
+		font-size: $body-font-size;
+		font-weight: $font-weight-medium;
+		line-height: $h3-line-height;
+		text-align: center;
+		position: relative;
+		padding-bottom: 1.6rem;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 0.4rem;
+			background-color: $border-color;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -8px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 8px solid transparent;
+
+			@include breakpoint-down(mobile-medium) {
+				display: none;
+			}
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 100%;
+			padding: 1.5rem 0;
+		}
+	}
+
+	.tabs__nav li.is-active:after {
+		background-color: $primary-color;
+	}
+
+	.tabs__nav li.is-active:before {
+		border-top-color: $primary-color;
+	}
+
+	.tabs__nav a {
+		display: block;
+		text-decoration: none;
+
+		@include breakpoint-down(tablet) {
+			max-width: 20rem;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Tabs Nav
+\* ------------------------------------------------------------ */
+
+.tabs-nav {
+	li {
+		display: inline-block; 
+	}
+
+	button {
+		display: inline-block; 
+		position: relative; 
+		background: none; 
+		border: none;
+		color: rgba(84, 89, 85, .65);
+		letter-spacing: 0.3px;
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size; 
+		padding: 30px 45px; 
+
+		@include breakpoint-down(tablet) {
+			padding: 30px 20px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 30px 20px; 
+		}
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			bottom: 0; 
+			left: 0; 
+			width: 0; 
+			height: 4px; 
+			background: $primary-color; 
+			transition: width .4s;
+
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.is-active {
+		button {
+			color: $primary-color;
+
+			&:after {
+				width: 100%; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Tabs Def
+\* ------------------------------------------------------------ */
+
+.tabs-def {
+	.tabs__head {
+		margin: 0 0 72px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			margin: 0 0 31px; 
+		}
+	}
+
+	.tabs__nav {
+		font-size: $body-font-size; 
+		border-bottom: 1px solid $border-color;
+
+		ul {
+			list-style: none; 
+		}
+
+		button {
+			position: relative; 
+			display: inline-block; 
+			text-decoration: none; 
+			padding: 0 12px 10px; 
+			border: none;
+			background: none; 
+
+			&:after {
+				content: ''; 
+				position: absolute; 
+				bottom: -1px; 
+				left: 0; 
+				width: 0; 
+				height: 3px; 
+				background: $primary-color; 
+				transition: width .4s;
+			}
+		}
+
+		ul {
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				white-space: nowrap;
+				overflow-y: hidden;
+				overflow-x: auto;
+			}
+		}
+
+		li {
+			display: inline-block; 
+
+			+ li {
+				margin-left: 43px; 
+
+				/*  Mobile  */
+				
+				@include breakpoint-down(mobile) {
+					margin-left: 31px; 
+				}
+			}
+		}
+
+		.is-active {
+			font-weight: $font-weight-regular; 
+
+			button {
+				&:after {
+					width: 100%; 
+				}
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Tabs Nav
+\* ------------------------------------------------------------ */
+
+.tabs-nav-def {
+	li {
+		display: inline-block; 
+	}
+
+	button {
+		display: inline-block; 
+		position: relative; 
+		background: none; 
+		border: none;
+		color: rgba(84, 89, 85, .65);
+		letter-spacing: 0.3px;
+		font-weight: 500;
+		font-size: $body-font-size;
+		padding: 30px 45px; 
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			padding: 30px 20px; 
+		}
+
+		&:after {
+			content: ''; 
+			position: absolute; 
+			bottom: 0; 
+			left: 0; 
+			width: 0; 
+			height: 4px; 
+			background: $primary-color; 
+			transition: width .4s;
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.is-active {
+		button {
+			color: $primary-color;
+
+			&:after {
+				width: 100%; 
+			}
+		}
+	}
+}

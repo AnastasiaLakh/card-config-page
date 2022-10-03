@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	Section info
+\* ------------------------------------------------------------ */
+
+.section-info {
+	padding: 10rem 0 6rem;
+	background-color: $scrollbar-primary-color;
+
+	@include breakpoint-down(mobile) {
+		padding: 4.5rem 0 5rem;
+	}
+
+	.section__head {
+		text-align: center;
+		max-width: 74rem;
+		margin: 0 auto 6rem;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			padding: 0 .7rem;
+			margin-bottom: 5.7rem;
+		}
+
+		h1,
+		h2 {
+			margin-bottom: 2rem;
+			color: $primary-color;
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+				line-height: $body-line-height;
+				max-width: 260px;
+				margin: 0 auto 2rem;
+			}
+		}
+
+		h2 {
+			font-weight: $font-weight-thin;
+		font-size: $h1-font-size;  
+		line-height: $h1-line-height;
+		font-family: $ff-sans-serif-2;  
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size-mobile;
+				max-width: 260px;
+				margin: 0 auto 2rem;
+			}
+		}
+
+		h3 {
+			font-size: $h4-font-size;
+			letter-spacing: 0.0085em;
+			font-weight: $font-weight-light;
+		}
+
+		h4,
+		h3 {
+			@include breakpoint-down(mobile) {
+				font-size: $body-font-size;
+				line-height: $h3-line-height;
+			}
+		}
+	}
+}

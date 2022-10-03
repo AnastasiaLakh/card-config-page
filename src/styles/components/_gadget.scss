@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	Gadget Notification
+\* ------------------------------------------------------------ */
+
+.gadget-notification {
+	position: relative; 
+	background: $lighter-color; 
+	font-size: $h6-font-size-mobile; 
+	line-height: $h3-line-height; 
+	padding: 17px 25px 14px 57px; 
+	letter-spacing: 0.04em;
+	
+	@include breakpoint-down(mobile) {
+		padding: 16px 25px 14px 47px; 
+	}
+
+	i {
+		position: absolute; 
+		top: 50%; 
+		left: 16px; 
+		transform: translateY(-50%); 
+
+		@include breakpoint-down(mobile) {
+			top: 15px; 
+			transform: translateY(0); 
+			width: 16px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Gadget Notification ALt
+\* ------------------------------------------------------------ */
+
+.gadget-notification--alt {
+	font-size: $body-font-size; 
+	letter-spacing: 0.05em;
+	
+	p {
+		font-weight: $font-weight-regular; 
+	}
+}

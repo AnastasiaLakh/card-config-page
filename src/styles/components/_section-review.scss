@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ *\
+	Section Review
+\* ------------------------------------------------------------ */
+
+.section-review {
+	padding: 4.6rem 0 6.2rem;
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 2.4rem;
+	}
+
+	.section__actions {
+		margin-top: 4rem;
+		text-align: right;
+
+		@include breakpoint-down(mobile) {
+			margin-top: -0.4rem;
+		}
+	}
+
+	.section__button {
+		display: inline-block;
+		padding: 1.4rem 6rem;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+}
+
+/* Section Review Alt */
+
+.section-review--alt {
+	padding-top: 2rem;
+}

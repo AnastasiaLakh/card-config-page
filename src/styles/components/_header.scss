@@ -1,0 +1,426 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	border-bottom: 0.1rem solid $border-color;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $white-color;
+
+	@include breakpoint-down(mobile) {
+		position: relative;
+	}
+
+	.header__bar {
+		padding: 1rem 0 1.1rem;
+		background-color: $primary-color;
+	}
+
+	.header__bar nav + nav {
+		margin-left: 0.8rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-left: 2rem;
+		}
+	}
+
+	.header__shell {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.header__logo {
+		margin-right: 1.9rem;
+		width: 30%;
+
+		@include breakpoint-down(small-desktop) {
+			width: 50%;
+			margin: 0;
+		}
+
+		@include breakpoint-down(tablet) {
+			width: auto;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+	}
+
+	.header__logo span {
+		color: $primary-color;
+		font-size: $h5-font-size;
+		font-weight: $font-weight-light;
+		letter-spacing: -0.02em;
+		vertical-align: middle;
+
+		@include breakpoint-down(tablet) {
+			display: none;
+		}
+	}
+
+	.header__inner {
+		padding: 3rem 0 0;
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+		}
+	}
+
+	.header__content {
+		display: flex;
+		position: relative;
+
+		@include breakpoint-down(tablet) {
+			justify-content: space-between;
+		}
+
+		@include breakpoint-down(mobile) {
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 0;
+		}
+	}
+
+	.header__aside {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+
+		@include breakpoint-down(tablet) {
+			width: auto;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: $white-color;
+			width: 50%;
+			z-index: 99;
+			padding: 3rem 5rem;
+			transform: translateX(-200%);
+			transition: transform $t-duration;
+
+			&.is-active {
+				transform: translateX(0);
+				margin-left: -1.5rem;
+			}
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			width: 100%;
+		}
+	}
+
+	.header__aside nav + nav {
+		@include breakpoint-down(tablet) {
+			margin-left: 1rem;
+		}
+	}
+
+	.header__logged + .header__logged {
+		display: none;
+	}
+
+	&.is-logged-in .header__logged {
+		display: none;
+	}
+
+	&.is-logged-in .header__logged + .header__logged {
+		display: block;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Header Alt
+\* ------------------------------------------------------------ */
+
+.header--alt {
+	.nav-access {
+		position: relative;
+		margin-right: 2.8rem;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translateY(-50%) rotate(-45deg);
+			width: 10px; 
+			height: 10px;
+			border-left: 1px solid $white-color;
+			border-bottom: 1px solid $white-color;
+			margin-left: 8px;
+			margin-top: -4px;
+		}
+
+		li + li {
+			margin-left: .9rem;
+		}
+	}
+
+	.header__bar {
+		padding: 1rem 0 .6rem;
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Header Secondary
+\* ------------------------------------------------------------ */
+
+.header--secondary {
+	.header__logo {
+		width: 27.5%;
+
+		@include breakpoint-down(small-desktop) {
+			width: 50%;
+		}
+
+		@include breakpoint-down(tablet) {
+			width: auto;
+		}
+	}
+
+	.header__logo span {
+		font-weight: $font-weight-regular;
+	}
+
+	.header__inner {
+		min-height: 8rem;
+
+		@include breakpoint-down(mobile) {
+			min-height: 0;
+		}
+	}
+
+	.header__aside {
+		width: 72.5%;
+
+		@include breakpoint-down(tablet) {
+			width: auto;
+		}
+	}
+}
+
+.header--secondary-alt {
+
+	.header__bar {
+		padding: 1rem 0 .7rem;
+	}
+
+	.header__bar .header__shell {
+		max-width: calc(118.6rem + #{$shell-gutter} * 2);
+	}
+
+	.header__bar nav + nav {
+		margin-left: 1.3rem;
+	}
+
+	.nav-access ul {
+		display: flex;
+		align-items: stretch;
+		line-height: $line-height-default; 
+		letter-spacing: 0.055em;
+	}
+
+	.nav-access li {
+		line-height: 0;
+		display: flex;
+	}
+
+	.nav-access li + li {
+		margin-left: 1rem;
+		margin-top: 0;
+		position: relative;
+		padding-left: 1.2rem;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: .1rem; 
+			left: 0; 
+			width: .1rem;
+			height: 1.8rem; 
+			background-color: currentColor;
+
+		}
+	}
+
+	.nav-access a {
+		display: inline-flex;
+		align-items: center;
+		line-height: $line-height-default;
+	}
+
+	.nav-access i {
+		color: inherit;
+		display: inline-block;
+		font-size: 0;
+		margin-right: .8rem;
+	}
+
+	.nav-access span {
+		display: inline-block;
+		font-weight: $font-weight-regular;
+		letter-spacing: 0.04em;
+	}
+
+	.nav-access img,
+	.nav-access svg {
+		width: 2.2rem;
+		height: auto;
+	}
+
+	.nav-lang li {
+		padding: 0 0 0 1.2rem;
+	}
+
+	.shell--alt {
+		max-width: calc(117.6rem + 25px * 2);
+	}
+
+	.header__inner {
+		padding-top: 2.7rem; 
+
+		@include breakpoint-down(mobile) {
+			padding-top: 0;
+		}
+	}
+
+	.header__content {
+		justify-content: space-between;
+	}
+
+	.header__logo {
+		max-width: 20.3rem;
+	}
+
+	.header__aside {
+		padding-top: .5rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 3rem 2.5rem;
+		}
+	}
+
+	.header__aside.is-active {
+		@include breakpoint-down(mobile) {
+			margin-left: -2.5rem;
+		}
+	}
+
+	.nav li {
+		font-size: $body-font-size;
+		letter-spacing: 0.06em;
+	}
+
+	.nav li + li {
+		margin-left: 4.4rem;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+			margin-top: 0; 
+		}
+	}
+
+	.header__aside .ico-cart path {
+		fill: $dark-text;
+	}
+
+	.header__aside nav + nav {
+		@include breakpoint-down(tablet) {
+			margin-left: 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
+	}
+
+	.header__aside .nav {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Header Small
+\* ------------------------------------------------------------ */
+
+.header--small {
+	.header__content {
+		@media (min-width: 1024px) {
+			padding-right: 2rem; 
+		}
+	}
+
+	.header__logo {
+		margin-right: 6.1rem;
+
+		@include breakpoint-down(tablet) {
+			margin-right: 3rem;
+		}
+	}
+
+	.header__logo span {
+		display: inline-block;
+		font-size: 1.8rem;
+		margin-left: 0.4rem;
+		margin-top: -.4rem; 
+		letter-spacing: 0.02em;
+	}
+
+	.header__aside .nav li {
+		font-size: $h6-font-size;
+		letter-spacing: 0.01em;
+		min-width: 12rem;
+		padding-left: 1.2rem; 
+		padding-right: 1.2rem; 
+
+		@include breakpoint-down(tablet) {
+			padding-left: 0; 
+			padding-right: 0;
+			min-width: unset;
+		}
+	}
+
+	.header__aside .nav li + li {
+		margin-left: 0;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 1rem;
+		}
+	}
+
+	.nav-utilities [class*="ico-"] {
+		margin-top: -.6rem;
+	}
+
+	.nav-utilities a span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-style: normal;
+		font-size: 1.1rem; 
+		font-weight: 700;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+		border: .2rem solid $white-color;
+		right: -.8rem;
+		top: -1.4rem; 
+	}
+}

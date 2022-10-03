@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Announcement
+\* ------------------------------------------------------------ */
+
+.announcement {
+	background-color: rgba($alt-color, 0.1);
+	text-align: center;
+	padding: 1.9rem 0 1.6rem;
+
+	@include breakpoint-down(mobile) {
+		font-size: $body-font-size-small-mobile;
+		padding: 1.2rem 0;
+	}
+
+	p {
+		color: $dark-text;
+		font-weight: $font-weight-medium;
+		display: inline;
+	}
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0.3rem;
+	}
+
+	span {
+		font-weight: $font-weight-medium;
+		color: $alt-color-2;
+	}
+}

@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------ *\
+	Features
+\* ------------------------------------------------------------ */
+
+.features {
+	padding-top: 5.8rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 4rem 0 3rem;
+	}
+}
+
+.features--alt {
+	padding-top: 10.2rem;
+	margin-bottom: -.5rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0 3rem; 
+		margin-bottom: 0;
+	}
+
+	.feature + .feature {
+		margin-top: 0;
+	}
+
+	.feature {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 9.6rem;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 4rem;
+		}
+	}
+
+	.feature:nth-child(even) {
+		flex-direction: row-reverse;
+
+		@include breakpoint-down(mobile) {
+			flex-direction: row;
+		}
+	}
+
+	.feature .feature__content {
+		flex: 0 0 41%;
+		max-width: 41%;
+		margin-right: 7.5%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	.feature:nth-child(even) .feature__content {
+		flex: 0 0 39%;
+		max-width: 39%;
+		margin-right: 0;
+		margin-left: 8.7%;
+		padding-left: 0;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.feature .feature__entry {
+		max-width: 42.9rem;
+		letter-spacing: 0.038em;
+		line-height: $h3-line-height; 
+	}
+
+	.feature .feature__image {
+		flex: 0 0 46%;
+		max-width: 46%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.feature .feature__image img {
+		width: 100%; 
+		height: auto; 
+	}
+}

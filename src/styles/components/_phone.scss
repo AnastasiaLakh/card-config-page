@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Phone
+\* ------------------------------------------------------------ */
+
+.phone {
+	font-family: $ff-sans-serif-2;
+	font-size: $body-font-size;
+	font-weight: $font-weight-regular;
+	letter-spacing: -0.03em;
+	color: $dark-text;
+
+	i {
+		margin-right: 1.2rem;
+	}
+
+	span {
+		display: inline-block;
+		margin-left: 2.3rem;
+		letter-spacing: -0.015em;
+		font-size: $h6-font-size-mobile;
+	}
+}

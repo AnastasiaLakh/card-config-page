@@ -1,0 +1,97 @@
+/* ------------------------------------------------------------ *\
+	Portal
+\* ------------------------------------------------------------ */
+
+.portal {
+	border: 0.1rem solid $border-color;
+	height: 100%;
+
+	h5 {
+		letter-spacing: 0.03em;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		letter-spacing: normal;
+		margin-bottom: 1.4rem;
+	}
+
+	ul {
+		margin-left: 0rem;
+		list-style-position: inside;
+	}
+
+	li + li {
+		margin-top: 0.7rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 0.6rem;
+		}
+	}
+
+	li > span {
+		margin-left: -0.4em;
+	}
+	
+	.portal__head {
+		padding: 3.4rem 2.2rem 2.6rem;
+		border-bottom: 0.1rem solid $border-color;
+
+		@include breakpoint-down(small-desktop) {
+			padding: 2rem 2rem 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 1.7rem 2rem 1.4rem;
+		}
+	}
+
+	.portal__body {
+		padding: 1.6rem 2.2rem 5.2rem;
+		color: $quinary-color-alt;
+
+		@include breakpoint-down(small-desktop) {
+			padding-bottom: 3rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 2.8rem 2.2rem 0;
+		}
+	}
+
+	.portal__actions {
+		margin: 2.5rem 0 3rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 2.5rem -1rem 3rem;
+		}
+	}
+
+	.portal__btn {
+		font-size: $h6-font-size-mobile;
+		padding: 0.9rem 2.4rem;
+		min-width: 18rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			display: block;
+			padding: 1.4rem 2.4rem;
+		}
+	}
+
+	.portal__outro p {
+		@include breakpoint-down(mobile) {
+			line-height: $h3-line-height;
+		}
+	}
+	
+	.portal__outro p + p {
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\
+	Link Green
+\* ----------------------------------------------------------- */
+
+.link-green {
+	display: inline-block;
+	font-family: $ff-sans-serif-2;
+	font-size: $h6-font-size-mobile;
+	font-weight: $font-weight-regular;
+	color: $secondary-color;
+}
+
+.link-green--alt {
+	font-size: $body-font-size;
+	font-family: $ff-sans-serif;
+	font-weight: $font-weight-light;
+}

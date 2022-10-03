@@ -1,0 +1,105 @@
+/* ------------------------------------------------------------ *\
+	 Options
+\* ------------------------------------------------------------ */
+
+.options {
+	max-width: 69.5rem;
+	width: 100%;
+	margin: 0 auto;
+
+	.options__items {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -0.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin: -1rem 0;
+		}
+	}
+
+	.options__item {
+		max-width: 33.3333%;
+		width: 100%;
+		flex: 0 0 33.3333%;
+		padding: 0 0.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 100%;
+			flex: 0 0 100%;
+			padding: 1rem 0;
+		}
+	}
+}
+
+.options--centered {
+	.options__items {
+		justify-content: center;
+	}
+
+	.options__item {
+		max-width: 41.2rem;
+		flex: 0 0 41.2rem;
+
+		@include breakpoint-down(mobile) {
+			max-width: 22.5rem;
+			flex: 0 0 22.5rem;
+		}
+	}
+}
+
+/*  options alt  */
+
+.options--alt {
+	max-width: 71rem;
+
+	@include breakpoint-down(mobile-medium) {
+		max-width: 23rem;
+		margin: 0 auto;
+	}
+
+	.options__items {
+		margin: 0 -0.8rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0 -0.5rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin: -.5rem 0;
+		}
+	}
+
+	.options__item {
+		padding: 0 0.8rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 0rem 0.5rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: .5rem 0;
+		}
+	}
+}
+
+/*  options start  */
+
+.options--start {
+	.option__content {
+		justify-content: flex-start;
+	}
+
+	.option__image {
+		margin-left: .8rem;
+	}
+
+	.option span {
+		letter-spacing: 0.0375em;
+	}
+
+	.option__entry h6 {
+		letter-spacing: 0.02em;
+		margin-bottom: .1rem;
+	}
+}

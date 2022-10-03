@@ -1,0 +1,274 @@
+/* ------------------------------------------------------------ *\
+	Form Split
+\* ------------------------------------------------------------ */
+
+.form-split {
+	display: flex;
+	padding: 2.4rem 1.6rem 2rem;
+	position: relative;
+
+	@include breakpoint-down(tablet) {
+		padding: 4.4rem 1.6rem 2rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		flex-wrap: wrap;
+		padding: 2.2rem 1.6rem 3.2rem;
+	}
+
+	.form__body,
+	.form__aside {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.form__body {
+		padding-left: 4.8rem; 
+		padding-right: .8rem; 
+
+		@include breakpoint-down(tablet) {
+			padding-left: 0; 
+			padding-right: 1.5rem; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding-right: 0;  
+		}
+	}
+
+	.form__aside {
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+
+	.form__map {
+		max-width: 38.4rem;
+		margin-left: auto;
+	}
+
+	.form__map img {
+		width: 100%; 
+		height: auto;
+		font-size: 0;
+	}
+
+	.form__label {
+		display: block;
+		padding-bottom: .4rem; 
+		font-weight: 700; 
+		font-size: $body-font-size-small;
+		letter-spacing: 0.005em;
+	}
+
+	.form__controls {
+		position: relative;
+	}
+
+	.form__controls .field {
+		border-radius: 0;
+		border: .1rem solid $quinary-color; 
+		padding: 1rem 1.1rem; 
+		font-size: $body-font-size;
+		line-height: 1.63; 
+		font-weight: 400;
+		letter-spacing: 0.022em;
+		color: $quinary-color; 
+	}
+
+	.form__row.error .field {
+		border-color: $error-color;
+	}
+
+	.form__controls .form__message {
+		display: none;
+		position: absolute;
+		top: 0; 
+		bottom: 0; 
+		left: 0; 
+		width: 100%;
+		background-color: $beige-color; 
+		padding: 1rem 1.7rem 1rem 1rem;
+		letter-spacing: 0.03em;
+		border: .1rem solid $error-color; 
+
+		@include breakpoint-down(mobile) {
+			padding: 1.2rem 1.5rem 1rem 1rem;
+		}
+	}
+
+	.form__row.error .form__message {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.form__row.error .form__label {
+		&:before {
+			@include breakpoint-down(mobile) {
+				content: "1";
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				font-size: $body-font-size-small-mobile;
+				width: 1.8rem;
+				height: 1.8rem;
+				border-radius: 50%;
+				background-color: $error-color; 
+				color: $white-color;
+				margin-right: .5rem;
+			}
+		}
+	}
+
+	.form__message p {
+		margin-bottom: 0; 
+	}
+
+	.form__cols {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -.8rem -1.6rem; 
+	}
+
+	.form__col {
+		padding: 0 .8rem 1.6rem;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.form__col--lg {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.form__col--md {
+		flex: 0 0 61.5%;
+		max-width: 61.5%;
+	}
+
+	.form__col--sm {
+		flex: 0 0 38.5%;
+		max-width: 38.5%;
+	}
+
+	.form__count {
+		position: absolute;
+		top: 2rem; 
+		left: .8rem; 
+		width: 2.4rem;
+		height: 2.4rem;
+		border-radius: 50%;
+		background-color: $error-color;
+		color: $white-color;
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+		display: none;
+		font-size: $body-font-size-small;
+
+		@include breakpoint-down(tablet) {
+			top: 1rem;  
+		}
+	}
+
+	&.error .form__count {
+		display: flex;
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+
+	.form__location {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $secondary-color;
+		font-weight: 400; 
+		margin-top: 2rem; 
+		letter-spacing: 0.03em;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 0;
+			padding-left: .9rem; 
+		}
+	}
+
+	.form__location[disabled] span {
+		opacity: .1;
+	}
+
+	.form__location i {
+		width: 2.4rem;
+		margin-right: 1.6rem; 
+
+		@include breakpoint-down(mobile) {
+			width: 1.9rem;
+			margin-right: .7rem;
+		}
+	}
+
+	.form__location svg {
+		width: 100%; 
+		height: auto; 
+	}
+
+	.form__link,
+	.form__trigger {
+		display: inline-flex;
+		align-items: center;
+		color: $secondary-color;
+		text-decoration: none;
+		letter-spacing: 0.02em;
+	}
+
+	.form__link i,
+	.form__trigger i {
+		font-size: 0;
+
+
+		&:first-child {
+			margin-right: .6rem;
+		}
+
+		&:last-child {
+			margin-left: .6rem;
+		}
+	}
+
+	.form__link i svg,
+	.form__trigger i svg {
+		@include breakpoint-down(mobile) {
+			width: .9rem;
+			height: auto;
+		}
+	} 
+
+	.form__actions {
+		@include breakpoint-down(mobile) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-right: .7rem; 
+			padding-bottom: 1.3rem;
+		}
+	}
+
+	&.is-active .form__body {
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+
+	&.is-active .form__aside {
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+}

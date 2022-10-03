@@ -1,0 +1,307 @@
+/* ------------------------------------------------------------ *\
+	List
+\* ------------------------------------------------------------ */
+
+[class^="list-"] {
+	list-style: none; 
+}
+
+/* ------------------------------------------------------------ *\
+	List Checkboxes
+\* ------------------------------------------------------------ */
+
+.list-checkboxes {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -7px -15px; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		display: block; 
+	}
+
+	li {
+		flex: 0 0 50%;
+		max-width: 50%; 
+		padding: 0 7px 15px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			max-width: 100% !important; 
+		}
+	}
+	
+	/*  List Checkboxes Alt  */
+	&--alt {
+		li {
+			flex: 0 0 25%;
+			max-width: 25%; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				flex: 0 0 50%;
+				max-width: 50%; 				
+			}
+		}
+	}
+
+	/*  List Checkboxes Primary  */
+	&--primary {
+		margin: 0 -110px -6px -7px; 
+
+		@include breakpoint-down(small-desktop) {
+			margin: 0 -7px -6px; 
+		}
+
+		li {
+			flex: 0 0 25%;
+			max-width: 25%; 
+			padding: 0 7px 6px; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				flex: 0 0 33.33%;
+				max-width: 33.33%; 				
+			}
+		}
+	}
+
+	/*  List Checkboxes Secondary  */
+	&--secondary {
+		display: block; 
+		margin: 0; 
+
+		li {
+			max-width: 100%; 
+			padding: 0; 
+
+			+ li {
+				margin: 16px 0 0; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Links
+\* ------------------------------------------------------------ */
+
+.list-links {
+	font-size: $body-font-size;  
+	font-weight: $font-weight-light; 
+	letter-spacing: 0.06em;
+
+	a {
+		text-decoration: none; 
+	}
+
+	li {
+		display: inline-block; 
+
+		&:after {
+			content: '>'; 
+			margin: 0 6px 0 6px; 
+		}
+
+		&:last-child {
+			&:after {
+				display: none; 
+			}
+		}
+	}
+
+	.is-active {
+		font-weight: $font-weight-regular; 
+		color: $primary-color; 
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Updates
+\* ------------------------------------------------------------ */
+
+.list-updates {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px;  
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		display: block; 
+		margin: 0; 
+	}
+
+	a {
+		display: flex;
+		align-items: center; 
+		position: relative; 
+		font-size: $body-font-size-small; 
+		line-height: $h3-line-height; 
+		letter-spacing: 0.043em;
+		text-decoration: none; 
+		color: $primary-color; 
+		background: $scrollbar-primary-color; 
+		padding: 8px 10px 8px 52px; 
+		min-height: 56px; 
+
+		> img {
+			position: absolute; 
+			top: 8px; 
+			left: 6px; 
+		}
+	}
+
+	li {
+		flex: 0 0 50%;
+		max-width: 50%; 
+		padding: 0 8px; 
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			padding: 0; 
+			max-width: 100%; 
+		}
+
+		+ li {
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				margin: 8px 0 0; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Stats
+\* ------------------------------------------------------------ */
+
+.list-stats {
+	font-size: $body-font-size; 
+	font-weight: $font-weight-light;
+
+	p {
+		margin: 0; 
+		flex: 0 0 54%;
+	} 
+
+	span {
+		position: relative; 
+		top: 7px; 
+		flex: 0 0 46%;
+		background: $light-color-def; 
+		border-radius: 4px; 
+		height: 10px; 
+
+		em {
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			bottom: 0; 
+			width: 40%; 
+			background: $blue-color-alt; 
+			border-radius: 4px; 
+		}
+	}
+
+	strong {
+		flex: 0 1 auto;
+		margin-left: auto; 
+		font-weight: $font-weight-light; 
+	}
+
+	li {
+		display: flex;
+		align-items: flex-start; 
+
+		+ li {
+			margin-top: 9px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Data
+\* ------------------------------------------------------------ */
+
+.list-data {
+	font-size: $body-font-size; 
+	font-weight: $font-weight-light;
+
+	p {
+		margin: 0; 
+		flex: 0 0 54%;
+	} 
+
+	span {
+		flex: 0 0 67px;
+
+		em {
+			display: inline-block; 
+			width: 7px; 
+			height: 7px; 
+			border-radius: 50%; 
+			vertical-align: middle;
+			margin-right: 7px; 
+			position: relative; 
+			top: -2px; 
+		}
+	}
+
+	li {
+		display: flex; 
+		justify-content: space-between;
+		align-items: flex-start; 
+
+		+ li {
+			margin-top: 10px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Stars
+\* ------------------------------------------------------------ */
+
+.list-stars {
+	li {
+		display: inline-block; 
+
+		+ li {
+			margin-left: 5px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	List Features
+\* ------------------------------------------------------------ */
+
+.list-features {
+	li {
+		position: relative; 
+		padding-left: 31px; 
+
+		&:after {
+			content: '';
+			position: absolute; 
+			top: 12px; 
+			left: 8px; 
+			transform: translate(-50%, -50%); 
+			background: url(../images/svg/ico-check-green.svg) no-repeat 0 0; 
+			background-size: 100% 100%; 
+			width: 15px; 
+			height: 11px; 
+		}
+
+		+ li {
+			margin-top: 8px; 
+		}
+	}
+}

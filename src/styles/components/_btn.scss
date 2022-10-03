@@ -1,0 +1,255 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  appearance: none;
+  font-size: $body-font-size;
+  font-weight: $font-weight-medium;
+  transition: color $t-duration, background-color $t-duration,
+    border-color $t-duration;
+  border: 0.1rem solid transparent;
+  padding: 1.4rem 4.2rem;
+  border-radius: 0.4rem;
+
+  &:focus {
+    outline: 0.2rem solid $c-orange-2;
+    outline-offset: 0.2rem;
+  }
+}
+
+.btn--green {
+  color: $white-color;
+  background-color: $secondary-color;
+
+  &:focus {
+    outline: 0.2rem solid $secondary-color;
+    outline-offset: 0.2rem;
+  }
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: $white-color;
+    color: $secondary-color;
+  }
+}
+
+.btn--white {
+  border-color: $secondary-color;
+  color: $secondary-color;
+  background-color: $white-color;
+
+  &:focus,
+  &:hover {
+    background-color: $secondary-color;
+    color: $white-color;
+  }
+}
+
+.btn--small {
+  padding: 1.4rem 2.6rem;
+}
+
+.btn--medium {
+  padding: 1.4rem 3.7rem;
+}
+
+.btn--large {
+  padding: 1.4rem 5.2rem;
+}
+
+.btn--xl {
+  padding: 1.6rem 8.9rem;
+  letter-spacing: 0.03em;
+}
+
+.btn--size-4 {
+  padding: 1.4rem 4.9rem 1.4rem 4.6rem;
+}
+
+.btn--size-5 {
+  padding: 1.4rem 4.4rem 1.4rem 4.6rem;
+}
+
+.btn--size-6 {
+  padding: 1.5rem 5.6rem;
+}
+
+.btn--size-7 {
+  padding: 1.5rem 5.8rem;
+}
+
+/*  Btn block  */
+
+.btn--block {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Btn Disabled */
+
+.btn--disabled {
+  pointer-events: none;
+  background-color: $border-color;
+  color: $white-color;
+}
+
+/*  btn gray  */
+
+.btn--gray {
+  border-color: $border-color;
+  color: $dark-text;
+  background-color: $white-color;
+
+  &:hover {
+    background-color: $border-color;
+  }
+}
+
+.btn--purple {
+  background: $primary-color;
+  color: $white-color;
+}
+
+/*  Button border  */
+.btn--border {
+  border: 1px solid $secondary-alt-color;
+  background: $white-color;
+  color: $secondary-alt-color;
+  font-size: $body-font-size;
+  padding: 14px 10px;
+}
+/*  Button border  */
+.btn--border-alt {
+  border: 1px solid $primary-color;
+  background: $white-color;
+  color: $primary-color;
+  font-size: $body-font-size;
+  padding: 15px 15px;
+  min-width: 181px;
+}
+
+/* btn oval */
+
+.btn--oval {
+  border-radius: 4.8rem;
+  padding: 1.4rem 3.2rem;
+}
+
+/* ------------------------------------------------------------ *\
+	Button Terms
+\* ------------------------------------------------------------ */
+
+.btn-terms {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding: 17px 10px;
+  font-size: $body-font-size;
+  font-weight: $font-weight-regular;
+  color: $dark-text;
+
+  @include breakpoint-down(mobile) {
+    display: block;
+    width: 100%;
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    margin-right: 8px;
+    top: -3px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: url(../../assets/images/svg/ico-angle-down-purple.svg)
+        no-repeat 0 0;
+      width: 12px;
+      height: 7px;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  &--alt {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------ *\
+	Button Alt
+\* ------------------------------------------------------------ */
+
+.btn-alt {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  background: none;
+  border: none;
+  background: $secondary-color;
+  color: #fff;
+  font-size: $body-font-size;
+  border-radius: 40px 0 0 40px;
+  padding: 17px 29px 15px 27px;
+  z-index: 1000;
+  transition: opacity 0.4s;
+
+  @include breakpoint-down(small-desktop) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  i {
+    display: block !important;
+    margin: 0 auto 10px;
+  }
+}
+
+/* ------------------------------------------------------------ *\
+	Button Def
+\* ------------------------------------------------------------ */
+
+.btn-def {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: $body-font-size;
+  color: $primary-color;
+  padding: 17px 29px 14px 27px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  i:not(.ico-angle-right) {
+    display: block;
+    margin: 0 auto 13px;
+  }
+
+  .ico-angle-right {
+    margin-left: 6px;
+  }
+}

@@ -1,0 +1,9 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="19.856" height="29.816" viewBox="0 0 19.856 29.816">
+  <g id="Lightbulb" transform="translate(0.508 0.508)">
+    <path id="Path" d="M18.84,9.42A9.42,9.42,0,1,0,2.39,15.68c1.61,1.8,2.63,3.43,2.63,5.85v.48h8.79v-.48c0-2.41,1.02-4.05,2.63-5.85a9.354,9.354,0,0,0,2.4-6.26Z" fill="none" stroke="#4b286d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.016"/>
+    <path id="Path-2" data-name="Path" d="M0,.5H8.48" transform="translate(5.18 23.77)" fill="none" stroke="#4b286d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.016"/>
+    <path id="Path-3" data-name="Path" d="M0,.5H8.48" transform="translate(5.18 26.04)" fill="none" stroke="#4b286d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.016"/>
+    <path id="Path-4" data-name="Path" d="M0,.5H6.06" transform="translate(6.39 28.3)" fill="none" stroke="#4b286d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.016"/>
+  </g>
+</svg>

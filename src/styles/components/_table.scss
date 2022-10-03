@@ -1,0 +1,486 @@
+/* ------------------------------------------------------------ *\
+	Table Documents
+\* ------------------------------------------------------------ */
+
+.table-documents {
+	@include breakpoint-down(mobile) {
+		overflow-x: auto;
+		overflow-y: hidden; 
+	}
+	
+	table {
+		@include breakpoint-down(tablet) {
+			table-layout: fixed;
+		}
+
+		@include breakpoint-down(mobile) {
+			min-width: 70.0rem; 
+		}
+	}
+
+	th,
+	td {
+		@include breakpoint-down(tablet) {
+		}
+
+		&:nth-child(1) {
+			width: 47%; 
+
+			@include breakpoint-down(tablet) {
+				width: 40%; 
+			}
+		}
+
+		&:nth-child(2) {
+			width: 31%; 
+
+			@include breakpoint-down(tablet) {
+				width: 20%; 
+			}
+			
+		}
+
+		&:nth-child(3) {
+			width: 30%; 
+		} 
+
+		&:nth-child(4) {
+			text-align: right; 
+		} 
+	}
+
+	th {
+		text-align: left; 
+		padding-bottom: .6rem; 
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+		line-height: 2.0rem;
+		letter-spacing: 0.1px;
+		color: $primary-color;
+
+		i {
+			margin-left: .4rem; 
+		}
+	}
+
+	td {
+		border-top: .1rem solid $border-color;
+		padding: 1.2rem 0; 
+		font-weight: $font-weight-light;
+		letter-spacing: 0.61px;
+		color: $dark-text;
+	}
+
+	h6 {
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+		line-height: 2.0rem;
+		letter-spacing: 0.1px;
+		color: $dark-text;
+
+		@include breakpoint-down(tablet) {
+			max-width: 90%; 
+			overflow: hidden; 
+			text-overflow: ellipsis;
+			padding-right: 2.0rem; 
+		}
+	}
+
+	&--primary {
+		table {
+			table-layout: fixed;
+		}
+
+		th,
+		td {
+			&:nth-child(1) {
+				width: 33.5%; 
+
+				@include breakpoint-down(tablet) {
+					/*width: 40%; */
+				}
+			}
+
+			&:nth-child(2) {
+				width: 11%; 
+
+				@include breakpoint-down(tablet) {
+					/*width: 20%; */
+				}
+				
+			}
+
+			&:nth-child(3) {
+				width: 13%; 
+				text-align: right; 
+				padding-right: 3.4rem; 
+
+				@include breakpoint-down(tablet) {
+					padding-right: 1.0rem; 
+				}
+			} 
+
+			&:nth-child(4) {
+				width: 10%; 
+				text-align: left; 
+				padding-left: 4.0rem; 
+
+				@include breakpoint-down(tablet) {
+					padding-left: 1.0rem; 
+				}
+
+				.label {
+					white-space: nowrap;
+					background: $scrollbar-primary-color; 
+				}
+			}
+
+			&:nth-child(5) {
+				width: 17%; 
+				text-align: right; 
+			} 
+		}
+
+
+		th {
+			padding-bottom: 2.1rem; 
+		}
+
+		td {
+			padding: 2.0rem 0 1.8rem; 
+			vertical-align: top;
+		}
+
+		tr {
+			&:last-child {
+				td {
+					border-bottom: .1rem solid $border-color;
+				}
+			} 
+		}
+
+		p {
+			margin: 0; 
+
+			+ p {
+				margin-top: 4.3rem; 
+			}
+		}
+
+		.table__link {
+			text-decoration: none; 
+			font-weight: bold;
+			font-size: $body-font-size; 
+			font-weight: $font-weight-bold; 
+			color: $secondary-color;
+
+			@include breakpoint-down(tablet) {
+				font-size: 0; 
+			}
+
+			i {
+				margin-left: .5rem; 
+				vertical-align: middle;
+			}
+		}
+
+		.js-toggle-link {
+			display: inline-block; 
+			position: relative; 
+			text-decoration: none; 
+			padding-left: 3.0rem; 
+
+			@include breakpoint-down(tablet) {
+				padding-right: 2.0rem; 
+			}
+
+			i {
+				position: absolute; 
+				top: 50%; 
+				left: 0; 
+				transform: translateY(-50%); 
+			}
+
+			+ p {
+				padding: 1.6rem 0 0 3.1rem; 
+				max-width: 31.0rem; 
+				line-height: $h3-line-height; 
+			}
+
+			&.is-active {
+				i {
+					transform: translateY(-50%) rotate(180deg); 
+				}
+			}
+		}
+
+
+		.js-toggle-element {
+			display: none; 
+		}
+	}
+
+	&.js-table {
+		
+		tr {
+			display: none; 
+		}
+
+		tr:nth-child(-n+5) {
+			display: block; 
+		}
+	}
+}
+
+
+
+.is-expand {
+	padding-bottom: 1rem; 
+
+	.table-documents.js-table tr {
+		display: block; 
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Table Alt
+\* ------------------------------------------------------------ */
+
+.table-alt {
+	background: $white-color;
+	box-shadow: 0 0 1.6rem rgba(213, 213, 213, 0.5);
+	border-radius: .4rem;
+
+	@include breakpoint-down(tablet) {
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	+ .table-alt {
+		margin-top: 5.1rem; 
+	}
+	
+	table {
+		table-layout: fixed;
+
+		@include breakpoint-down(tablet) {
+			min-width: 102.4rem; 
+		}
+	}
+
+	thead {
+		background: $scrollbar-primary-color;
+		border-bottom: .1rem solid $border-color;
+	}
+
+	th,
+	td {
+		&:nth-child(1) {
+			width: 21.9%; 
+		}
+
+		&:nth-child(2) {
+			width: 18.9%; 
+		}
+
+		&:nth-child(3) {
+			width: 18.9%; 
+		}
+
+		&:nth-child(4) {
+			width: 20.3%; 
+		}
+
+		&:nth-child(5) {
+			width: 20%; 
+			text-align: right; 
+			padding-right: 2.6rem; 
+			padding-left: 0; 
+		} 
+	}
+
+	th {
+		text-align: left; 
+		padding: 2.4rem 0 2.0rem 3.2rem; 
+
+		h6 {
+			font-weight: $font-weight-medium;
+			font-size: $body-font-size;
+			letter-spacing: 0.61px;
+			color: $dark-text;
+
+			span {
+				display: block; 
+				font-weight: $font-weight-light;
+				letter-spacing: 0.6px;
+				margin-top: .4rem; 
+			}
+		}
+
+		em {
+			font-style: normal; 
+			font-weight: $font-weight-bold;
+			font-size: $h6-font-size-mobile;
+			letter-spacing: 0.6px;
+			color: $quinary-color;
+			display: block; 
+		}
+	}
+
+	td {
+		padding: 2.9rem 0 2.9rem 3.2rem; 
+	}
+
+	.link-alt {
+		text-decoration: none; 
+		font-weight: $font-weight-bold;
+		font-size: $body-font-size;
+		color: $secondary-color;
+		margin-right: .9rem; 
+	}
+
+
+}
+
+/* ------------------------------------------------------------ *\
+	Table Tickets
+\* ------------------------------------------------------------ */
+
+.table-tickets {
+	border: 1px solid $border-color;
+	border-radius: 4px; 
+	text-align: left; 
+
+	/*  Tablet  */
+	
+	@include breakpoint-down(tablet) {
+		overflow-x: auto;
+	}
+
+	table {
+		table-layout: fixed;
+
+		/*  Tablet  */
+		
+		@include breakpoint-down(tablet) {
+			min-width: 800px; 
+		}
+	}
+
+	th,
+	td {
+		padding-right: 10px; 
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 14px !important; 
+		}
+
+		&:nth-child(1) {
+			width: 14.5%; 
+			padding-left: 20px; 
+
+			p {
+				padding-left: 0; 
+			}
+		}
+
+		&:nth-child(2) {
+			width: 16.5%; 
+		}
+
+		&:nth-child(3) {
+			width: 25.3%; 
+		}
+
+		&:nth-child(4) {
+			width: 16.3%; 
+		}
+
+		&:nth-child(5) {
+			width: 15.4%; 
+		}
+
+		&:nth-child(6) {
+			width: 11.4%; 
+		} 
+	}
+
+	th {
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size; 
+		letter-spacing: 0.1px;
+		color: $primary-color;
+		padding: 10px 10px;  
+		border-bottom: 1px solid $border-color;
+
+		span {
+			display: inline-flex; 
+			align-items: center; 
+
+			i {
+				margin-left: 8px; 
+			}
+		}
+	}
+
+	td {
+		vertical-align: top;
+		font-weight: $font-weight-light;
+		font-size: $body-font-size; 
+		line-height: $h3-line-height; 
+		letter-spacing: 0.61px;
+		color: $dark-text;
+		padding-top: 10px; 
+		padding-bottom: 10px; 
+
+		p {
+			padding-left: 7px; 
+		}
+
+		em {
+			display: block; 
+			font-style: normal; 
+			color: #9fa2a7; 
+		}
+	}
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				td {
+					background: #f7f7f9; 
+				}
+			} 
+		}
+	}
+
+	.badge {
+		display: block; 
+		background: #7C53A5;
+		color: $white-color; 
+		border-radius: 90px;
+		width: 78px; 
+		font-weight: $font-weight-medium;
+		font-size: 11px;
+		letter-spacing: 0.09px;
+		text-align: center; 
+		padding: 3px 2px; 
+		margin-top: 3px; 
+
+		&--gray {
+			background: $border-color;
+			color: $dark-text;
+
+		}
+
+		&--dark {
+			background: $quinary-color;
+		}
+
+		&--yellow {
+			color: $dark-text;
+			background: #FACA69;
+		}
+	}
+}

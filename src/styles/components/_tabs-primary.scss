@@ -1,0 +1,280 @@
+/* ------------------------------------------------------------ *\
+	Tabs primary
+\* ------------------------------------------------------------ */
+
+.tabs-primary {
+	margin-right: -9rem;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include breakpoint-down(large-desktop) {
+		margin-right: 0; 
+	}
+
+	@include breakpoint-down(mobile) {
+		text-align: center;
+	}
+
+	.tabs__body {
+		max-width: 37.4%;
+		flex: 0 0 37.4%;
+
+		@include breakpoint-down(tablet) {
+			max-width: 45%;
+			flex: 0 0 45%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+
+	.tabs__aside {
+		max-width: 62.6%;
+		flex: 0 0 62.6%;
+
+		@include breakpoint-down(tablet) {
+			max-width: 55%;
+			flex: 0 0 55%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+
+	.tabs__image {
+		padding-left: 6rem; 
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		transition: opacity $t-duration, visibility $t-duration;
+
+		@include breakpoint-down(tablet) {
+			padding-left: 1.5rem; 
+		}
+
+		&.is-active {
+			opacity: 1;
+			position: relative;
+			visibility: visible; 
+		} 
+	}
+
+	h2 {
+		line-height: .95;
+		color: $primary-color;
+		margin-bottom: 2rem;
+
+		@include breakpoint-down(tablet) {
+			font-size: $h3-font-size;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: $h3-font-size-mobile;
+			margin: 0 auto 2.7rem;
+		}
+	}
+
+	.tabs__body {
+		padding-top: 1rem;
+	}
+
+	.tab-primary + .tab-primary {
+		margin-top: 1.7rem; 
+	}
+
+	.tabs__nav {
+		background-color: $white-color;
+		border-radius: 2rem;
+		display: flex;
+		align-items: center;
+		max-width: 19rem;
+		padding: .7rem 1rem 1rem 1.5rem;
+		margin-bottom: 3.3rem;
+		box-shadow: 0px 0px 8px 2px rgba(42,44,46,0.1);
+
+
+		ul {
+			display: flex;
+			list-style: none;
+			margin-left: 1.7rem; 
+
+			a {
+				display: inline-block; 
+				width: 4rem;
+				border-radius: 2rem;
+				height: 2.3rem;
+				line-height: 2.3rem;
+				text-align: center;
+				color: $dark-text;
+				font-size: $h6-font-size-mobile;
+				text-decoration: none;
+				transition: background-color $t-duration, color $t-duration;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $white-color;	
+					text-decoration: none;
+				}
+			} 
+
+			li.is-active {
+				a {
+					background-color: $primary-color;
+					color: $white-color;
+				}
+			}
+
+			li + li {
+				margin-left: .3rem; 
+			}
+		}
+	}
+
+	.tab-primary + .tabs__nav {
+		margin-top: 3rem; 
+	}
+
+	.tabs__actions {
+		@include breakpoint-down(mobile) {
+			width: 100%;
+			margin-top: 0; 
+		}
+			
+		.btn {
+			min-width: 18rem;
+
+			@include breakpoint-down(mobile) {
+				min-width: 100%;
+			}
+		}
+	}
+
+	.tabs__slide {
+		text-align: center;
+
+		p {
+			font-size: $body-font-size;
+			font-weight: $font-weight-regular;
+			line-height: $h3-line-height;
+			letter-spacing: .03em;
+			color: $dark-text;
+			margin-bottom: 1rem;
+
+			span {
+				display: block;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	.tabs__paging {
+		span {
+			display: inline-block; 
+			width: 4rem;
+			border-radius: 2rem;
+			height: 2.3rem;
+			line-height: 2.3rem;
+			text-align: center;
+			color: $dark-text;
+			font-size: $h6-font-size-mobile;
+			text-decoration: none;
+			transition: background-color $t-duration, color $t-duration;
+			background-color: transparent;
+			opacity: 1; 
+			margin: 0 0 0 0;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: $primary-color;
+			color: $white-color;			
+		}
+	}
+
+	.tabs__head {
+		padding-bottom: 5.5rem;
+	}
+
+	.swiper-pagination {
+		max-width: 19rem;
+		background-color: $white-color;
+		border-radius: 2rem;
+		box-shadow: 0px 0px 8px 2px rgba(42,44,46,0.1);
+		padding: .7rem 0 .8rem 4rem;
+		margin: 0 auto;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin-top: -.9rem; 
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 1.5rem;
+			transform: translateY(-50%);
+			background-image: url(../images/svg/ico-pause.svg);
+			width: 1.7rem;
+			height: 1.7rem;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Tab primary
+\* ------------------------------------------------------------ */
+
+.tab-primary {
+	background-color: $white-color;
+	border-radius: .4rem;
+	position: relative;
+	padding: 1rem 1.5rem 1.3rem 1.4rem;
+	transition: box-shadow $t-duration;
+
+	&:before {
+		content: '';
+		height: 100%;
+		border-radius: .4rem 0 0 .4rem;
+		background-color: $primary-color;
+		width: 4px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden; 
+		transition: opacity $t-duration, visibility $t-duration;
+	}
+
+	p {
+		font-size: $body-font-size;
+		font-weight: $font-weight-regular;
+		line-height: $h3-line-height;
+		letter-spacing: .03em;
+		color: $dark-text;
+		transition: color $t-duration;
+
+		span {
+			font-weight: $font-weight-medium;
+		}
+	}
+
+	&.is-active {
+		box-shadow: 0px 0px 16px 11px rgba(42,44,46,0.1);
+
+		&:before {
+			opacity: 1;
+			visibility: visible;  
+		}
+
+		p {
+			color: $primary-color;
+		}
+	}
+}

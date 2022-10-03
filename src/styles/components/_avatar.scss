@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------ *\
+	Avatar
+\* ------------------------------------------------------------ */
+
+.avatar {
+	position: relative; 
+	display: inline-flex; 
+	align-items: center; 
+	padding-right: 20px; 
+	margin-right: 25px; 
+
+	&:after {
+		content: ''; 
+		position: absolute; 
+		top: 50%; 
+		right: 0; 
+		width: 10px; 
+		height: 10px; 
+		border-top: 1px solid $white-color;
+		border-right: 1px solid $white-color;
+		transform: translateY(-50%) rotate(135deg); 
+		margin-top: -3px; 
+	}
+
+	h6 {
+		font-size: $body-font-size-small; 
+		margin: 0 8px 0 0;  
+		color: $white-color; 
+	} 
+
+	.avatar__image {
+		width: 24px; 
+		height: 24px; 
+		border-radius: 50%; 
+		background-size: cover; 
+		background-position: center center; 
+	}
+
+	/*  Avatar Alt  */
+	&--alt {
+		padding: 0; 
+
+		&:after {
+			display: none; 
+		}
+
+		h6 {
+			order: 1;
+			margin: 0 0 0 8px; 
+		}
+
+		> i {
+			order: 1;
+			margin-left: 12px; 
+		}
+
+		.avatar__image {
+			background: $black-color; 
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Portals
+\* ------------------------------------------------------------ */
+
+.portals {
+	.portals__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1.6rem;
+	}
+
+	.portals__item {
+		max-width: 50%;
+		width: 100%;
+		padding: 0 1.6rem;
+
+		@include breakpoint-down(tablet) {
+			max-width: 100%;
+		}
+	}
+
+	.portals__item + .portals__item {
+		@include breakpoint-down(tablet) {
+			margin-top: 1.8rem;
+		}
+	}
+}

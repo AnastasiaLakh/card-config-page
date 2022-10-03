@@ -1,0 +1,357 @@
+
+/* ------------------------------------------------------------ *\
+	List Steps
+\* ------------------------------------------------------------ */
+
+.list-steps {
+	list-style: none;
+	max-width: 71rem;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include breakpoint-down(mobile) {
+		flex-direction: column;
+	}
+
+	li {
+		text-align: center;
+		color: $quinary-color-alt;
+		text-align: center;
+		min-width: 18.8rem;
+	}
+
+	li + li {
+		@include breakpoint-down(mobile) {
+			margin-top: 5rem;
+		}
+	}
+
+	li.is-current h6 {
+		font-family: $ff-sans-serif;
+		font-weight: $font-weight-medium;
+		color: $dark-text;
+	}
+
+	li:last-child span:after {
+		display: none;
+	}
+
+	span {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.4rem;
+		height: 2.4rem;
+		background-color: $secondary-color;
+		border: 0.1rem solid $c-gray-8;
+		border-radius: 50%;
+		margin-bottom: 0.8rem;
+		z-index: 10;
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 2.3rem;
+			height: 0.1rem;
+			background-color: $c-gray-8;
+			width: 23.8rem;
+
+			@include breakpoint-down(mobile) {
+				width: 0.1rem;
+				height: 10rem;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				z-index: -1;
+				background-color: rgba($c-gray-8, 0.5);
+			}
+		}
+	}
+
+	h6 {
+		font-size: $h6-font-size-mobile;
+		font-family: $ff-sans-serif-2;
+		font-weight: $font-weight-regular;
+		position: relative;
+		z-index: 11;
+	}
+}
+
+/* List Steps Alt */
+
+.list-steps--alt {
+	max-width: unset;
+	justify-content: start;
+	position: relative;
+
+	@include breakpoint-down(small-desktop) {
+		justify-content: center;
+	}
+
+	@include breakpoint-down(tablet) {
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 45rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		max-width: 22.8rem;
+	}
+
+	li {
+		min-width: unset;
+		min-height: 5.2rem;
+
+		@include breakpoint-down(mobile) {
+			min-height: 2.8rem;
+		}
+	}
+
+	li + li {
+		margin-left: 11.6rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 5rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+	}
+
+	li:nth-of-type(1) {
+		text-align: left;
+
+		@include breakpoint-down(small-desktop) {
+			text-align: center;
+		}
+	}
+
+	li:nth-of-type(1) span {
+		margin-left: 1.4rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin: 0;
+		}
+	}
+
+	li:last-of-type {
+		margin-left: 14rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 4rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin-left: 0;
+		}
+	}
+
+	li:last-of-type span {
+		margin-left: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	li.is-completed span {
+		margin-bottom: 1rem;
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+	}
+
+	li.is-current span,
+	li.is-completed span {
+		background-color: $secondary-color;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 0;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+	}
+
+	span {
+		margin-left: 1.8rem;
+		background-color: $white-color;
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+
+		&:after {
+			width: 21.3rem;
+
+			@include breakpoint-down(small-desktop) {
+				width: 13.4rem;
+			}
+
+			@include breakpoint-down(850px) {
+				width: 12rem;
+			}
+
+			@include breakpoint-down(tablet) {
+				height: 0.1rem;
+				width: 7rem;
+				left: 100%;
+				right: unset;
+				transform: translate(0, -50%);
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 3rem;
+			}
+		}
+	}
+
+	h6 {
+		@include breakpoint-down(tablet) {
+			display: none;
+		}
+	}
+
+	.list__note {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 30%);
+		font-size: $body-font-size-small-mobile;
+	}
+}
+
+/*  list steps secodnary  */
+
+.list-steps--secondary {
+	max-width: 89rem;
+	margin: 0 auto;
+	position: relative;
+
+	@include breakpoint-down(tablet) {
+		max-width: 65rem
+	}
+
+	@include breakpoint-down(mobile) {
+		max-width: 45rem;
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		max-width: 29rem;
+	}
+
+	span {
+		margin-left: 0;
+		margin-bottom: .5rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 3.4rem;
+			height: 3.4rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+
+	span:after {
+		width: 16.2rem;
+
+		@include breakpoint-down(small-desktop) {
+			width: 16rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			width: 12rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 5.5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			width: 5rem;
+		}
+	}
+
+	li.is-completed span {
+		margin-bottom: .5rem;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 0;
+		}
+	}
+
+	h6 {
+		font-family: $ff-sans-serif;
+		font-weight: $font-weight-bold;
+		letter-spacing: 0.03em;
+		color: $c-gray-4;
+	}
+
+	li.is-current h6 {
+		font-family: $ff-sans-serif;
+		font-weight: $font-weight-medium;
+	}
+
+	li + li {
+		margin-left: 0rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin-left: 0rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+	}
+
+	li {
+		flex: 1;
+	}
+
+	li:last-of-type {
+		margin-left: 0;
+	}
+
+	li:nth-of-type(1) {
+		text-align: center;
+	}
+
+	li:nth-of-type(1) span {
+		margin-left: 0;
+	}
+
+	li:last-of-type {
+		margin-left: 0rem;
+	}
+
+	li.is-current span,
+	li.is-completed span {
+		margin-left: 0;
+	}
+
+	.list__note {
+		width: 100%;
+		text-align: center;
+		margin-top: .5rem;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.6px;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+	}
+}

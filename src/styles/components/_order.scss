@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Order
+\* ------------------------------------------------------------ */
+
+.order {
+	.order__head {
+		margin-bottom: 5.4rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	h1 {
+		color: $primary-color;
+		margin-bottom: 3.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2.4rem;
+		}
+	}
+
+	.order__info {
+		line-height: $h3-line-height;
+		letter-spacing: 0.02em;
+	}
+
+	.order__owner {
+		margin-bottom: 2.4rem;
+	}
+}

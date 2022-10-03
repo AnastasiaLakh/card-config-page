@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------ *\
+	Terms block
+\* ------------------------------------------------------------ */
+
+.terms-block {
+	h3 {
+		font-size: $h3-font-size-mobile;
+		line-height: $h3-line-height;
+		letter-spacing: 1.1px;
+		font-weight: $font-weight-light;
+		margin-bottom: 0;
+		color: $primary-color;
+
+		@include breakpoint-down(mobile) {
+			font-size: $h4-font-size;
+			letter-spacing: 0.74px;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.terms__head {
+		letter-spacing: 0.61px;
+		margin-bottom: 3.4rem;
+	}
+
+	.terms__entry {
+		font-weight: $font-weight-light;
+		letter-spacing: 0.61px;
+		margin-bottom: 2.2rem;
+
+		@include breakpoint-down(mobile) {
+			line-height: $h3-line-height;
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	.terms__head a {
+		font-weight: $font-weight-light;
+		letter-spacing: 0.6px;
+
+		@include breakpoint-down(mobile) {
+			line-height: $h3-line-height;
+		}
+	}
+
+	.terms__body {
+		margin-bottom: 3.2rem;
+	}
+
+	.terms__actions {
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+	}
+
+	.terms__actions a {
+		display: inline-block;
+	}
+
+	.terms__actions a + a {
+		margin-left: 5.8rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+			margin-top: 2.5rem;
+		}
+	}
+
+	.terms__back {
+		letter-spacing: 0.6px;
+	}
+
+	.terms__submit {
+		padding: 1.4rem 6rem;
+
+		@include breakpoint-down(mobile) {
+			min-width: 100%;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 1.4rem 5.2rem;
+		}
+	}
+
+	.terms__item + .terms__item {
+		margin-top: 4.1rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 4.4rem;
+		}
+	}
+}

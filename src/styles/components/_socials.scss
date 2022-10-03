@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials {
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+	}
+
+
+	li + li {
+		margin-left: 1.6rem;
+	}
+
+	a {
+		font-size: 0;
+		transition: opacity .3s;
+	}
+
+	li:hover a {
+		opacity: .7; 
+	}
+}

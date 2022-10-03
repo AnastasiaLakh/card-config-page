@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------ *\
+	Section Advice
+\* ------------------------------------------------------------ */
+
+.section-advice {
+	padding-bottom: 3.2rem;
+
+	.section__inner {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+
+		@include breakpoint-down(mobile) {
+			flex-flow: row wrap-reverse;
+		}
+	}
+
+	.section__content {
+		flex: 0 0 34%;
+		max-width: 34%;
+		margin-top: 9.9rem;
+		font-size: $h5-font-size;
+		line-height: $h3-line-height; 
+		letter-spacing: 0.009em;
+
+		@include breakpoint-down(small-desktop) {
+			margin-top: 4rem;
+			flex: 0 0 40%;
+			max-width: 40%;
+		}
+
+		@include breakpoint-down(tablet) {
+			margin-top: 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			font-size: $body-font-size;
+		}
+	}
+
+	.section__content h1 {
+		margin-bottom: 2.5rem;
+	}
+
+	.section__image {
+		flex: 0 0 57%;
+		max-width: 57%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.section__image img {
+		width: 100%; 
+		height: auto;
+	}
+}

@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	List Plans
+\* ------------------------------------------------------------ */
+
+.list-plans {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	margin: -0.4rem -0.5rem;
+
+	@include breakpoint-down(mobile-medium) {
+		justify-content: flex-start;
+		margin: -0.6rem -0.5rem;
+	}
+
+	li {
+		display: block;
+		padding: 0.4rem 0.5rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 0.6rem 0.5rem;
+		}
+	}
+
+	li:hover > a {
+		border-color: $secondary-color;
+	}
+
+	li.is-selected > a {
+		border: 0.2rem solid $secondary-color;
+		padding-bottom: 1.4rem;
+	}
+
+	a {
+		display: block;
+		min-width: 17.5rem;
+		width: 100%;
+		background-color: $white-color;
+		border: 0.1rem solid $dark-text;
+		border-radius: 0.4rem;
+		text-decoration: none;
+		padding: 1.2rem 3.5rem 1.6rem;
+		text-align: center;
+
+		@include breakpoint-down(mobile-medium) {
+			min-width: 0;
+			width: 16.5rem;
+			padding: 0.8rem 3.5rem 1.5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			width: 13.5rem;
+			padding: 0.8rem 1rem 1.5rem;
+		}
+	}
+
+	h6 {
+		font-weight: $font-weight-medium;
+		letter-spacing: 0.06em;
+		margin-bottom: 0;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $body-font-size;
+		}
+	}
+
+	span {
+		font-size: $h6-font-size-mobile;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.028em;
+	}
+}

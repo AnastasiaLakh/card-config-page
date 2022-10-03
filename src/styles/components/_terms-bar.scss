@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------ *\
+	Terms bar
+\* ------------------------------------------------------------ */
+
+.terms-bar {
+	padding: 1.4rem 0 1.6rem;
+	text-align: center;
+	color: $dark-text;
+	font-weight: $font-weight-bold;
+	border-top: solid .1rem $border-color;
+	border-bottom: solid .1rem $border-color;
+
+	img {
+		margin-right: 1.1rem;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}

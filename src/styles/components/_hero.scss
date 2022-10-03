@@ -1,0 +1,787 @@
+/* ------------------------------------------------------------ *\
+	Hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative;
+
+	@include breakpoint-down(tablet) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	h1 {
+		color: $primary-color;
+		font-weight: $font-weight-light;
+		margin-bottom: 2.8rem;
+	}
+
+	.hero__inner {
+		background-color: $scrollbar-primary-color;
+	}
+
+	.hero__content {
+		max-width: 57.8rem;
+		width: 100%;
+		padding: 6.2rem 0 4.4rem;
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 54rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			max-width: none;
+			text-align: center;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 4rem 0;
+		}
+	}
+
+	.hero__entry {
+		max-width: 52rem;
+		width: 100%;
+		font-size: $h4-font-size;
+		font-weight: $font-weight-light;
+		line-height: $h3-line-height;
+		letter-spacing: 0.013em;
+		margin-bottom: 3.8rem;
+
+		@include breakpoint-down(tablet) {
+			margin: 0 auto 3rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $body-font-size;
+		}
+	}
+
+	.hero__gallery {
+		min-height: 450px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 43.7%;
+		width: 100%;
+		height: 100%;
+
+		@include breakpoint-down(tablet) {
+			position: relative;
+			max-width: none;
+			min-height: none;
+		}
+	}
+}
+
+.hero--secondary {
+	@include breakpoint-down(mobile) {
+		flex-direction: column-reverse;
+	}
+	.hero__gallery {
+		max-width: 46%;
+
+		@include breakpoint-down(tablet) {
+			max-width: 100%;
+		}
+	}
+
+	.hero__content {
+		padding: 9rem 0 5.7rem;
+		max-width: 51.8rem;
+
+		@include breakpoint-down(tablet) {
+			max-width: 100%;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 41px 0 3.5rem;
+			text-align: left;
+		}
+
+		h1 {
+			font-size: $h1-font-size;
+			margin-bottom: 1.6rem;
+
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size;
+				margin-bottom: 1.8rem;
+			}
+		}
+
+		p {
+			padding-right: .7rem;
+		}
+
+		.hero__entry {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.hero__actions {
+		p {
+			display: inline-block;
+			margin-left: 1.7rem;
+			font-size: $body-font-size;
+			letter-spacing: .05em;
+			font-weight: $font-weight-light;
+
+			@include breakpoint-down(mobile) {
+				margin-left: 0;
+				font-size: $h6-font-size-mobile;
+				margin-top: 2rem;
+			}
+
+			a {
+				text-decoration: underline;
+				color: $secondary-color;
+			}
+		}
+
+		.btn {
+			@include breakpoint-down(mobile) {
+				min-width: 100%;
+			}
+		}
+	}
+
+	.gallery {
+		@include breakpoint-down(mobile-medium) {
+			grid-template-rows: repeat(37, .74rem);
+			column-gap: 1.2rem;
+
+		}
+	}
+
+	.hero__gallery {
+		@include breakpoint-down(mobile) {
+			min-height: auto;
+		}
+	}
+
+	.gallery__item--1 {
+		@include breakpoint-down(mobile) {
+			grid-row: 1 / 19;
+		}
+	}
+
+	.gallery__item--2 {
+		@include breakpoint-down(mobile) {
+			grid-row: 1 / 23;
+		}
+	}
+
+	.gallery__item--3 {
+		@include breakpoint-down(mobile) {
+			grid-row: 20 / -1;
+		}
+	}
+	.gallery__item--4 {
+		@include breakpoint-down(mobile) {
+			grid-row: 24 / -1;
+		}
+	}
+}
+
+/*  hero alt  */
+
+.hero--alt {
+	background-color: $white-color;
+
+	.hero__inner {
+		background-color: transparent;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	.hero__content {
+		width: auto;
+		flex: 1 0;
+		padding: 4.4rem 2rem 4.4rem 0;
+
+		@include breakpoint-down(tablet) {
+			padding: 4.4rem 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+			order: 2;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 2.7rem 0;
+		}
+	}
+
+	.hero__image {
+		position: relative;
+		max-width: 74rem;
+		margin-right: -16rem;
+
+		@include breakpoint-down(large-desktop) {
+			margin-right: -3rem;
+			max-width: 65rem;
+		}
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 55rem;
+			margin-right: -1.5rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 calc(100% + 3.1rem);
+			max-width: calc(100% + 3.1rem);
+			order: 1;
+			width: calc(100% + 3.1rem);
+			margin: 0;
+			margin-left: -1.6rem;
+		}
+	}
+
+	.hero__image img {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: $large-font-size;
+		letter-spacing: -0.015em;
+		line-height: $h1-line-height;
+		margin-bottom: 1.6rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: $h1-font-size;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			letter-spacing: 0.05px;
+			font-size: $h3-font-size-mobile;
+			line-height: $h3-line-height;
+			padding: 0rem 1rem;
+		}
+	}
+
+	.hero__entry {
+		font-size: $h5-font-size;
+		line-height: $h3-line-height;
+		font-weight: $font-weight-light;
+		margin-bottom: 2.3rem;
+		letter-spacing: 0.03em;
+
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size;
+			line-height: $h3-line-height;
+			margin-bottom: 3rem;
+		}
+	}
+
+	.hero__btn {
+		@include breakpoint-down(mobile) {
+			min-width: 100%;
+		}
+	}
+}
+
+/*  hero small  */
+
+.hero--small {
+	position: relative;
+	border-bottom: 1px solid $border-color;
+
+	.hero__image {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		@include breakpoint-down(tablet) {
+			display: none;
+		}
+	}
+
+	.hero__inner {
+		position: relative;
+		background: transparent;
+	}
+
+	.hero__content {
+		max-width: 57.8rem;
+		padding: 5.8rem 0 5rem;
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 54rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			max-width: none;
+			text-align: center;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 4rem 0;
+		}
+	}
+
+	h1 {
+		margin-bottom: 1.6rem;
+	}
+
+	.hero__entry {
+		max-width: 52rem;
+		font-size: $h5-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.03em;
+		margin-bottom: 1.8rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: $body-font-size;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Hero Alt
+\* ------------------------------------------------------------ */
+
+.hero-alt {
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+	
+	h1 {
+		font-weight: $font-weight-light; 
+		color: $dark-text; 
+		margin: 0;  
+
+		+ p { 
+			margin: 12px 0 0; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				margin: 12px 0 0; 
+			}
+		}
+	}
+
+	.shell {
+		position: relative; 
+	}
+
+	.hero__content {
+		padding: 57px 0 69px; 
+		font-size: $h5-font-size; 
+		max-width: 500px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: relative; 
+			z-index: 5; 
+			padding: 50px 0 269px; 
+			font-size: $h4-font-size-mobile; 
+			max-width: 100%; 
+		}
+
+		p {
+			letter-spacing: 0.015em;
+		}
+	}
+
+	.hero__image {
+		position: absolute; 
+		bottom: 0; 
+		right: 13px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			right: 50%; 
+			transform: translateX(50%); 
+			width: 100%; 
+			max-width: 290px; 
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Hero Def
+\* ------------------------------------------------------------ */
+
+.hero-def {
+	background: $primary-color; 
+	color: $white-color; 
+	position: relative; 
+	padding: 64px 38px 52px 43.8%; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 0; 
+	}
+
+	h1 {
+		font-size: $medium-font-size; 
+		font-weight: $font-weight-light; 
+		margin: 0 0 25px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $h3-font-size-medium;
+			line-height: 1.2;  
+			text-align: left; 
+			margin: 0 10px 14px 0; 
+		}
+	}
+
+	p {
+		font-size: $h5-font-size-big; 
+		line-height: 1.27;
+		font-weight: $font-weight-light; 
+		max-width: 544px;  
+		margin: 0 0 37px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $h4-font-size-mobile; 
+			line-height: $h3-line-height;
+			text-align: left; 
+			max-width: 100%;  
+			margin: 0 0 15px; 
+		}
+	}
+
+	.btn {
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			margin-left: 0; 
+		}
+	}
+
+	.hero__content {
+		padding-left: 65px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			padding-left: 0; 
+		}
+	}
+
+	.hero__image {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 43.8%; 
+		height: 100%; 
+		background-size: cover;  
+		background-position: center center; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: static; 
+			padding-top: 45%; 
+			width: 100%; 
+		}
+	}
+
+	&--alt {
+		background: $scrollbar-primary-color; 
+		color: $dark-text; 
+		padding: 74px 49.6% 88px 160px; 
+		padding: 74px 0 88px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			padding: 0; 
+		}
+
+		h1 {
+			font-size: $h1-font-size; 
+			font-weight: $font-weight-200; 
+			color: $primary-color; 
+			margin: 0 0 10px; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				font-size: $medium-font-size; 
+			}
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-size: $h3-font-size;
+				line-height: $h3-line-height;  
+				text-align: left; 
+				margin: 0 10px 14px 0; 
+			}
+		}
+
+		p {
+			font-size: $body-font-size;  
+			line-height: $h3-line-height;
+			letter-spacing: 0.037em; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-size: $h4-font-size-mobile; 
+				
+				text-align: left; 
+				max-width: 100%;  
+				margin: 0 0 15px; 
+			}
+		}
+
+		.btn {
+			background: $secondary-alt-color;
+			color: $white-color; 
+			min-width: 258px; 
+		}
+
+		.hero__body {
+			max-width: 1150px; 
+			padding: 0 15px; 
+			margin: auto; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				padding: 35px 16px; 
+			}
+		}
+
+		.hero__content {
+			padding: 0 50px 0 0; 
+			max-width: 50%; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				padding-right: 30px; 
+			}
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				max-width: 100%; 
+				padding-right: 0; 
+			}
+		}
+
+		.hero__image {
+			background-position: top center; 
+			left: auto;
+			right: 0;  
+			width: 49.6%; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				padding-top: 45%; 
+				width: 100%; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Hero R
+\* ------------------------------------------------------------ */
+
+.hero-r {
+	background: $primary-color; 
+	color: $white-color; 
+	position: relative; 
+	padding: 64px 38px 52px 43.8%; 
+
+	/*  Mobile  */
+	
+	@include breakpoint-down(mobile) {
+		padding: 0; 
+	}
+
+	h1 {
+		font-size: $h2-font-size; 
+		font-weight: $font-weight-light; 
+		margin: 0 0 25px; 
+		color: inherit;
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $h3-font-size-medium;
+			line-height: 1.2;  
+			text-align: left; 
+			margin: 0 10px 14px 0; 
+		}
+	}
+
+	p {
+		font-size: $h5-font-size-big; 
+		line-height: 1.27;
+		font-weight: $font-weight-light; 
+		max-width: 544px;  
+		margin: 0 0 37px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $h5-font-size-mobile; 
+			line-height: 1.33;
+			text-align: left; 
+			max-width: 100%;  
+			margin: 0 0 15px; 
+		}
+	}
+
+	.btn {
+		border: none;
+		color: $primary-color; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			margin-left: 0; 
+		}
+	}
+
+	.hero__content {
+		padding-left: 65px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			padding-left: 0; 
+		}
+	}
+
+	.hero__body {
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			padding: 35px 16px; 
+		}
+	}
+
+
+	.hero__image {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 43.8%; 
+		height: 100%; 
+		background-size: cover;  
+		background-position: center center; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			position: static; 
+			padding-top: 45%; 
+			width: 100%; 
+		}
+	}
+
+	&--alt {
+		background: $scrollbar-primary-color; 
+		color: $dark-text; 
+		padding: 74px 49.6% 88px 160px; 
+		padding: 74px 0 88px; 
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			padding: 0; 
+		}
+
+		h1 {
+			font-size: $h1-font-size; 
+			font-weight: $font-weight-200; 
+			color: $primary-color; 
+			margin: 0 0 10px; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				font-size: $h2-font-size; 
+			}
+
+			/*  Mobile Small  */
+			
+			@include breakpoint-down(mobile-small) {
+				font-size: $h3-font-size-medium;
+				line-height: 1.2;  
+				text-align: left; 
+				margin: 0 10px 14px 0; 
+			}
+		}
+
+		p {
+			font-size: $body-font-size; 
+			line-height: $line-height-big;
+			letter-spacing: 0.037em; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				font-size: $h5-font-size-mobile; 
+				line-height: 1.33;
+				text-align: left; 
+				max-width: 100%;  
+				margin: 0 0 15px; 
+			}
+		}
+
+		.btn {
+			background: $secondary-alt-color;
+			color: $white-color; 
+			min-width: 258px; 
+		}
+
+		.hero__body {
+			max-width: 1150px; 
+			padding: 0 15px; 
+			margin: auto; 
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				padding: 35px 16px; 
+			}
+		}
+
+		.hero__content {
+			padding: 0 50px 0 0; 
+			max-width: 50%; 
+
+			/*  Tablet  */
+			
+			@include breakpoint-down(tablet) {
+				padding-right: 30px; 
+			}
+
+			/*  Mobile  */
+			
+			@include breakpoint-down(mobile) {
+				max-width: 100%; 
+				padding-right: 0; 
+			}
+		}
+
+		.hero__image {
+			background-position: top center; 
+			left: auto;
+			right: 0;  
+			width: 49.6%; 
+		}
+	}
+}

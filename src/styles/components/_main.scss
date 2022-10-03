@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------ *\
+	Main
+\* ------------------------------------------------------------ */
+
+.main {
+	position: relative;
+	margin-top: 17.6rem;
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+	}
+}
+
+.main--alt {
+	margin-top: 12.2rem;
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+	}
+}
+
+.main--def {
+	margin-top: 12.2rem;
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+
+		+ .footer {
+			margin-bottom: 211px;
+		}
+	}
+}
+
+.main--secondary {
+	margin-top: 12rem;
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+	}
+}
+
+/* Main Partner */
+
+.main--partner {
+	margin-top: 12.2rem;
+
+	@include breakpoint-down(tablet) {
+		margin-top: 17rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+	}
+}
+
+/* Main Teritary */
+
+.main--teritary {
+	margin-top: 11.8rem;
+
+	@include breakpoint-down(tablet) {
+		/*margin-top: 17rem;*/
+	}
+
+	@include breakpoint-down(mobile) {
+		margin-top: 0;
+	}
+}
+
+
+.main--quaternary {
+	padding: 0; 
+	margin: 0; 
+}

@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	Checkboxes
+\* ------------------------------------------------------------ */
+
+.checkboxes {
+	ul {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -.8rem;
+		align-items: flex-end;
+
+		@include breakpoint-down(tablet) {
+			align-items: stretch;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: -.4rem;
+		}
+	}
+
+	li {
+		flex: 0 0 50%;
+		max-width: 50%; 
+		padding: .8rem;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: .4rem; 
+		}
+	}
+
+	li .price-alt {
+		padding-bottom: 1.6rem; 
+		margin-left: auto;
+		max-width: 16.3rem;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 0; 
+			padding-top: 0; 
+			margin-top: -.2rem;
+			max-width: 13.6rem;
+			margin-left: auto;
+		}
+
+	}
+}

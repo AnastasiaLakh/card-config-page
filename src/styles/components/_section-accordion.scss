@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------ *\
+	Section Accordion
+\* ------------------------------------------------------------ */
+
+.section-accordion {
+	padding: 4rem 0 18.5rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 2rem 0 10rem;
+	}
+
+	.shell {
+		position: relative; 
+	}
+
+	.shell > .pagination-alt {
+		position: absolute;
+		top: 0; 
+		right: 1.5rem;
+		max-width: 50%;
+
+		@include breakpoint-down(tablet) {
+			right: 1.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			position: static;
+			max-width: unset;
+			justify-content: flex-end;
+		}
+	}
+
+	.section__head {
+		letter-spacing: 0.042em;
+		padding-bottom: 2.5rem; 
+
+		@include breakpoint-down(mobile) {
+			padding: 2rem 0 1.5rem; 
+		}
+	}
+
+	.section__head h3 {
+		max-width: 50%;
+
+		@include breakpoint-down(mobile) {
+			max-width: unset;
+			font-size: $h4-font-size;
+		}
+	}
+
+	.section__body{
+		margin: 0 -1.5rem; 
+	}
+}

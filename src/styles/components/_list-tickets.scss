@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	List tickets
+\* ------------------------------------------------------------ */
+
+.list-tickets {
+	list-style: none; 
+	display: flex;
+	text-align: center; 
+	padding: 14px 0 0; 
+
+	@include breakpoint-down(mobile) {
+		display: block; 
+	}
+
+	li {
+		flex: 0 0 33.33%;
+		max-width: 33.33%; 
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%; 
+		}
+
+		> span {
+			font-weight: $font-weight-200;
+			font-size: $large-font-size;
+			letter-spacing: -0.28px;
+		}
+
+		p {
+			letter-spacing: 0.6px;
+			font-size: $h6-font-size-mobile;
+			font-weight: $font-weight-bold; 
+			margin: 0px 0 0; 
+		}
+
+		+ li {
+			border-left: 1px solid $border-color;
+
+			@include breakpoint-down(mobile) {
+				border: none;
+				border-top: 1px solid $border-color;
+				margin-top: 20px; 
+				padding-top: 20px; 
+			}
+		}
+	}
+
+
+}

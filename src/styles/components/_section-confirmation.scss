@@ -1,0 +1,113 @@
+/* ------------------------------------------------------------ *\
+	Section confirmation
+\* ------------------------------------------------------------ */
+
+.section-confirmation {
+	padding: 8.4rem 0rem 6.4rem;
+
+	.section__head {
+		display: flex;
+		flex-flow: row wrap;
+		margin-bottom: 6.4rem;
+		position: relative;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.section__head-content {
+		flex: 0 0 65.33%;
+		max-width: 65.33%;
+		padding-right: 2rem;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 52%;
+			max-width: 52%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	.section__head-content:not(:last-child) {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.section__head-aside {
+		position: absolute;
+		top: .5rem;
+		right: 0;
+
+		@include breakpoint-down(mobile) {
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-bottom: 3rem;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.section__head h1 {
+		line-height: 1.2;
+		color: $primary-color;
+		margin-bottom: 1.7rem;
+	}
+
+	.section__entry {
+		letter-spacing: 0.02em;
+		margin-bottom: 6.8rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 0rem;
+		}
+	}
+
+	&--alt {
+		padding: 8.4rem 0rem 11.2rem; 
+
+		.order {
+			h1 {
+				margin-bottom: 1.8rem; 
+			}
+		}
+
+		.order__head {
+			margin-bottom: 61px; 
+		}
+
+		.order__owner {
+			margin-bottom: 16px; 
+		}
+
+		.order__info {
+			display: inline-block; 
+			vertical-align: middle;
+			min-width: 300px; 
+
+			@include breakpoint-down(tablet) {
+				display: block; 
+				min-width: 0; 
+			}
+
+			+ .order__info {
+				margin-left: 269px; 
+
+				@include breakpoint-down(tablet) {
+					margin-left: 0; 
+					margin-top: 16px; 
+				}
+			}
+		}
+
+		.table-order .table__head {
+			margin-bottom: 30px; 
+		}
+	}
+}

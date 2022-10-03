@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------ *\
+	Section FAQ
+\* ------------------------------------------------------------ */
+
+.section-faq {
+	padding-bottom: 12rem;
+
+	@include breakpoint-down(tablet) {
+		padding-bottom: 8rem; 	
+	}
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 4rem; 
+	}
+
+	.section__head {
+		background-color: $gray-light; 
+		padding: 11.5rem 0 11.6rem;
+		text-align: center;
+
+		@include breakpoint-down(tablet) {
+			padding: 9rem 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 6rem 0;
+		}
+	}
+
+	.section__head h1 {
+		font-size: $h1-large-font-size;
+		font-weight: $font-weight-light; 
+		letter-spacing: #{$h1-large-letter-spacing}em;
+		margin-bottom: 4.7rem;
+		color: transparent;
+		background: linear-gradient(123.69deg, $primary-color 38.67%, $pink-bubblegum 101.33%); 
+		background-clip: text;
+		-webkit-background-clip: text;
+		max-width: 103.3rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include breakpoint-down(tablet) {
+			font-size: $h1-large-font-size-tablet;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: $h1-large-font-size-mobile;
+		}
+	}
+
+	.section__head .search {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.section__body {
+		padding: 8.2rem 0 0;
+
+		@include breakpoint-down(mobile) {
+			padding-top: 3rem; 
+		}
+	}
+
+	.section__body .shell {
+		max-width: calc(117.2rem + #{$shell-gutter} * 2);
+	}
+}

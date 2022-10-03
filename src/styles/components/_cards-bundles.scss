@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Cards bundles
+\* ------------------------------------------------------------ */
+
+.cards-bundles {
+	.cards__items {
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		margin: -1.6rem;
+	}
+
+	.cards__item {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 1.6rem;
+	}
+
+	.cards__item--1of3 {
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 70%;
+			max-width: 70%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	Bill
+\* ------------------------------------------------------------ */
+
+.bill {
+	.bill__head {
+		margin-bottom: 3.2rem;
+	}
+
+	.bill__head-inner {
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		border-top: solid .1rem $border-color;
+		padding: 1.6rem 0;
+	}
+
+	h5 {
+		letter-spacing: 0.6px;
+		font-weight: $font-weight-medium;
+		line-height: $h3-line-height;
+		margin-bottom: 2rem;
+	}
+
+	.bill__col--size1 {
+		padding-right: 2rem;
+		flex: 0 0 51.3%;
+		max-width: 51.3%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	.bill__col--size2 {
+		flex: 0 0 48.7%;
+		max-width: 48.7%;
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.bill__col + .bill__col {
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem;
+		}
+	}
+
+	.bill__edit {
+		position: absolute;
+		top: 1.6rem;
+		right: 0;
+	}
+}

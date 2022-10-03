@@ -1,0 +1,178 @@
+/* ------------------------------------------------------------ *\
+	Checkbox
+\* ------------------------------------------------------------ */
+
+.checkbox {
+	display: block;
+
+	input {
+		display: none;
+	}
+
+	label {
+		display: block;
+		color: $dark-text;
+		font-weight: $font-weight-regular;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.6px;
+		position: relative;
+		padding-left: 4rem;
+	}
+
+	label:before {
+		content: '';
+		position: absolute;
+		top: .2rem;
+		left: 0;
+		width: 2rem;
+		height: 2rem;
+		border-radius: .4rem;
+		border: solid .1rem $border-color;
+		transition: border .3s, background-color .3s;
+
+		@include breakpoint-down(mobile) {
+			width: 1.8rem;
+			height: 1.8rem;
+		}
+	}
+
+	input:checked ~ label:before {
+		border: solid .1rem $secondary-color;
+		background-color: $secondary-color;
+	}
+
+	label:after {
+		content: '';
+		position: absolute;
+		top: .5rem;
+		left: .3rem;
+		width: 1.4rem;
+		height: 1.2rem;
+		background-image: url(../images/svg/ico-check-white.svg);
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	input:checked ~ label:after {
+		opacity: 1;
+	}
+}
+
+.checkbox.disabled {
+	pointer-events: none;
+	opacity: .3;
+
+	label {
+		color: $c-gray-4;
+	}
+
+	label:before {
+		border: solid .1rem $c-gray-4;
+	}
+}
+
+/*  checkbox alt  */
+
+.checkbox--alt {
+	label {
+		font-weight: $font-weight-light;
+		letter-spacing: 0.6px;
+		padding-left: 4.2rem;
+	}
+
+	label:before {
+		width: 2.6rem;
+		height: 2.6rem;
+		border: solid .1rem $dark-text;
+
+		@include breakpoint-down(mobile) {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+	}
+
+	label:after {
+		left: .4rem;
+		width: 2rem;
+		height: 1.8rem;
+	}
+}
+
+/*  checkbox light  */
+
+.checkbox--light {
+	label {
+		font-weight: $font-weight-light;
+		letter-spacing: 0.6px;
+		padding-left: 3.4rem;
+	}
+
+	label:before {
+		border: solid .1rem $dark-text;
+	}
+}
+
+
+/* ------------------------------------------------------------ *\
+	Checkbox Alt
+\* ------------------------------------------------------------ */
+
+.checkbox-alt {
+	input {
+		display: none;
+		
+		&:checked + label {
+			span {
+				background: $secondary-color; 
+				&:after {
+					left: 20px; 
+				}
+			}
+		}
+	}
+
+	label {
+		display: inline-block; 
+		font-size: $body-font-size;   
+		font-weight: $font-weight-light; 
+		letter-spacing: 0.038em;
+
+		/*  Mobile  */
+		
+		@include breakpoint-down(mobile) {
+			font-size: $body-font-size-small; 
+		}
+
+		span {
+			position: relative; 
+			top: -3px; 
+			display: inline-block; 
+			vertical-align: middle;
+			margin-left: 14px; 
+			width: 40px; 
+			height: 24px; 
+			border-radius: 20px; 
+			background: $border-color; 
+			transition: background .4s; 
+
+			&:after {
+				content: ''; 
+				position: absolute; 
+				top: 50%; 
+				left: 3px; 
+				width: 18px; 
+				height: 18px; 
+				background: $white-color; 
+				border-radius: 50%; 
+				box-shadow: 0 0 2px 0 rgba(0, 0, 0, 1);
+				transform: translateY(-50%); 
+				transition: left .4s; 
+			}
+		}
+	}
+}

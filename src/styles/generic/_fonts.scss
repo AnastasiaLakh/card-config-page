@@ -1,0 +1,200 @@
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../assets/fonts/HelveticaNeue-Thin.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeue-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../assets/fonts/HelveticaNeue-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeue-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../assets/fonts/HelveticaNeue-Light.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeue-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../assets/fonts/HelveticaNeue.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeue.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../assets/fonts/HelveticaNeueThin.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeueThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../assets/fonts/HelveticaNeue-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../../assets/fonts/Graphik-Semibold.woff2") format("woff2"),
+    url("../../assets/fonts/Graphik-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../../assets/fonts/Graphik-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Graphik-Regular.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../../assets/fonts/Graphik-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Graphik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../../assets/fonts/HelveticaNowText-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNowText-Regular.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../../assets/fonts/HelveticaNowText-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/HelveticaNowText-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hoefler Text";
+  src: url("../../assets/fonts/HoeflerText-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/HoeflerText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../../assets/fonts/Gotham-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Gotham-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text W01 Thin";
+  src: url("../../assets/fonts/5760837/9845b7d8-40a6-4047-9cd9-2b93c421df38.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760837/1538ea9f-3c4f-4ccb-a34d-3ef9e451a84c.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Text W01 Regular";
+  src: url("../../assets/fonts/5760841/46dd84ea-bb96-46da-973b-d7fcca46437e.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760841/0fb90058-c064-40ed-8109-d1fd8633caa2.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Text W01 Bold";
+  src: url("../../assets/fonts/5760861/39ae88e8-7d53-4395-8f9d-f7a0d4060ec4.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760861/0c4f3bb0-d605-4462-9603-9163a560a536.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display W01 Bold";
+  src: url("../../assets/fonts/5760915/f0cbab32-010c-4ff1-8be8-7d74011f2548.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760915/79e75c13-a7cb-4154-83dc-4dfb2aec1b11.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display W01";
+  src: url("../../assets/fonts/5760931/f5b78362-04e7-42f9-9c7c-1a249964cc80.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760931/b19bb50a-5542-494b-ac36-b4d6920e7483.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display W01 Rg";
+  src: url("../../assets/fonts/5760947/72d42bf4-2173-4e9d-b3f5-2e97d45eac01.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760947/784fdfff-9e52-4f65-af2a-c0892907a9d4.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display W01";
+  src: url("../../assets/fonts/5760963/284e66f2-886a-4e0f-a801-ff7b25fd52af.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5760963/cd6178ba-ad0f-4cd3-8f0c-05b2c51b9bc7.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Text W01 Medium";
+  src: url("../../assets/fonts/5761058/e62ce8f4-9983-4262-9030-3fdbebcebf39.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5761058/0e8ae071-ceee-4b41-9d37-cbb6af5a9ca9.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "Helvetica Now Text W01 Light";
+  src: url("../../assets/fonts/5761072/f0a513eb-aa29-40cd-b5d5-058cfdc9fb35.woff2")
+      format("woff2"),
+    url("../../assets/fonts/5761072/cf0e8515-0fc6-40a8-96bf-e1303d206b81.woff")
+      format("woff");
+}

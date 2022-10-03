@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	Section articles
+\* ------------------------------------------------------------ */
+
+.section-articles {
+	padding: 5rem 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 5rem 0rem 2rem;
+	}
+
+	h1 {
+		color: $primary-color;
+		margin-bottom: 3.8rem;
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+			font-size: $h4-font-size;
+			line-height: $h3-line-height;
+			letter-spacing: 0.5px;
+			margin-bottom: 2.4rem;
+		}
+
+	}
+
+	.section__inner {
+		display: flex;
+	}
+
+	.section__content {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-right: 1.6rem;
+	}
+
+	.section__aside {
+		padding-left: 1.6rem;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+.section-articles--alt {
+	padding: 11.8rem 0 2.3rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 5rem 0 3rem;
+	}
+
+	.shell {
+		max-width: calc(117.2rem + #{$shell-gutter} * 2);
+	}
+
+	.section__head {
+		margin-bottom: 3.2rem;
+	}
+
+	.section__head h3 {
+		font-size: $h3-font-size-large;
+		line-height: $line-height-default;
+		letter-spacing: $h2-large-letter-spacing;
+
+		@include breakpoint-down(mobile) {
+			font-size: $h3-font-size-large-mobile;
+		}
+	}
+
+	.section__actions {
+		text-align: center;
+		padding-top: 4rem; 
+	}
+
+	.section__actions .btn {
+		padding: 1.3rem 4.5rem;
+		font-weight: $font-weight-bold; 
+		letter-spacing: $letter-spacing-l-md;
+	}
+}

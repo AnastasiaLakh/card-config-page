@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	Slider Bundles
+\* ------------------------------------------------------------ */
+
+.slider-bundles {
+	.slider__slides {
+		max-width: 110.6rem;
+		width: 100%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+		gap: 5.2rem;
+
+		@include breakpoint-down(tablet) {
+			display: flex;
+			gap: 0;
+			padding-bottom: 5rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding-bottom: 2rem;
+		}
+	}
+
+	.swiper-pagination {
+		position: static;
+	}
+
+	.swiper-pagination-bullet {
+		width: 1rem;
+		height: 1rem;
+		background-color: $white-color;
+		border: 0.1rem solid $primary-color;
+		opacity: 1;
+		margin: 0 0.5rem !important;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $primary-color;
+	}
+
+	.slider__clip {
+		overflow: visible;
+	}
+}
+
+/*  slider bundles alt  */
+
+.slider-bundles--alt {
+	.slider__slides {
+		max-width: 100%;
+		gap: 3.2rem;
+
+		@include breakpoint-down(tablet) {
+			gap: 0;
+		}
+	}
+}

@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------ *\
+	Form payment
+\* ------------------------------------------------------------ */
+
+.form-payment {
+	max-width: 44.8rem;
+
+	@include breakpoint-down(mobile) {
+		max-width: 100%;
+	}
+
+	.form__label {
+		display: inline-block;
+		font-weight: $font-weight-medium;
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		letter-spacing: 0.61px;
+		margin-bottom: 1.1rem;
+		color: $dark-text;
+	}
+
+	.form__label i {
+		vertical-align: middle;
+		margin-left: .3rem;
+	}
+
+	.form__row + .form__row {
+		margin-top: 3.2rem;
+
+		@include breakpoint-down(tablet) {
+			margin-top: 2.4rem;
+		}
+	}
+
+	.form__row + .form__row-order {
+		margin-top: 3.9rem;
+	}
+
+	.form__cols {
+		margin: -.65rem 0rem;
+	}
+
+	.form__col {
+		position: relative;
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: .65rem 0rem;
+	}
+
+	.form__body {
+		margin-bottom: 6.4rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.6rem;
+		}
+	}
+
+	.form__notice {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.form__note {
+		font-size: $body-font-size;
+		line-height: $h3-line-height;
+		font-weight: $font-weight-light;
+		letter-spacing: 0.61px;
+	}
+
+	.form__btn {
+		letter-spacing: 0.6px;
+		padding: 1.5rem 4.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			min-width: 100%;
+		}
+	}
+
+	.form__order {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		@include breakpoint-down(tablet) {
+			position: relative;
+		}
+	}
+}
+
+
+.form-payment--alt {
+	.form__body {
+		margin-bottom: 4.6rem;
+	}
+
+	.form__row + .form__row-order {
+		margin-top: -.2rem;
+
+		@include breakpoint-down(tablet) {
+			margin-top: 3rem;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------ *\
+	Testimonials
+\* ------------------------------------------------------------ */
+
+.testimonials {
+	.testimonials__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -1.6rem -4.3rem;
+	}
+
+	.testimonials__item {
+		max-width: 50%;
+		width: 100%;
+		flex: 0 0 50%;
+		padding: 0 1.6rem 4.3rem;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+}

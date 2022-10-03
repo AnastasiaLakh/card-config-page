@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------ *\
+	Slick
+\* ------------------------------------------------------------ */
+
+.slick-dots {
+	list-style: none; 
+	display: inline-block !important; 
+	border-radius: 20px; 
+	box-shadow: 0 0 8px 0 rgba(42, 44, 46, 0.15);
+	padding: 3px 10px; 
+	margin: 10px 0 0; 
+
+	&:before {
+		content: ''; 
+		display: inline-block; 
+		background: url(../images/svg/ico-progress.svg) no-repeat 0 0; 
+		width: 17px; 
+		height: 17px; 
+		background-size: 100% 100%; 
+		vertical-align: middle;
+		margin-right: 16px; 
+	}
+
+
+	button {
+		display: inline-block; 
+		border: none;
+		background: none; 
+		font-size: $h6-font-size-mobile; 
+		letter-spacing: 0.042em;
+		border-radius: 19px; 
+		padding: 3px 10px; 
+		min-width: 40px; 
+		text-align: center; 
+		transition: background .4s, color .4s; 
+	}
+
+	li {
+		display: inline-block; 
+		vertical-align: middle;
+
+		+ li {
+			margin-left: 4px; 
+		}
+	}
+
+	.slick-active {
+		button {
+			background: $primary-color; 
+			color: $white-color; 
+		}
+	}
+
+}
+
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.slider {
+	padding: 20px 0 34px;
+	text-align: center; 
+
+	.slick-slide {
+		text-align: left; 
+		padding: 10px; 
+	}
+
+	.slick-arrow {
+		display: none !important; 
+	}
+
+	.slick-list {
+		margin: -10px; 
+	}
+}

@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Link edit
+\* ------------------------------------------------------------ */
+
+.link-edit {
+	display: flex;
+	align-items: center;
+	color:$secondary-color;
+	font-weight: $font-weight-bold;
+	line-height: 1.5rem;
+
+	svg {
+		margin-right: .6rem;
+	}
+}
